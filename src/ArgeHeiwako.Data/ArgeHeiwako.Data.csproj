@@ -20,6 +20,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>BasicDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -36,6 +38,9 @@
   <ItemGroup>
     <Compile Include="ArgeVersion.cs" />
     <Compile Include="KundenNummer.cs" />
+    <Compile Include="OrdnungsbegriffAbrechnungsunternehmen.cs" />
+    <Compile Include="Ordnungsbegriffe.cs" />
+    <Compile Include="OrdnungsbegriffWohnungsunternehmen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
