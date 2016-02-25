@@ -7,7 +7,7 @@ using Xunit;
 namespace ArgeHeiwako.Tests.IO
 {
     [ExcludeFromCodeCoverage]
-    public class DataFileWriterTests
+    public class OrdnungsbegriffeWriterTests
     {
         [Fact]
         public void WriteTests()
@@ -15,7 +15,7 @@ namespace ArgeHeiwako.Tests.IO
             byte[] content = null;
             using (var stream = new MemoryStream())
             {
-                using (var writer = new DataFileWriter(stream))
+                using (var writer = new OrdnungsbegriffeWriter(stream))
                 {
                     writer.Write(CreateDefaultOrdnungsbegriffe());
                 }

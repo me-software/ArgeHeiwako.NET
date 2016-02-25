@@ -67,7 +67,7 @@
     <Compile Include="Data\OrdnungsbegriffAbrechnungsunternehmenTests.cs" />
     <Compile Include="Data\OrdnungsbegriffeTests.cs" />
     <Compile Include="Data\OrdnungsbegriffWohnungsunternehmenTests.cs" />
-    <Compile Include="IO\DataFileWriterTests.cs" />
+    <Compile Include="IO\OrdnungsbegriffeWriterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
