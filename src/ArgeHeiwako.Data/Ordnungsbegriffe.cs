@@ -13,8 +13,17 @@
             ArgeVersion version,
             KundenNummer kundenNummer,
             OrdnungsbegriffAbrechnungsunternehmen ordnungsbegriffAbrechnungsunternehmen,
-            OrdnungsbegriffWohnungsunternehmen ordnungsbegriffWohnungsunternehmen, 
-            Abrechnungsunternehmen unternehmen = null)
+            OrdnungsbegriffWohnungsunternehmen ordnungsbegriffWohnungsunternehmen)
+            : this(version, kundenNummer, ordnungsbegriffAbrechnungsunternehmen, ordnungsbegriffWohnungsunternehmen, null)
+        {
+        }
+
+        public Ordnungsbegriffe(
+            ArgeVersion version,
+            KundenNummer kundenNummer,
+            OrdnungsbegriffAbrechnungsunternehmen ordnungsbegriffAbrechnungsunternehmen,
+            OrdnungsbegriffWohnungsunternehmen ordnungsbegriffWohnungsunternehmen,
+            Abrechnungsunternehmen unternehmen)
         {
             this.version = version;
             this.kundenNummer = kundenNummer;
@@ -30,7 +39,7 @@
                 Satzart,
                 version,
                 kundenNummer,
-                unternehmen != null ? unternehmen.ToString() :new string(' ', 2),
+                unternehmen != null ? unternehmen.ToString() : new string(' ', 2),
                 ordnungsbegriffAbrechnungsunternehmen,
                 ordnungsbegriffWohnungsunternehmen,
                 new string(' ', 76));

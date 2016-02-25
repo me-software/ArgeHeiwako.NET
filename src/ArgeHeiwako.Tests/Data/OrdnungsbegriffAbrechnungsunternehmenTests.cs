@@ -1,7 +1,8 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using ArgeHeiwako.Data;
+using System.Diagnostics.CodeAnalysis;
 using Xunit;
 
-namespace ArgeHeiwako.Data.Tests
+namespace ArgeHeiwako.Tests.Data
 {
     [ExcludeFromCodeCoverage]
     public class OrdnungsbegriffAbrechnungsunternehmenTests

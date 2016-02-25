@@ -5,7 +5,9 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgeHeiwako.Data", "ArgeHeiwako.Data\ArgeHeiwako.Data.csproj", "{FAE52BDC-B953-4EE4-BB1A-CE3A01650E9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgeHeiwako.Data.Tests", "ArgeHeiwako.Data.Tests\ArgeHeiwako.Data.Tests.csproj", "{59393DA6-EDE8-44CE-8BCB-11A59745F259}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgeHeiwako.IO", "ArgeHeiwako.IO\ArgeHeiwako.IO.csproj", "{BF8DAFE4-8D47-475F-828D-8D45CC514ACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgeHeiwako.Tests", "ArgeHeiwako.Tests\ArgeHeiwako.Tests.csproj", "{59393DA6-EDE8-44CE-8BCB-11A59745F259}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,10 @@ Global
 		{FAE52BDC-B953-4EE4-BB1A-CE3A01650E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAE52BDC-B953-4EE4-BB1A-CE3A01650E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAE52BDC-B953-4EE4-BB1A-CE3A01650E9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF8DAFE4-8D47-475F-828D-8D45CC514ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF8DAFE4-8D47-475F-828D-8D45CC514ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF8DAFE4-8D47-475F-828D-8D45CC514ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF8DAFE4-8D47-475F-828D-8D45CC514ACA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release|Any CPU.ActiveCfg = Release|Any CPU

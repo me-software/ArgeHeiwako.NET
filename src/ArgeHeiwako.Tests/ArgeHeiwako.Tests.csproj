@@ -8,8 +8,8 @@
     <ProjectGuid>{59393DA6-EDE8-44CE-8BCB-11A59745F259}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ArgeHeiwako.Data.Tests</RootNamespace>
-    <AssemblyName>ArgeHeiwako.Data.Tests</AssemblyName>
+    <RootNamespace>ArgeHeiwako.Tests</RootNamespace>
+    <AssemblyName>ArgeHeiwako.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -23,7 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>BasicDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -61,12 +61,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbrechnungsunternehmenTests.cs" />
-    <Compile Include="ArgeVersionTests.cs" />
-    <Compile Include="KundenNummerTests.cs" />
-    <Compile Include="OrdnungsbegriffAbrechnungsunternehmenTests.cs" />
-    <Compile Include="OrdnungsbegriffeTests.cs" />
-    <Compile Include="OrdnungsbegriffWohnungsunternehmenTests.cs" />
+    <Compile Include="Data\AbrechnungsunternehmenTests.cs" />
+    <Compile Include="Data\ArgeVersionTests.cs" />
+    <Compile Include="Data\KundenNummerTests.cs" />
+    <Compile Include="Data\OrdnungsbegriffAbrechnungsunternehmenTests.cs" />
+    <Compile Include="Data\OrdnungsbegriffeTests.cs" />
+    <Compile Include="Data\OrdnungsbegriffWohnungsunternehmenTests.cs" />
+    <Compile Include="IO\DataFileWriterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -77,10 +78,15 @@
       <Project>{fae52bdc-b953-4ee4-bb1a-ce3a01650e9a}</Project>
       <Name>ArgeHeiwako.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ArgeHeiwako.IO\ArgeHeiwako.IO.csproj">
+      <Project>{bf8dafe4-8d47-475f-828d-8d45cc514aca}</Project>
+      <Name>ArgeHeiwako.IO</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
