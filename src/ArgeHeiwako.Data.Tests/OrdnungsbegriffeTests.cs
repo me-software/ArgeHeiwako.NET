@@ -1,7 +1,9 @@
-﻿using Xunit;
+﻿using System.Diagnostics.CodeAnalysis;
+using Xunit;
 
 namespace ArgeHeiwako.Data.Tests
 {
+    [ExcludeFromCodeCoverage]
     public class OrdnungsbegriffeTests
     {
         #region ToString()

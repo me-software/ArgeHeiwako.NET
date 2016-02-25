@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using Xunit;
 
 namespace ArgeHeiwako.Data.Tests
 {
+    [ExcludeFromCodeCoverage]
     public class KundenNummerTests
     {
         [Fact]

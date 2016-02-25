@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using Xunit;
 
 namespace ArgeHeiwako.Data.Tests
 {
+    [ExcludeFromCodeCoverage]
     public class AbrechnungsunternehmenTests
     {
         #region Ctor
