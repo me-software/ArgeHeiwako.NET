@@ -36,6 +36,7 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abrechnungsunternehmen.cs" />
     <Compile Include="ArgeVersion.cs" />
     <Compile Include="KundenNummer.cs" />
     <Compile Include="OrdnungsbegriffAbrechnungsunternehmen.cs" />

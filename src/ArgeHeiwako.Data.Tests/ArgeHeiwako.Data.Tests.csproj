@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbrechnungsunternehmenTests.cs" />
     <Compile Include="ArgeVersionTests.cs" />
     <Compile Include="KundenNummerTests.cs" />
     <Compile Include="OrdnungsbegriffAbrechnungsunternehmenTests.cs" />

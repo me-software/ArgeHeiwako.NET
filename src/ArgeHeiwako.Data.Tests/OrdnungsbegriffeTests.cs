@@ -43,6 +43,12 @@ namespace ArgeHeiwako.Data.Tests
         }
 
         [Fact]
+        public void ToString_Chars17To18_AbrechnungsunternehmenTechem_Equal30()
+        {
+            Assert.Equal("30", CreateDefaultInstance(Abrechnungsunternehmen.Find(30)).ToString().Substring(16, 2));
+        }
+
+        [Fact]
         public void ToString_Chars19To31_OrdnungsbegriffAbrechnungsunternehmen_Equal0000000010001()
         {
             Assert.Equal("0000000010001", CreateDefaultInstance().ToString().Substring(18, 13));
@@ -62,10 +68,10 @@ namespace ArgeHeiwako.Data.Tests
 
         #endregion
 
-        private Ordnungsbegriffe CreateDefaultInstance()
+        private Ordnungsbegriffe CreateDefaultInstance(Abrechnungsunternehmen unternehmen = null)
         {
             return new Ordnungsbegriffe(new ArgeVersion(), new KundenNummer(1), new OrdnungsbegriffAbrechnungsunternehmen(1, 1), new
-                OrdnungsbegriffWohnungsunternehmen("Id"));
+                OrdnungsbegriffWohnungsunternehmen("Id"), unternehmen);
         }
     }
 }
