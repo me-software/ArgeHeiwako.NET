@@ -10,6 +10,7 @@ namespace ArgeHeiwako.IO
         public static readonly Encoding WriterEncoding = Encoding.GetEncoding(ISO_8859_15_CODE_PAGE);
 
         private const int ISO_8859_15_CODE_PAGE = 28605;
+        private const string LINE_END = "\r\n";
         private StreamWriter writer;
 
         public OrdnungsbegriffeWriter(Stream stream)
@@ -19,7 +20,7 @@ namespace ArgeHeiwako.IO
         
         public void Write(Ordnungsbegriffe ordnungsbegriffe)
         {
-            writer.WriteLine(ordnungsbegriffe.ToString());
+            writer.Write($"{ordnungsbegriffe}{LINE_END}");
         }
 
         #region IDisposable-Impl
