@@ -17,3 +17,6 @@ using (var writer = new OrdnungsbegriffeWriter(stream))
 
 # Links
 Waffle-Agile-Board: https://waffle.io/me-software/ArgeHeiwako.NET
+
+# Statistiken
+[![Throughput Graph](https://graphs.waffle.io/me-software/ArgeHeiwako.NET/throughput.svg)](https://waffle.io/me-software/ArgeHeiwako.NET/metrics)
