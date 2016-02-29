@@ -40,5 +40,33 @@ namespace ArgeHeiwako.Tests.Data
         {
             Assert.Throws<ArgumentException>(() => new ArgeVersion("3.04"));
         }
+
+        [Fact]
+        public void Ctor_VersionStringWithoutPoint_ThrowsArgumentException()
+        {
+            var ex = Assert.Throws<ArgumentException>(() => new ArgeVersion("12345"));
+            Assert.StartsWith(ArgeHeiwako.Data.Properties.Resources.EXP_MSG_VALID_ARGE_VERSION_RANGE, ex.Message);
+        }
+
+        [Fact]
+        public void Ctor_VersionStringFirstPartNotNumeric_ThrowsArgumentException()
+        {
+            var ex = Assert.Throws<ArgumentException>(() => new ArgeVersion("A2.45"));
+            Assert.StartsWith(ArgeHeiwako.Data.Properties.Resources.EXP_MSG_VALID_ARGE_VERSION_RANGE, ex.Message);
+        }
+
+        [Fact]
+        public void Ctor_VersionStringFirstPartLesserThan3_ThrowsArgumentException()
+        {
+            var ex = Assert.Throws<ArgumentException>(() => new ArgeVersion("02.45"));
+            Assert.StartsWith(ArgeHeiwako.Data.Properties.Resources.EXP_MSG_VALID_ARGE_VERSION_RANGE, ex.Message);
+        }
+
+        [Fact]
+        public void Ctor_VersionStringSecondPartNotNumeric_ThrowsArgumentException()
+        {
+            var ex = Assert.Throws<ArgumentException>(() => new ArgeVersion("03.A5"));
+            Assert.StartsWith(ArgeHeiwako.Data.Properties.Resources.EXP_MSG_VALID_ARGE_VERSION_RANGE, ex.Message);
+        }
     }
 }

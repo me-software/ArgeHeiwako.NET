@@ -1,4 +1,8 @@
-﻿namespace ArgeHeiwako.Data
+﻿using ArgeHeiwako.Data.Properties;
+using System;
+using System.Collections.Generic;
+
+namespace ArgeHeiwako.Data
 {
     public sealed class Ordnungsbegriffe
     {
@@ -8,6 +12,10 @@
         private OrdnungsbegriffAbrechnungsunternehmen ordnungsbegriffAbrechnungsunternehmen;
         private OrdnungsbegriffWohnungsunternehmen ordnungsbegriffWohnungsunternehmen;
         private Abrechnungsunternehmen unternehmen;
+
+        public string Version { get { return version.ToString(); } }
+
+        public KundenNummer KundenNummer { get { return kundenNummer; } }
 
         public Ordnungsbegriffe(
             ArgeVersion version,
@@ -43,6 +51,25 @@
                 ordnungsbegriffAbrechnungsunternehmen,
                 ordnungsbegriffWohnungsunternehmen,
                 new string(' ', 76));
+        }
+
+        internal static Ordnungsbegriffe FromString(string ordnungsbegriffeString)
+        {
+            #region Contracts
+            if (ordnungsbegriffeString == null)
+                throw new ArgumentNullException("ordnungsbegriffeString");
+
+            if (ordnungsbegriffeString.Length != 128)
+                throw new ArgumentException(Resources.EXP_MSG_VALID_A_SATZ_128_CHARACTERS, "ordnungsbegriffeString");
+
+            if (!ordnungsbegriffeString.StartsWith(Satzart) || !ordnungsbegriffeString.EndsWith(Satzart))
+                throw new ArgumentException(Resources.EXP_MSG_VALID_A_SATZ_MUST_START_END_WITH_A, "ordnungsbegriffeString");
+            #endregion
+
+            var version = new ArgeVersion(ordnungsbegriffeString.Substring(1, 5));
+            var kundenNummer = new KundenNummer(ordnungsbegriffeString.Substring(6, 10));
+
+            return new Ordnungsbegriffe(version, kundenNummer, new OrdnungsbegriffAbrechnungsunternehmen(0, 0), new OrdnungsbegriffWohnungsunternehmen("0"));
         }
     }
 }

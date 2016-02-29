@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
+using System.Linq;
 using Xunit;
 
 namespace ArgeHeiwako.Tests.IO
@@ -91,7 +92,6 @@ namespace ArgeHeiwako.Tests.IO
         public void Write_WithEmptyListOfOrdnungsbegriffen_CreatesFileInCurrentDirectory()
         {
             file.Write(new List<Ordnungsbegriffe>());
-
             Assert.True(File.Exists(Path.Combine(Environment.CurrentDirectory, file.FileName)));
         }
 
@@ -116,6 +116,34 @@ namespace ArgeHeiwako.Tests.IO
                 File.Delete(file.FileName);
             }
         }
+
+        #endregion
+
+        #region Load()
+
+        ////public void Load_FromStream_ReturnsOrdnungsbegriffeFile()
+        ////{
+        ////    using (var stream = new MemoryStream(OrdnungsbegriffeWriterTests.GetWrittenBytes()))
+        ////    {
+        ////        var file = OrdnungsbegriffeFile.Load(stream);
+        ////        Assert.NotNull(file);
+        ////        Assert.IsAssignableFrom<OrdnungsbegriffeFile>(file);
+        ////    }
+        ////}
+
+        ////[Fact]
+        ////public void Load_FromStreamWithSingleRow_ReturnsOrdnungsbegriffeFileWithOneItem()
+        ////{
+        ////    using (var stream = new MemoryStream(OrdnungsbegriffeWriterTests.GetWrittenBytes()))
+        ////    {
+        ////        var file = OrdnungsbegriffeFile.Load(stream);
+        ////        Assert.NotNull(file);
+        ////        Assert.NotNull(file.Ordnungsbegriffe);
+        ////        Assert.NotEmpty(file.Ordnungsbegriffe);
+        ////        Assert.Equal(1, file.Ordnungsbegriffe.Count());
+        ////        Assert.IsAssignableFrom<Ordnungsbegriffe>(file.Ordnungsbegriffe.First());
+        ////    }
+        ////}
 
         #endregion
     }

@@ -17,6 +17,8 @@ namespace ArgeHeiwako.IO
             }
         }
 
+        public IEnumerable<Ordnungsbegriffe> Ordnungsbegriffe { get; set; }
+
         public OrdnungsbegriffeFile(DateTime created)
         {
             Created = created;
@@ -39,5 +41,19 @@ namespace ArgeHeiwako.IO
                 }
             }
         }
+
+        ////public static OrdnungsbegriffeFile Load(Stream stream)
+        ////{
+        ////    var ordnungsbegriffe = new List<Ordnungsbegriffe>();
+
+        ////    byte[] buffer = new byte[130];
+        ////    while(stream.Read(buffer, 0, 130) > 0)
+        ////    {
+        ////        var content = OrdnungsbegriffeWriter.WriterEncoding.GetString(buffer);
+        ////        Data.Ordnungsbegriffe.FromString(content);
+        ////    }
+            
+        ////    return new OrdnungsbegriffeFile(DateTime.Now);
+        ////}
     }
 }
