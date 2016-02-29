@@ -13,3 +13,10 @@ using (var writer = new OrdnungsbegriffeWriter(stream))
 {
     writer.WriteLine(new Ordnungsbegriffe(/**/));
 }
+```
+
+# Links
+Waffle-Agile-Board: https://waffle.io/me-software/ArgeHeiwako.NET
+
+# Statistiken
+[![Throughput Graph](https://graphs.waffle.io/me-software/ArgeHeiwako.NET/throughput.svg)](https://waffle.io/me-software/ArgeHeiwako.NET/metrics)
