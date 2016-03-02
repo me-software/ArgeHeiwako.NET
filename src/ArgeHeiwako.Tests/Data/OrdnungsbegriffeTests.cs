@@ -1,6 +1,7 @@
 ﻿using ArgeHeiwako.Data;
 using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Text;
 using Xunit;
 
 namespace ArgeHeiwako.Tests.Data
@@ -140,6 +141,22 @@ namespace ArgeHeiwako.Tests.Data
         {
             var value = CreateDefault().ToString();
             Assert.Equal("0000000001", Ordnungsbegriffe.FromString(value).KundenNummer.ToString());
+        }
+
+        [Fact]
+        public void FromString_StringAbrechnungsunternehmenEmpty_KundenNummerEqual0000000001()
+        {
+            var valueBuilder = new StringBuilder(CreateDefault().ToString());
+            valueBuilder[16] = ' ';
+            valueBuilder[17] = ' ';
+            Assert.Null(Ordnungsbegriffe.FromString(valueBuilder.ToString()).Abrechnungsunternehmen);
+        }
+
+        [Fact]
+        public void FromString_StringAbrechnungsunternehmen30_AbrechnungsunternehmenEqual30()
+        {
+            var valueBuilder = new StringBuilder(CreateDefault(Abrechnungsunternehmen.Find(30)).ToString());
+            Assert.Equal("30", Ordnungsbegriffe.FromString(valueBuilder.ToString()).Abrechnungsunternehmen.ToString());
         }
 
         [Fact(Skip = "Not Implemented")]

@@ -79,6 +79,15 @@ namespace ArgeHeiwako.Data.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Eine valide Kennung besteht aus 2 numerischen Zeichen..
+        /// </summary>
+        internal static string EXP_MSG_VALID_ABRECHNUNGSUNTERNEHMENKENNUNG {
+            get {
+                return ResourceManager.GetString("EXP_MSG_VALID_ABRECHNUNGSUNTERNEHMENKENNUNG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Eine valide ARGE-Version liegt im Wertebereich 03.00 und 99.99..
         /// </summary>
         internal static string EXP_MSG_VALID_ARGE_VERSION_RANGE {

@@ -1,4 +1,5 @@
 ﻿using ArgeHeiwako.Data;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using Xunit;
@@ -48,7 +49,7 @@ namespace ArgeHeiwako.Tests.Data
         }
 
         #endregion
-
+        
         #region ToString()
 
         [Fact]
@@ -63,6 +64,51 @@ namespace ArgeHeiwako.Tests.Data
         {
             var unternehmen = new Abrechnungsunternehmen(1, "Test");
             Assert.Equal("01", unternehmen.ToString());
+        }
+
+        #endregion
+
+        #region FromString()
+
+        [Fact]
+        public void FromString_Null_ThrowsArgumentNullException()
+        {
+            var ex = Assert.Throws<ArgumentNullException>(() => Abrechnungsunternehmen.FromString(null));
+            Assert.Equal("abrechnungsunternehmen", ex.ParamName);
+        }
+
+        [Fact]
+        public void FromString_StringEmpty_ThrowsArgumentException()
+        {
+            var ex = Assert.Throws<ArgumentException>(() => Abrechnungsunternehmen.FromString(string.Empty));
+            Assert.Equal("abrechnungsunternehmen", ex.ParamName);
+            Assert.StartsWith("Eine valide Kennung besteht aus 2 numerischen Zeichen.", ex.Message);
+        }
+
+        [Fact]
+        public void FromString_String1Char_ThrowsArgumentException()
+        {
+            var ex = Assert.Throws<ArgumentException>(() => Abrechnungsunternehmen.FromString(" "));
+            Assert.Equal("abrechnungsunternehmen", ex.ParamName);
+            Assert.StartsWith("Eine valide Kennung besteht aus 2 numerischen Zeichen.", ex.Message);
+        }
+
+        [Fact]
+        public void FromString_String2Space_ThrowsArgumentException()
+        {
+            Assert.Null(Abrechnungsunternehmen.FromString("  "));
+        }
+
+        [Fact]
+        public void FromString_ZeroZero_ThrowsKeyNotFoundException()
+        {
+            var ex = Assert.Throws<KeyNotFoundException>(() => Abrechnungsunternehmen.FromString("00"));
+        }
+
+        [Fact]
+        public void FromString_30_ReturnsTechem()
+        {
+            Assert.Equal(Abrechnungsunternehmen.Find(30).ToString(), Abrechnungsunternehmen.FromString("30").ToString());
         }
 
         #endregion

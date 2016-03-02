@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="EXP_MSG_VALID_ABRECHNUNGSUNTERNEHMENKENNUNG" xml:space="preserve">
+    <value>Eine valide Kennung besteht aus 2 numerischen Zeichen.</value>
+  </data>
   <data name="EXP_MSG_VALID_ARGE_VERSION_RANGE" xml:space="preserve">
     <value>Eine valide ARGE-Version liegt im Wertebereich 03.00 und 99.99.</value>
   </data>
