@@ -69,9 +69,14 @@ namespace ArgeHeiwako.Data
 
             var version = new ArgeVersion(ordnungsbegriffeString.Substring(1, 5));
             var kundenNummer = new KundenNummer(ordnungsbegriffeString.Substring(6, 10));
-            var abrechnungsunternehmen = Data.Abrechnungsunternehmen.FromString(ordnungsbegriffeString.Substring(16, 2));
+            var abrechnungsunternehmen = Abrechnungsunternehmen.FromString(ordnungsbegriffeString.Substring(16, 2));
 
-            return new Ordnungsbegriffe(version, kundenNummer, new OrdnungsbegriffAbrechnungsunternehmen(0, 0), new OrdnungsbegriffWohnungsunternehmen("0"), abrechnungsunternehmen);
+            return new Ordnungsbegriffe(
+                version, 
+                kundenNummer, 
+                new OrdnungsbegriffAbrechnungsunternehmen(new LiegenschaftsNummer(0), new WohnungsNummer(0)), 
+                new OrdnungsbegriffWohnungsunternehmen("0"), 
+                abrechnungsunternehmen);
         }
     }
 }

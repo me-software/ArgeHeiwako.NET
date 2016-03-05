@@ -7,11 +7,11 @@ namespace ArgeHeiwako.IO
 {
     public class OrdnungsbegriffeWriter : IDisposable
     {
-        public static readonly Encoding WriterEncoding = Encoding.GetEncoding(ISO_8859_15_CODE_PAGE);
-
         private const int ISO_8859_15_CODE_PAGE = 28605;
         private const string LINE_END = "\r\n";
         private StreamWriter writer;
+
+        public static readonly Encoding WriterEncoding = Encoding.GetEncoding(ISO_8859_15_CODE_PAGE);
 
         public OrdnungsbegriffeWriter(Stream stream)
         {

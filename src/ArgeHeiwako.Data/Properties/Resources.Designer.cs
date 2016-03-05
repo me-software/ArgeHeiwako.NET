@@ -104,5 +104,23 @@ namespace ArgeHeiwako.Data.Properties {
                 return ResourceManager.GetString("EXP_MSG_VALID_KUNDENNUMMER_LENGTH", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eine valide Liegenschaftsnummer besteht aus 9 Ziffern..
+        /// </summary>
+        internal static string EXP_MSG_VALID_LIEGENSCHAFTSNUMMER {
+            get {
+                return ResourceManager.GetString("EXP_MSG_VALID_LIEGENSCHAFTSNUMMER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eine valide Wohnungsnummer besteht aus 4 Ziffern..
+        /// </summary>
+        internal static string EXP_MSG_VALID_WOHNUNGSNUMMER {
+            get {
+                return ResourceManager.GetString("EXP_MSG_VALID_WOHNUNGSNUMMER", resourceCulture);
+            }
+        }
     }
 }

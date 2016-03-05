@@ -132,4 +132,10 @@
   <data name="EXP_MSG_VALID_KUNDENNUMMER_LENGTH" xml:space="preserve">
     <value>Eine valide Kundennummer hat eine Zeichenlänge von 10 Zeichen.</value>
   </data>
+  <data name="EXP_MSG_VALID_LIEGENSCHAFTSNUMMER" xml:space="preserve">
+    <value>Eine valide Liegenschaftsnummer besteht aus 9 Ziffern.</value>
+  </data>
+  <data name="EXP_MSG_VALID_WOHNUNGSNUMMER" xml:space="preserve">
+    <value>Eine valide Wohnungsnummer besteht aus 4 Ziffern.</value>
+  </data>
 </root>

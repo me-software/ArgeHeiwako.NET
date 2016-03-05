@@ -169,7 +169,7 @@ namespace ArgeHeiwako.Tests.Data
 
         internal static Ordnungsbegriffe CreateDefault(Abrechnungsunternehmen unternehmen = null)
         {
-            return new Ordnungsbegriffe(new ArgeVersion(), new KundenNummer(1), new OrdnungsbegriffAbrechnungsunternehmen(1, 1), new
+            return new Ordnungsbegriffe(new ArgeVersion(), new KundenNummer(1), new OrdnungsbegriffAbrechnungsunternehmen(new LiegenschaftsNummer(1), new WohnungsNummer(1)), new
                 OrdnungsbegriffWohnungsunternehmen("Id"), unternehmen);
         }
     }

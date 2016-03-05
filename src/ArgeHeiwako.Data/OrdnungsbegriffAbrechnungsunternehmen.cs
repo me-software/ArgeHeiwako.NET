@@ -2,10 +2,10 @@
 {
     public sealed class OrdnungsbegriffAbrechnungsunternehmen
     {
-        private int liegenschaftsNummer;
-        private short wohnungsNummer;
+        private LiegenschaftsNummer liegenschaftsNummer;
+        private WohnungsNummer wohnungsNummer;
 
-        public OrdnungsbegriffAbrechnungsunternehmen(int liegenschaftsNummer, short wohnungsNummer)
+        public OrdnungsbegriffAbrechnungsunternehmen(LiegenschaftsNummer liegenschaftsNummer, WohnungsNummer wohnungsNummer)
         {
             this.liegenschaftsNummer = liegenschaftsNummer;
             this.wohnungsNummer = wohnungsNummer;
@@ -13,7 +13,7 @@
 
         public override string ToString()
         {
-            return string.Format("{0:000000000}{1:0000}", liegenschaftsNummer, wohnungsNummer);
+            return $"{liegenschaftsNummer}{wohnungsNummer}";
         }
     }
 }

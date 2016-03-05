@@ -66,6 +66,8 @@
     <Compile Include="Data\AbrechnungsunternehmenTests.cs" />
     <Compile Include="Data\ArgeVersionTests.cs" />
     <Compile Include="Data\KundenNummerTests.cs" />
+    <Compile Include="Data\WohnungsNummerTests.cs" />
+    <Compile Include="Data\LiegenschaftsNummerTests.cs" />
     <Compile Include="Data\OrdnungsbegriffAbrechnungsunternehmenTests.cs" />
     <Compile Include="Data\OrdnungsbegriffeTests.cs" />
     <Compile Include="Data\OrdnungsbegriffWohnungsunternehmenTests.cs" />

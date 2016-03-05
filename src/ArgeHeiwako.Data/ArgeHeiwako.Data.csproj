@@ -42,6 +42,7 @@
     <Compile Include="Abrechnungsunternehmen.cs" />
     <Compile Include="ArgeVersion.cs" />
     <Compile Include="KundenNummer.cs" />
+    <Compile Include="LiegenschaftsNummer.cs" />
     <Compile Include="OrdnungsbegriffAbrechnungsunternehmen.cs" />
     <Compile Include="Ordnungsbegriffe.cs" />
     <Compile Include="OrdnungsbegriffWohnungsunternehmen.cs" />
@@ -51,6 +52,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="WohnungsNummer.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
