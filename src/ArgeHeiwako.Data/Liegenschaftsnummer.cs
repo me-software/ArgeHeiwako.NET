@@ -18,19 +18,21 @@ namespace ArgeHeiwako.Data
             int nummer = 0;
             if (!int.TryParse(liegenschaftsnummer, out nummer))
                 throw new ArgumentException(Resources.EXP_MSG_VALID_LIEGENSCHAFTSNUMMER, "liegenschaftsnummer");
-
-            if (nummer > 999999999 || nummer < -99999999)
-                throw new ArgumentOutOfRangeException("liegenschaftsnummer");
-
-            this.liegenschaftsnummer = nummer;
+            
+            this.liegenschaftsnummer = CheckNumericRange(nummer);
         }
 
         public LiegenschaftsNummer(int liegenschaftsnummer)
         {
+
+            this.liegenschaftsnummer = CheckNumericRange(liegenschaftsnummer);
+        }
+
+        private int CheckNumericRange(int liegenschaftsnummer)
+        {
             if (liegenschaftsnummer > 999999999 || liegenschaftsnummer < -99999999)
                 throw new ArgumentOutOfRangeException("liegenschaftsnummer");
-
-            this.liegenschaftsnummer = liegenschaftsnummer;
+            return liegenschaftsnummer;
         }
 
         public static implicit operator int(LiegenschaftsNummer nummer)

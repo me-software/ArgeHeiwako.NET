@@ -121,29 +121,29 @@ namespace ArgeHeiwako.Tests.IO
 
         #region Load()
 
-        ////public void Load_FromStream_ReturnsOrdnungsbegriffeFile()
-        ////{
-        ////    using (var stream = new MemoryStream(OrdnungsbegriffeWriterTests.GetWrittenBytes()))
-        ////    {
-        ////        var file = OrdnungsbegriffeFile.Load(stream);
-        ////        Assert.NotNull(file);
-        ////        Assert.IsAssignableFrom<OrdnungsbegriffeFile>(file);
-        ////    }
-        ////}
+        public void Load_FromStream_ReturnsOrdnungsbegriffeFile()
+        {
+            using (var stream = new MemoryStream(OrdnungsbegriffeWriterTests.GetWrittenBytes()))
+            {
+                var file = OrdnungsbegriffeFile.Load(stream);
+                Assert.NotNull(file);
+                Assert.IsAssignableFrom<OrdnungsbegriffeFile>(file);
+            }
+        }
 
-        ////[Fact]
-        ////public void Load_FromStreamWithSingleRow_ReturnsOrdnungsbegriffeFileWithOneItem()
-        ////{
-        ////    using (var stream = new MemoryStream(OrdnungsbegriffeWriterTests.GetWrittenBytes()))
-        ////    {
-        ////        var file = OrdnungsbegriffeFile.Load(stream);
-        ////        Assert.NotNull(file);
-        ////        Assert.NotNull(file.Ordnungsbegriffe);
-        ////        Assert.NotEmpty(file.Ordnungsbegriffe);
-        ////        Assert.Equal(1, file.Ordnungsbegriffe.Count());
-        ////        Assert.IsAssignableFrom<Ordnungsbegriffe>(file.Ordnungsbegriffe.First());
-        ////    }
-        ////}
+        [Fact]
+        public void Load_FromStreamWithSingleRow_ReturnsOrdnungsbegriffeFileWithOneItem()
+        {
+            using (var stream = new MemoryStream(OrdnungsbegriffeWriterTests.GetWrittenBytes()))
+            {
+                var file = OrdnungsbegriffeFile.Load(stream);
+                Assert.NotNull(file);
+                Assert.NotNull(file.Ordnungsbegriffe);
+                Assert.NotEmpty(file.Ordnungsbegriffe);
+                Assert.Equal(1, file.Ordnungsbegriffe.Count());
+                Assert.IsAssignableFrom<Ordnungsbegriffe>(file.Ordnungsbegriffe.First());
+            }
+        }
 
         #endregion
     }

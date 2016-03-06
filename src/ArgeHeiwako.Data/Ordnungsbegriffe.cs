@@ -54,7 +54,7 @@ namespace ArgeHeiwako.Data
                 new string(' ', 76));
         }
 
-        internal static Ordnungsbegriffe FromString(string ordnungsbegriffeString)
+        public static Ordnungsbegriffe FromString(string ordnungsbegriffeString)
         {
             #region Contracts
             if (ordnungsbegriffeString == null)
@@ -70,12 +70,15 @@ namespace ArgeHeiwako.Data
             var version = new ArgeVersion(ordnungsbegriffeString.Substring(1, 5));
             var kundenNummer = new KundenNummer(ordnungsbegriffeString.Substring(6, 10));
             var abrechnungsunternehmen = Abrechnungsunternehmen.FromString(ordnungsbegriffeString.Substring(16, 2));
+            var liegenschaftsNummer = new LiegenschaftsNummer(ordnungsbegriffeString.Substring(18, 9));
+            var wohnungsNummer = new WohnungsNummer(ordnungsbegriffeString.Substring(27, 4));
+            var ordnungsbegriffWohnungsunternehmen = new OrdnungsbegriffWohnungsunternehmen(ordnungsbegriffeString.Substring(31, 20));
 
             return new Ordnungsbegriffe(
                 version, 
                 kundenNummer, 
-                new OrdnungsbegriffAbrechnungsunternehmen(new LiegenschaftsNummer(0), new WohnungsNummer(0)), 
-                new OrdnungsbegriffWohnungsunternehmen("0"), 
+                new OrdnungsbegriffAbrechnungsunternehmen(liegenschaftsNummer, wohnungsNummer),
+                ordnungsbegriffWohnungsunternehmen, 
                 abrechnungsunternehmen);
         }
     }

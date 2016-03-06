@@ -159,10 +159,16 @@ namespace ArgeHeiwako.Tests.Data
             Assert.Equal("30", Ordnungsbegriffe.FromString(valueBuilder.ToString()).Abrechnungsunternehmen.ToString());
         }
 
-        [Fact(Skip = "Not Implemented")]
+        [Fact()]
         public void FromString_String128Characters_ReturnsOrdnungsbegriffe()
         {
             Assert.IsAssignableFrom<Ordnungsbegriffe>(Ordnungsbegriffe.FromString(CreateDefault().ToString()));
+        }
+
+        [Fact()]
+        public void FromString_String128Characters_DefaultTpStringEqualsOrdnungsbegriffe()
+        {
+            Assert.Equal(CreateDefault().ToString(), Ordnungsbegriffe.FromString(CreateDefault().ToString()).ToString());
         }
 
         #endregion

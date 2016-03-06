@@ -7,6 +7,8 @@ namespace ArgeHeiwako.IO
 {
     public sealed class OrdnungsbegriffeFile
     {
+        private const string LINE_END = "\r\n";
+
         public DateTime Created { get; private set; }
 
         public string FileName
@@ -17,11 +19,27 @@ namespace ArgeHeiwako.IO
             }
         }
 
-        public IEnumerable<Ordnungsbegriffe> Ordnungsbegriffe { get; set; }
+        public IEnumerable<Ordnungsbegriffe> Ordnungsbegriffe { get; private set; }
+        
+        public OrdnungsbegriffeFile() 
+            : this(DateTime.Now, new List<Ordnungsbegriffe>())
+        {
+        }
 
         public OrdnungsbegriffeFile(DateTime created)
+            : this(created, new List<Ordnungsbegriffe>())
+        {
+        }
+
+        public OrdnungsbegriffeFile(IEnumerable<Ordnungsbegriffe> ordnungsbegriffe) 
+            : this(DateTime.Now, ordnungsbegriffe)
+        {
+        }
+
+        public OrdnungsbegriffeFile(DateTime created, IEnumerable<Ordnungsbegriffe> ordnungsbegriffe)
         {
             Created = created;
+            Ordnungsbegriffe = ordnungsbegriffe;
         }
 
         public void Write(IEnumerable<Ordnungsbegriffe> ordnungsbegriffe)
@@ -42,18 +60,19 @@ namespace ArgeHeiwako.IO
             }
         }
 
-        ////public static OrdnungsbegriffeFile Load(Stream stream)
-        ////{
-        ////    var ordnungsbegriffe = new List<Ordnungsbegriffe>();
+        public static OrdnungsbegriffeFile Load(Stream stream)
+        {
+            var ordnungsbegriffe = new List<Ordnungsbegriffe>();
 
-        ////    byte[] buffer = new byte[130];
-        ////    while(stream.Read(buffer, 0, 130) > 0)
-        ////    {
-        ////        var content = OrdnungsbegriffeWriter.WriterEncoding.GetString(buffer);
-        ////        Data.Ordnungsbegriffe.FromString(content);
-        ////    }
-            
-        ////    return new OrdnungsbegriffeFile(DateTime.Now);
-        ////}
+            byte[] buffer = new byte[130];
+            while (stream.Read(buffer, 0, 130) > 0)
+            {
+                var content = OrdnungsbegriffeWriter.WriterEncoding.GetString(buffer);
+                content = content.Replace(LINE_END, string.Empty);
+                ordnungsbegriffe.Add(Data.Ordnungsbegriffe.FromString(content));
+            }
+
+            return new OrdnungsbegriffeFile(DateTime.Now, ordnungsbegriffe);
+        }
     }
 }

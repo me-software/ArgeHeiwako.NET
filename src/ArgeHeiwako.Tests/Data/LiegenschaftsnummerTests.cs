@@ -1,9 +1,11 @@
 ﻿using ArgeHeiwako.Data;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using Xunit;
 
 namespace ArgeHeiwako.Tests.Data
 {
+    [ExcludeFromCodeCoverage]
     public class LiegenschaftsNummerTests
     {
         public LiegenschaftsNummerTests()
