@@ -3,17 +3,33 @@ using System;
 
 namespace ArgeHeiwako.Data
 {
+    /// <summary>
+    /// Diese Klasse repräsentiert die von der ARGE vorgegebene Versionierung innerhalb des 
+    /// Standard-Datenaustausches
+    /// </summary>
     public sealed class ArgeVersion
     {
         private const string DEFAULT_VERSION = "03.05";
+
         private string versionString;
 
-        public ArgeVersion() 
-            : this(DEFAULT_VERSION)
+        /// <summary>
+        /// Erstellt eine neue <see cref="ArgeVersion"/>-Instanz. 
+        /// Es wird die aktuell implementierte Version des Standard-Datenaustausches verwendet.
+        /// </summary>
+        public ArgeVersion() : this(DEFAULT_VERSION)
         {
         }
 
-        public ArgeVersion(string version)
+        /// <summary>
+        ///  Erstellt eine neue <see cref="ArgeVersion"/>-Instanz. 
+        /// </summary>
+        /// <param name="versionString">Die zu verwendende Version des Standard-Datenaustausches</param>
+        /// <remarks>
+        /// Durch die Nicht-Verwendung der Standard-Implementierung kann es zu Inkonsistenzen während der Verarbeitung kommen.
+        /// </remarks>
+        /// <exception cref="ArgumentException">Wenn der <paramref name="versionString"/> nicht korrekt angegeben wird.</exception>
+        public ArgeVersion(string versionString)
         {
             if (version == null)
                 throw new ArgumentNullException("version");
@@ -38,6 +54,10 @@ namespace ArgeHeiwako.Data
             versionString = version;
         }
 
+        /// <summary>
+        /// Liefert die formatierte Ausgabe für die Verwendung in einer Datentausch-Datei
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return versionString;
