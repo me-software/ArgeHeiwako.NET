@@ -3,12 +3,29 @@ using System;
 
 namespace ArgeHeiwako.Data
 {
+    /// <summary>
+    /// Diese Klasse repräsentiert die Nummer des Kunden, unter der er beim Abrechnungsunternehmen geführt wird.
+    /// </summary>
     public sealed class KundenNummer
     {
+        /// <summary>
+        /// Der maximal gültige Wert für eine <see cref="KundenNummer"/>
+        /// </summary>
         public const long MaxValue = 9999999999;
-        public const long MinValue = -999999999;
-        private long nummer;
 
+        /// <summary>
+        /// Der minimal gültige Wert für eine <see cref="KundenNummer"/>
+        /// </summary>
+        public const long MinValue = -999999999;
+
+        private readonly long nummer;
+
+        /// <summary>
+        /// Erstellt eine neue <see cref="KundenNummer"/>-Instanz
+        /// </summary>
+        /// <param name="nummer">Die Nummer des Kunden aus einer Datenaustausch-Datei in Form eines <see cref="string"/></param>
+        /// <exception cref="ArgumentNullException">Wenn der Parameter <paramref name="nummer"/> NULL ist.</exception>
+        /// <exception cref="ArgumentException">Wenn keine valide Kundennummer in <paramref name="nummer"/> angegeben wurde.</exception>
         public KundenNummer(string nummer)
         {
             if (nummer == null)
@@ -21,14 +38,23 @@ namespace ArgeHeiwako.Data
             if (!long.TryParse(nummer, out value))
                 throw new ArgumentException();
 
-            Init(value);
+            this.nummer = Init(value);
         }
 
+        /// <summary>
+        /// Erstellt eine neue <see cref="KundenNummer"/>-Instanz
+        /// </summary>
+        /// <param name="nummer">Der numerische Wert der Nummer des Kunden</param>
+        /// <exception cref="ArgumentException">Wenn keine valide Kundennummer in <paramref name="nummer"/> angegeben wurde.</exception>
         public KundenNummer(long nummer)
         {
-            Init(nummer);
+            this.nummer = Init(nummer);
         }
-        
+
+        /// <summary>
+        /// Liefert die formatierte Ausgabe für die Verwendung in einer Datentausch-Datei
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return nummer < 0 ? 
@@ -36,14 +62,14 @@ namespace ArgeHeiwako.Data
                 string.Format("{0:0000000000}", nummer);
         }
 
-        private void Init(long nummer)
+        private long Init(long nummer)
         {
             if (nummer > MaxValue)
                 throw new ArgumentException();
             if (nummer < MinValue)
                 throw new ArgumentException();
 
-            this.nummer = nummer;
+            return nummer;
         }
     }
 }
