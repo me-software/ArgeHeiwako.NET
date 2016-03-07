@@ -13,24 +13,46 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		..\LICENSE = ..\LICENSE
 		..\README.md = ..\README.md
+		VersionInfo.cs = VersionInfo.cs
 	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release 4.0|Any CPU = Release 4.0|Any CPU
+		Release 4.5|Any CPU = Release 4.5|Any CPU
+		Release 4.6|Any CPU = Release 4.6|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FAE52BDC-B953-4EE4-BB1A-CE3A01650E9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FAE52BDC-B953-4EE4-BB1A-CE3A01650E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAE52BDC-B953-4EE4-BB1A-CE3A01650E9A}.Release 4.0|Any CPU.ActiveCfg = Release 4.0|Any CPU
+		{FAE52BDC-B953-4EE4-BB1A-CE3A01650E9A}.Release 4.0|Any CPU.Build.0 = Release 4.0|Any CPU
+		{FAE52BDC-B953-4EE4-BB1A-CE3A01650E9A}.Release 4.5|Any CPU.ActiveCfg = Release 4.5|Any CPU
+		{FAE52BDC-B953-4EE4-BB1A-CE3A01650E9A}.Release 4.5|Any CPU.Build.0 = Release 4.5|Any CPU
+		{FAE52BDC-B953-4EE4-BB1A-CE3A01650E9A}.Release 4.6|Any CPU.ActiveCfg = Release 4.6|Any CPU
+		{FAE52BDC-B953-4EE4-BB1A-CE3A01650E9A}.Release 4.6|Any CPU.Build.0 = Release 4.6|Any CPU
 		{FAE52BDC-B953-4EE4-BB1A-CE3A01650E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAE52BDC-B953-4EE4-BB1A-CE3A01650E9A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BF8DAFE4-8D47-475F-828D-8D45CC514ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BF8DAFE4-8D47-475F-828D-8D45CC514ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF8DAFE4-8D47-475F-828D-8D45CC514ACA}.Release 4.0|Any CPU.ActiveCfg = Release 4.0|Any CPU
+		{BF8DAFE4-8D47-475F-828D-8D45CC514ACA}.Release 4.0|Any CPU.Build.0 = Release 4.0|Any CPU
+		{BF8DAFE4-8D47-475F-828D-8D45CC514ACA}.Release 4.5|Any CPU.ActiveCfg = Release 4.5|Any CPU
+		{BF8DAFE4-8D47-475F-828D-8D45CC514ACA}.Release 4.5|Any CPU.Build.0 = Release 4.5|Any CPU
+		{BF8DAFE4-8D47-475F-828D-8D45CC514ACA}.Release 4.6|Any CPU.ActiveCfg = Release 4.6|Any CPU
+		{BF8DAFE4-8D47-475F-828D-8D45CC514ACA}.Release 4.6|Any CPU.Build.0 = Release 4.6|Any CPU
 		{BF8DAFE4-8D47-475F-828D-8D45CC514ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF8DAFE4-8D47-475F-828D-8D45CC514ACA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.0|Any CPU.ActiveCfg = Release 4.0|Any CPU
+		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.0|Any CPU.Build.0 = Release 4.0|Any CPU
+		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.5|Any CPU.ActiveCfg = Release 4.5|Any CPU
+		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.5|Any CPU.Build.0 = Release 4.5|Any CPU
+		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.6|Any CPU.ActiveCfg = Release 4.6|Any CPU
+		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.6|Any CPU.Build.0 = Release 4.6|Any CPU
 		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

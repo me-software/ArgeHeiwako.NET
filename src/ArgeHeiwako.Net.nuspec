@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+    <metadata>
+        <id>ArgeHeiwako.Net</id>
+        <version>0.1.0-alpha</version>
+        <title>ArgeHeiwako.NET SDK</title>
+        <authors>me-software</authors>
+        <owners>me-software</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>.NET SDK für das Erstellen und Verarbeiten von Datenaustauschdateien nach ARGE-Heiwako (http://www.arge-heiwako.de/)</description>
+    </metadata>
+    <files>
+        <file src="..\build\net40\ArgeHeiwako.Data.dll" target="net40\ArgeHeiwako.Data.dll" />
+        <file src="..\build\net40\ArgeHeiwako.Data.pdb" target="net40\ArgeHeiwako.Data.pdb" />
+        <file src="..\build\net40\ArgeHeiwako.Data.XML" target="net40\ArgeHeiwako.Data.XML" />
+        <file src="..\build\net40\ArgeHeiwako.IO.dll" target="net40\ArgeHeiwako.IO.dll" />
+        <file src="..\build\net40\ArgeHeiwako.IO.pdb" target="net40\ArgeHeiwako.IO.pdb" />
+        <file src="..\build\net40\ArgeHeiwako.IO.xml" target="net40\ArgeHeiwako.IO.xml" />
+        <file src="..\build\net45\ArgeHeiwako.Data.dll" target="net452\ArgeHeiwako.Data.dll" />
+        <file src="..\build\net45\ArgeHeiwako.Data.pdb" target="net452\ArgeHeiwako.Data.pdb" />
+        <file src="..\build\net45\ArgeHeiwako.Data.xml" target="net452\ArgeHeiwako.Data.xml" />
+        <file src="..\build\net45\ArgeHeiwako.IO.dll" target="net452\ArgeHeiwako.IO.dll" />
+        <file src="..\build\net45\ArgeHeiwako.IO.pdb" target="net452\ArgeHeiwako.IO.pdb" />
+        <file src="..\build\net45\ArgeHeiwako.IO.xml" target="net452\ArgeHeiwako.IO.xml" />
+        <file src="..\build\net46\ArgeHeiwako.Data.dll" target="net46\ArgeHeiwako.Data.dll" />
+        <file src="..\build\net46\ArgeHeiwako.Data.pdb" target="net46\ArgeHeiwako.Data.pdb" />
+        <file src="..\build\net46\ArgeHeiwako.Data.xml" target="net46\ArgeHeiwako.Data.xml" />
+        <file src="..\build\net46\ArgeHeiwako.IO.dll" target="net46\ArgeHeiwako.IO.dll" />
+        <file src="..\build\net46\ArgeHeiwako.IO.pdb" target="net46\ArgeHeiwako.IO.pdb" />
+        <file src="..\build\net46\ArgeHeiwako.IO.xml" target="net46\ArgeHeiwako.IO.xml" />
+    </files>
+</package>
