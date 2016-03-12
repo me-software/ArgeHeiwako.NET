@@ -12,6 +12,7 @@
         <description>.NET SDK für das Erstellen und Verarbeiten von Datenaustauschdateien nach ARGE-Heiwako (http://www.arge-heiwako.de/)</description>
     </metadata>
     <files>
+        <file src="src\Documentation\Help\Documentation.chm" target="content\Documentation.chm" />
         <file src="build\release\net40\ArgeHeiwako.Data.dll" target="lib\net40\ArgeHeiwako.Data.dll" />
         <file src="build\release\net40\ArgeHeiwako.Data.pdb" target="lib\net40\ArgeHeiwako.Data.pdb" />
         <file src="build\release\net40\ArgeHeiwako.Data.XML" target="lib\net40\ArgeHeiwako.Data.XML" />
