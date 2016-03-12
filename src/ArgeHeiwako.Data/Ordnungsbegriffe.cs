@@ -6,17 +6,40 @@ namespace ArgeHeiwako.Data
     public sealed class Ordnungsbegriffe
     {
         private const string Satzart = "A";
-        private ArgeVersion version;
-        private KundenNummer kundenNummer;
-        private OrdnungsbegriffAbrechnungsunternehmen ordnungsbegriffAbrechnungsunternehmen;
-        private OrdnungsbegriffWohnungsunternehmen ordnungsbegriffWohnungsunternehmen;
-        private Abrechnungsunternehmen unternehmen;
+        private readonly ArgeVersion version;
+        private readonly KundenNummer kundenNummer;
+        private readonly OrdnungsbegriffAbrechnungsunternehmen ordnungsbegriffAbrechnungsunternehmen;
+        private readonly OrdnungsbegriffWohnungsunternehmen ordnungsbegriffWohnungsunternehmen;
+        private readonly Abrechnungsunternehmen unternehmen;
 
-        public string Version { get { return version.ToString(); } }
+        public string Version
+        {
+            get { return version.ToString(); }
+        }
 
-        public KundenNummer KundenNummer { get { return kundenNummer; } }
+        public KundenNummer KundenNummer
+        {
+            get { return kundenNummer; }
+        }
 
-        public Abrechnungsunternehmen Abrechnungsunternehmen { get { return unternehmen; } }
+        public Abrechnungsunternehmen Abrechnungsunternehmen
+        {
+            get { return unternehmen; }
+        }
+
+        public OrdnungsbegriffAbrechnungsunternehmen OrdnungsbegriffAbrechnungsunternehmen
+        {
+            get { return ordnungsbegriffAbrechnungsunternehmen; }
+        }
+
+        public OrdnungsbegriffWohnungsunternehmen OrdnungsbegriffWohnungsunternehmen
+        {
+            get
+            {
+                return ordnungsbegriffWohnungsunternehmen;
+            }
+        }
+
 
         public Ordnungsbegriffe(
             ArgeVersion version,
@@ -75,10 +98,10 @@ namespace ArgeHeiwako.Data
             var ordnungsbegriffWohnungsunternehmen = new OrdnungsbegriffWohnungsunternehmen(ordnungsbegriffeString.Substring(31, 20));
 
             return new Ordnungsbegriffe(
-                version, 
-                kundenNummer, 
+                version,
+                kundenNummer,
                 new OrdnungsbegriffAbrechnungsunternehmen(liegenschaftsNummer, wohnungsNummer),
-                ordnungsbegriffWohnungsunternehmen, 
+                ordnungsbegriffWohnungsunternehmen,
                 abrechnungsunternehmen);
         }
     }
