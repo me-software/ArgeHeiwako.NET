@@ -26,7 +26,7 @@
         /// <summary>
         ///Liefert die formatierte Ausgabe für die Verwendung in einer Datentausch-Datei
         /// </summary>
-        /// <returns>Liefert die formatierte Ausgabe für die Verwendung in einer Datentausch-Datei</returns>
+        /// <returns>Der formatierte String für die Datenaustauschdatei</returns>
         public override string ToString()
         {
             return $"{liegenschaftsNummer}{wohnungsNummer}";

@@ -33,7 +33,7 @@ namespace ArgeHeiwako.Data
         /// <summary>
         /// Liefert die formatierte Ausgabe für die Verwendung in einer Datentausch-Datei
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Der formatierte String für die Datenaustauschdatei</returns>
         public override string ToString()
         {
             return ordnungsbegriff.PadRight(20);

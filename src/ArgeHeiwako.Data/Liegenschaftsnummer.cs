@@ -41,11 +41,12 @@ namespace ArgeHeiwako.Data
         {
             this.liegenschaftsnummer = CheckNumericRange(liegenschaftsnummer);
         }
-        
+
         /// <summary>
         /// Implizite Konvertierung einer <see cref="LiegenschaftsNummer"/>-Instanz in ihren numerischen Wert vom Typ <see cref="int"/>
         /// </summary>
         /// <param name="nummer">Die zu konvertierende <see cref="LiegenschaftsNummer"/>-Instanz</param>
+        /// <returns>Der numerische Wert der <see cref="LiegenschaftsNummer"/></returns>
         public static implicit operator int(LiegenschaftsNummer nummer)
         {
             return nummer.liegenschaftsnummer;
@@ -54,7 +55,7 @@ namespace ArgeHeiwako.Data
         /// <summary>
         /// Liefert die formatierte Ausgabe für die Verwendung in einer Datentausch-Datei
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Der formatierte String für die Datenaustauschdatei</returns>
         public override string ToString()
         {
             return (liegenschaftsnummer < 0) ?

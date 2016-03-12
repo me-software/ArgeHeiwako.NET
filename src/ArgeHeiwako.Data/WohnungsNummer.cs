@@ -45,7 +45,7 @@ namespace ArgeHeiwako.Data
         /// <summary>
         /// Liefert die formatierte Ausgabe für die Verwendung in einer Datentausch-Datei
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Der formatierte String für die Datenaustauschdatei</returns>
         public override string ToString()
         {
             return (wohnungsnummer < 0) ? 
@@ -57,6 +57,7 @@ namespace ArgeHeiwako.Data
         /// Implizite Konvertierung einer <see cref="WohnungsNummer"/>-Instanz in ihren numerischen Wert vom Typ <see cref="short"/>
         /// </summary>
         /// <param name="nummer">Die zu konvertierende <see cref="WohnungsNummer"/>-Instanz</param>
+        /// <returns>Der numerische Wert der <see cref="WohnungsNummer"/></returns>
         public static implicit operator short(WohnungsNummer nummer)
         {
             return nummer.wohnungsnummer;
