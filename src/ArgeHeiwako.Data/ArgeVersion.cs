@@ -24,12 +24,12 @@ namespace ArgeHeiwako.Data
         /// <summary>
         ///  Erstellt eine neue <see cref="ArgeVersion"/>-Instanz. 
         /// </summary>
-        /// <param name="versionString">Die zu verwendende Version des Standard-Datenaustausches</param>
+        /// <param name="version">Die zu verwendende Version des Standard-Datenaustausches</param>
         /// <remarks>
         /// Durch die Nicht-Verwendung der Standard-Implementierung kann es zu Inkonsistenzen während der Verarbeitung kommen.
         /// </remarks>
-        /// <exception cref="ArgumentException">Wenn der <paramref name="versionString"/> nicht korrekt angegeben wird.</exception>
-        public ArgeVersion(string versionString)
+        /// <exception cref="ArgumentException">Wenn der <paramref name="version"/> nicht korrekt angegeben wird.</exception>
+        public ArgeVersion(string version)
         {
             if (version == null)
                 throw new ArgumentNullException("version");

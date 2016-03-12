@@ -195,3 +195,4 @@ FakesAssemblies/
 # Visual Studio 6 workspace options file
 *.opt
 /src/ArgeHeiwako.Documentation/Help/Working
+/src/Documentation/Help/Documentation.chm
