@@ -5,6 +5,9 @@ using System.IO;
 
 namespace ArgeHeiwako.IO
 {
+    /// <summary>
+    /// Test
+    /// </summary>
     public sealed class OrdnungsbegriffeFile
     {
         private const string LINE_END = "\r\n";

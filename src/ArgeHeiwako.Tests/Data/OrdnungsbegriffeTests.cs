@@ -124,7 +124,7 @@ namespace ArgeHeiwako.Tests.Data
         public void FromString_StringVersionValid_VersionEqual03p05()
         {
             var value = CreateDefault().ToString();
-            Assert.Equal("03.05", Ordnungsbegriffe.FromString(value).Version);
+            Assert.Equal("03.05", Ordnungsbegriffe.FromString(value).Version.ToString());
         }
 
         [Fact]

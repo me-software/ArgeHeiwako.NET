@@ -30,6 +30,9 @@
       <DocumentationSource sourceFile="..\ArgeHeiwako.Data\ArgeHeiwako.Data.csproj" xmlns="" />
       <DocumentationSource sourceFile="..\ArgeHeiwako.IO\ArgeHeiwako.IO.csproj" />
     </DocumentationSources>
+    <NamespaceSummaries>
+      <NamespaceSummaryItem name="ArgeHeiwako.Data" isDocumented="True" xmlns="">Dieser Namespace beinhaltet alle Datenklassen für die Erstellung und das Lesen von Datenaustauschdateien nach dem abgebildeten Standard.</NamespaceSummaryItem>
+    </NamespaceSummaries>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->
