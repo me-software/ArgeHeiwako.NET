@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="2f04566b-5502-41d9-bc3a-e1f503700063" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+        .NET SDK für das Erstellen und Verarbeiten von Datenaustauschdateien nach dem erstellten Standard  der Arbeitsgemeinschaft Heiz- und Wasserkostenverteilung e.V. (http://www.arge-heiwako.de/)
+      </para>
+    </introduction>
+
+    <relatedTopics>
+      <link xlink:href="00210b05-0165-4495-be4c-9e6a7a3bdcb5" />
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

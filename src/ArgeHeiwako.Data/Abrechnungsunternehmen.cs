@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 namespace ArgeHeiwako.Data
 {
+    /// <summary>
+    /// Diese Klasse repräsentiert ein Abrechnungsunternehmen, so wie es in der Version 3.05 im Abschnitt
+    /// 11.9 des Standard-Datenaustausches definiert ist.
+    /// </summary>
     public sealed class Abrechnungsunternehmen
     {
         #region Tabelle "U"
@@ -53,8 +57,14 @@ namespace ArgeHeiwako.Data
 
         #endregion
 
+        /// <summary>
+        /// Liefert die numerische Kennung des Abrechnungsunternehmen
+        /// </summary>
         public int Nummer { get; private set; }
 
+        /// <summary>
+        /// Liefert die textuelle Bezeichnung des Abrechungsunternehmens
+        /// </summary>
         public string Name { get; private set; }
 
         internal Abrechnungsunternehmen(int nummer, string name)
@@ -63,11 +73,27 @@ namespace ArgeHeiwako.Data
             Name = name;
         }
 
+        /// <summary>
+        /// Liefert die formatierte Ausgabe für die Verwendung in einer Datentausch-Datei
+        /// </summary>
+        /// <returns>Der formatierte String für die Datenaustauschdatei</returns>
         public override string ToString()
         {
             return $"{Nummer:00}";
         }
 
+        /// <summary>
+        /// Ermittelt aus <paramref name="abrechnungsunternehmen"/> ein Abrechnungsunternehmen aus der Tabelle U
+        /// </summary>
+        /// <remarks>
+        /// Diese Methode soll verwendet werden, wenn aus einer Datenaustausch-Datei gelesen wird, um eine korrekte Prüfung
+        /// des <see cref="Abrechnungsunternehmen"/> gewährleisten zu können.
+        /// </remarks>
+        /// <param name="abrechnungsunternehmen">Den Feldwert aus der Datenaustausch-Datei, welcher ein Abrechnunsunternehmen repräsentiert.</param>
+        /// <returns>Die Instanz des ermittelten <see cref="Abrechnungsunternehmen"/> oder NULL</returns>
+        /// <exception cref="ArgumentNullException">Wenn der Parameter <paramref name="abrechnungsunternehmen"/> NULL ist.</exception>
+        /// <exception cref="ArgumentException">Wenn keine valide Kennung des <see cref="Abrechnungsunternehmen"/> im Parameter <paramref name="abrechnungsunternehmen"/> übergeben wird.</exception>
+        /// <exception cref="KeyNotFoundException">Wenn für die Kennung in <paramref name="abrechnungsunternehmen"/> kein Abrechnungsunternehmen ermittelt werden kann.</exception>
         internal static Abrechnungsunternehmen FromString(string abrechnungsunternehmen)
         {
             if (abrechnungsunternehmen == null)
@@ -88,6 +114,12 @@ namespace ArgeHeiwako.Data
             return Find(kennungNummeric);
         }
 
+        /// <summary>
+        /// Ermittelt ein <see cref="Abrechnungsunternehmen"/> anhand der übergebenen numerischen Kennung
+        /// </summary>
+        /// <param name="nummer">Die numerische Kennung des <see cref="Abrechnungsunternehmen"/></param>
+        /// <returns>Das ermittelte <see cref="Abrechnungsunternehmen"/></returns>
+        /// <exception cref="KeyNotFoundException">Wenn für die Kennung in <paramref name="nummer"/> kein Abrechnungsunternehmen ermittelt werden kann.</exception>
         public static Abrechnungsunternehmen Find(int nummer)
         {
             return unternehmen[nummer];
