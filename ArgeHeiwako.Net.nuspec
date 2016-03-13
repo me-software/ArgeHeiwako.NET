@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+    <metadata>
+        <id>ArgeHeiwako.Net</id>
+        <version>0.1.2-alpha</version>
+        <title>ArgeHeiwako.NET SDK</title>
+        <authors>me-software Developers</authors>
+        <owners>me-software</owners>
+        <licenseUrl>https://github.com/me-software/ArgeHeiwako.NET/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/me-software/ArgeHeiwako.NET</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>.NET SDK für das Erstellen und Verarbeiten von Datenaustauschdateien nach ARGE-Heiwako (http://www.arge-heiwako.de/)</description>
+    </metadata>
+    <files>
+        <file src="src\Documentation\Help\Documentation.chm" target="content\Documentation.chm" />
+        <file src="build\release\net40\ArgeHeiwako.Data.dll" target="lib\net40\ArgeHeiwako.Data.dll" />
+        <file src="build\release\net40\ArgeHeiwako.Data.pdb" target="lib\net40\ArgeHeiwako.Data.pdb" />
+        <file src="build\release\net40\ArgeHeiwako.Data.XML" target="lib\net40\ArgeHeiwako.Data.XML" />
+        <file src="build\release\net40\ArgeHeiwako.IO.dll" target="lib\net40\ArgeHeiwako.IO.dll" />
+        <file src="build\release\net40\ArgeHeiwako.IO.pdb" target="lib\net40\ArgeHeiwako.IO.pdb" />
+        <file src="build\release\net40\ArgeHeiwako.IO.XML" target="lib\net40\ArgeHeiwako.IO.xml" />
+    </files>
+</package>

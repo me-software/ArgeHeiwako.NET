@@ -16,9 +16,18 @@ namespace ArgeHeiwako.Tests.Data
         }
 
         [Fact]
+        public void Ctor_Null_ThrowsArgumentException()
+        {
+            var ex = Assert.Throws<ArgumentNullException>(() => new ArgeVersion(null));
+            Assert.Equal("version", ex.ParamName);
+        }
+
+        [Fact]
         public void Ctor_EmptyVersionString_ThrowsArgumentException()
         {
-            Assert.Throws<ArgumentException>(() => new ArgeVersion(string.Empty));
+            var ex = Assert.Throws<ArgumentException>(() => new ArgeVersion(string.Empty));
+            Assert.Equal("version", ex.ParamName);
+            Assert.StartsWith("Eine valide ARGE-Version liegt im Wertebereich 03.00 und 99.99.", ex.Message);
         }
 
         [Fact]
@@ -38,13 +47,16 @@ namespace ArgeHeiwako.Tests.Data
         [Fact]
         public void Ctor_VersionString3p04_ThrowsArgumentException()
         {
-            Assert.Throws<ArgumentException>(() => new ArgeVersion("3.04"));
+            var ex = Assert.Throws<ArgumentException>(() => new ArgeVersion("3.04"));
+            Assert.Equal("version", ex.ParamName);
+            Assert.StartsWith("Eine valide ARGE-Version liegt im Wertebereich 03.00 und 99.99.", ex.Message);
         }
 
         [Fact]
         public void Ctor_VersionStringWithoutPoint_ThrowsArgumentException()
         {
             var ex = Assert.Throws<ArgumentException>(() => new ArgeVersion("12345"));
+            Assert.Equal("version", ex.ParamName);
             Assert.StartsWith(ArgeHeiwako.Data.Properties.Resources.EXP_MSG_VALID_ARGE_VERSION_RANGE, ex.Message);
         }
 
@@ -52,6 +64,7 @@ namespace ArgeHeiwako.Tests.Data
         public void Ctor_VersionStringFirstPartNotNumeric_ThrowsArgumentException()
         {
             var ex = Assert.Throws<ArgumentException>(() => new ArgeVersion("A2.45"));
+            Assert.Equal("version", ex.ParamName);
             Assert.StartsWith(ArgeHeiwako.Data.Properties.Resources.EXP_MSG_VALID_ARGE_VERSION_RANGE, ex.Message);
         }
 
@@ -59,6 +72,7 @@ namespace ArgeHeiwako.Tests.Data
         public void Ctor_VersionStringFirstPartLesserThan3_ThrowsArgumentException()
         {
             var ex = Assert.Throws<ArgumentException>(() => new ArgeVersion("02.45"));
+            Assert.Equal("version", ex.ParamName);
             Assert.StartsWith(ArgeHeiwako.Data.Properties.Resources.EXP_MSG_VALID_ARGE_VERSION_RANGE, ex.Message);
         }
 
@@ -66,6 +80,7 @@ namespace ArgeHeiwako.Tests.Data
         public void Ctor_VersionStringSecondPartNotNumeric_ThrowsArgumentException()
         {
             var ex = Assert.Throws<ArgumentException>(() => new ArgeVersion("03.A5"));
+            Assert.Equal("version", ex.ParamName);
             Assert.StartsWith(ArgeHeiwako.Data.Properties.Resources.EXP_MSG_VALID_ARGE_VERSION_RANGE, ex.Message);
         }
     }

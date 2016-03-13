@@ -25,6 +25,13 @@ namespace ArgeHeiwako.Tests.IO
         #region Ctor
 
         [Fact]
+        public void Ctor_Default_OrdnungsbegriffeReturnsEmptyCollection()
+        {
+            var file = new OrdnungsbegriffeFile();
+            Assert.Empty(file.Ordnungsbegriffe);
+        }
+
+        [Fact]
         public void Ctor_DateTime_CreatedEqualsDateTime()
         {
             var dateTime = DateTime.Now;

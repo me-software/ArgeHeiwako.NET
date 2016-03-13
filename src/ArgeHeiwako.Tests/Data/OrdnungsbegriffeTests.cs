@@ -124,7 +124,7 @@ namespace ArgeHeiwako.Tests.Data
         public void FromString_StringVersionValid_VersionEqual03p05()
         {
             var value = CreateDefault().ToString();
-            Assert.Equal("03.05", Ordnungsbegriffe.FromString(value).Version);
+            Assert.Equal("03.05", Ordnungsbegriffe.FromString(value).Version.ToString());
         }
 
         [Fact]
@@ -169,6 +169,62 @@ namespace ArgeHeiwako.Tests.Data
         public void FromString_String128Characters_DefaultTpStringEqualsOrdnungsbegriffe()
         {
             Assert.Equal(CreateDefault().ToString(), Ordnungsbegriffe.FromString(CreateDefault().ToString()).ToString());
+        }
+
+        #endregion
+
+        #region Version
+
+        [Fact]
+        public void Version_Get_ReturnsVersion()
+        {
+            Assert.Equal("03.05", CreateDefault().Version.ToString());
+        }
+
+        #endregion
+
+        #region KundenNummer
+
+        [Fact]
+        public void KundenNummer_Get_Returns1()
+        {
+            Assert.Equal("0000000001", CreateDefault().KundenNummer.ToString());
+        }
+
+        #endregion
+
+        #region Abrechnungsunternehmen
+
+        [Fact]
+        public void Abrechnungsunternehmen_GetRetruns30()
+        {
+            Assert.Equal(30, CreateDefault(Abrechnungsunternehmen.Find(30)).Abrechnungsunternehmen.Nummer);
+        }
+
+        [Fact]
+        public void Abrechnungsunternehmen_NotSet_Get_RetrunsNull()
+        {
+            Assert.Null(CreateDefault().Abrechnungsunternehmen);
+        }
+
+        #endregion
+
+        #region OrdnungsbegriffAbrechnungsunternehmen
+
+        [Fact]
+        public void OrdnungsbegriffAbrechnungsunternehmen_Get_Returns0000000010001()
+        {
+            Assert.Equal("0000000010001", CreateDefault(Abrechnungsunternehmen.Find(30)).OrdnungsbegriffAbrechnungsunternehmen.ToString());
+        }
+
+        #endregion
+
+        #region OrdnungsbegriffWohnungsunternehmen
+
+        [Fact]
+        public void OrdnungsbegriffWohnungsunternehmen_Get_Returns1Spaces()
+        {
+            Assert.Equal("Id                  ", CreateDefault(Abrechnungsunternehmen.Find(30)).OrdnungsbegriffWohnungsunternehmen.ToString());
         }
 
         #endregion

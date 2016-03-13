@@ -3,21 +3,66 @@ using System;
 
 namespace ArgeHeiwako.Data
 {
+    /// <summary>
+    /// Diese Klasse repräsentiert die Satzart A, welche für Austausch der Ordnungsbegriffe zwischen
+    /// Abrechnungs- und Wohnungsunternehmen verwendet wird.
+    /// </summary>
     public sealed class Ordnungsbegriffe
     {
         private const string Satzart = "A";
-        private ArgeVersion version;
-        private KundenNummer kundenNummer;
-        private OrdnungsbegriffAbrechnungsunternehmen ordnungsbegriffAbrechnungsunternehmen;
-        private OrdnungsbegriffWohnungsunternehmen ordnungsbegriffWohnungsunternehmen;
-        private Abrechnungsunternehmen unternehmen;
+        private readonly ArgeVersion version;
+        private readonly KundenNummer kundenNummer;
+        private readonly OrdnungsbegriffAbrechnungsunternehmen ordnungsbegriffAbrechnungsunternehmen;
+        private readonly OrdnungsbegriffWohnungsunternehmen ordnungsbegriffWohnungsunternehmen;
+        private readonly Abrechnungsunternehmen unternehmen;
 
-        public string Version { get { return version.ToString(); } }
+        /// <summary>
+        /// Liefert die verwendete <see cref="ArgeVersion"/> für den Datenaustausch
+        /// </summary>
+        public ArgeVersion Version
+        {
+            get { return version; }
+        }
 
-        public KundenNummer KundenNummer { get { return kundenNummer; } }
+        /// <summary>
+        /// Liefert die Kundennummer des Wohnungsunternehmens, wie sie beim Abrechnungsunternehmen geführt wird
+        /// </summary>
+        public KundenNummer KundenNummer
+        {
+            get { return kundenNummer; }
+        }
 
-        public Abrechnungsunternehmen Abrechnungsunternehmen { get { return unternehmen; } }
+        /// <summary>
+        /// Liefert das Abrechnungsunternehmen oder NULL, falls nicht gesetzt.
+        /// </summary>
+        public Abrechnungsunternehmen Abrechnungsunternehmen
+        {
+            get { return unternehmen; }
+        }
 
+        /// <summary>
+        /// Liefert den vom Abrechnungsunternehmen verwendeten Ordnungsbegriff
+        /// </summary>
+        public OrdnungsbegriffAbrechnungsunternehmen OrdnungsbegriffAbrechnungsunternehmen
+        {
+            get { return ordnungsbegriffAbrechnungsunternehmen; }
+        }
+
+        /// <summary>
+        /// Liefert den vom Wohnungsunternehmen verwendeten Ordnungsbegriff
+        /// </summary>
+        public OrdnungsbegriffWohnungsunternehmen OrdnungsbegriffWohnungsunternehmen
+        {
+            get { return ordnungsbegriffWohnungsunternehmen; }
+        }
+
+        /// <summary>
+        /// Erstellt eine neue <see cref="Ordnungsbegriffe"/>-Instanz
+        /// </summary>
+        /// <param name="version">Verwendete <see cref="ArgeVersion"/></param>
+        /// <param name="kundenNummer">Die Nummer des Wohnungsunternehmens wie es beim Abrechnungsunternehmen geführt wird</param>
+        /// <param name="ordnungsbegriffAbrechnungsunternehmen">Der vom Abrechnungsunternehmen verwendete Ordnungsbegriff</param>
+        /// <param name="ordnungsbegriffWohnungsunternehmen">Der vom Wohnungsunternehmen verwendete Ordnungsbegriff</param>
         public Ordnungsbegriffe(
             ArgeVersion version,
             KundenNummer kundenNummer,
@@ -27,6 +72,14 @@ namespace ArgeHeiwako.Data
         {
         }
 
+        /// <summary>
+        /// Erstellt eine neue <see cref="Ordnungsbegriffe"/>-Instanz
+        /// </summary>
+        /// <param name="version">Verwendete <see cref="ArgeVersion"/></param>
+        /// <param name="kundenNummer">Die Nummer des Wohnungsunternehmens wie es beim Abrechnungsunternehmen geführt wird</param>
+        /// <param name="ordnungsbegriffAbrechnungsunternehmen">Der vom Abrechnungsunternehmen verwendete Ordnungsbegriff</param>
+        /// <param name="ordnungsbegriffWohnungsunternehmen">Der vom Wohnungsunternehmen verwendete Ordnungsbegriff</param>
+        /// <param name="unternehmen">Das Abrechnungsunternehmen</param>
         public Ordnungsbegriffe(
             ArgeVersion version,
             KundenNummer kundenNummer,
@@ -41,6 +94,10 @@ namespace ArgeHeiwako.Data
             this.unternehmen = unternehmen;
         }
 
+        /// <summary>
+        /// Liefert die formatierte Ausgabe für die Verwendung in einer Datentausch-Datei
+        /// </summary>
+        /// <returns>Der formatierte String für die Datenaustauschdatei</returns>
         public override string ToString()
         {
             return string.Format(
@@ -54,6 +111,13 @@ namespace ArgeHeiwako.Data
                 new string(' ', 76));
         }
 
+        /// <summary>
+        /// Erstellt eine neue <see cref="Ordnungsbegriffe"/>-Instanz auf Basis einer Zeile in der Datenaustausch-Datei
+        /// </summary>
+        /// <param name="ordnungsbegriffeString">Die Zeile aus der Datenaustausch-Datei</param>
+        /// <returns>Die ausgelesene <see cref="Ordnungsbegriffe"/>-Instanz</returns>
+        /// <exception cref="ArgumentNullException">Wenn der Parameter <paramref name="ordnungsbegriffeString"/> NULL ist</exception>
+        /// <exception cref="ArgumentException">Wenn der Parameter <paramref name="ordnungsbegriffeString"/> keinen validen A-Satz enthält</exception>
         public static Ordnungsbegriffe FromString(string ordnungsbegriffeString)
         {
             #region Contracts
@@ -75,10 +139,10 @@ namespace ArgeHeiwako.Data
             var ordnungsbegriffWohnungsunternehmen = new OrdnungsbegriffWohnungsunternehmen(ordnungsbegriffeString.Substring(31, 20));
 
             return new Ordnungsbegriffe(
-                version, 
-                kundenNummer, 
+                version,
+                kundenNummer,
                 new OrdnungsbegriffAbrechnungsunternehmen(liegenschaftsNummer, wohnungsNummer),
-                ordnungsbegriffWohnungsunternehmen, 
+                ordnungsbegriffWohnungsunternehmen,
                 abrechnungsunternehmen);
         }
     }

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="00210b05-0165-4495-be4c-9e6a7a3bdcb5" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>Auf dieser Seite können zentral die Informationen über die erstellten Versionen eingesehen werden.</para>
+    </introduction>
+
+    <section>
+      <title>Versionsübersicht</title>
+      <content>
+        <para>Wähle eine Version aus, um mehr darüber zu erfahren.</para>
+
+        <list class="bullet">
+          <listItem>
+            <para>
+              <externalLink>
+                <linkText>0.1.2-alpha</linkText>
+                <linkUri>https://github.com/me-software/ArgeHeiwako.NET/issues?q=milestone%3A0.1.2-alpha+</linkUri>
+              </externalLink>
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <externalLink>
+                <linkText>0.1.0-alpha</linkText>
+                <linkUri>https://github.com/me-software/ArgeHeiwako.NET/issues?q=milestone%3A0.1.0</linkUri>
+              </externalLink>
+            </para>
+          </listItem>
+
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="2f04566b-5502-41d9-bc3a-e1f503700063" />
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>
