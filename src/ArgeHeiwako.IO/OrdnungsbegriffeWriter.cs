@@ -28,27 +28,58 @@ namespace ArgeHeiwako.IO
         {
             writer = new StreamWriter(stream, WriterEncoding);
         }
-        
+
         /// <summary>
         /// Schreibt eine <see cref="Ordnungsbegriffe"/>-Instanz in den den verwendeten <see cref="Stream"/>
         /// </summary>
         /// <param name="ordnungsbegriffe"></param>
         public void Write(Ordnungsbegriffe ordnungsbegriffe)
         {
+            if (disposed)
+                throw new ObjectDisposedException("OrdnungsbegriffeWriter");
+
             writer.Write($"{ordnungsbegriffe}{LINE_END}");
         }
 
-        #region IDisposable-Impl
+        #region IDisposable-Implementation
+        // Flag: Has Dispose already been called?
+        bool disposed = false;
 
         /// <summary>
-        /// Gibt die verwendeten Resourcen frei.
+        /// Öffentliche Implemntierung des Dispose-Pattern für die externe Verwendung
         /// </summary>
         public void Dispose()
         {
-            writer.Flush();
-            writer.Dispose();
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
-        
+
+        /// <summary>
+        /// Geschützte Implementierung des Dispose-Pattern
+        /// </summary>
+        /// <param name="disposing">Kennzeichen, ob dispose ausgeführt werden soll.</param>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposed)
+                return;
+
+            if (disposing)
+            {
+                writer.Flush();
+                writer.Dispose();
+            }
+
+            disposed = true;
+        }
+
+        /// <summary>
+        /// Finalizer
+        /// </summary>
+        ~OrdnungsbegriffeWriter()
+        {
+            Dispose(false);
+        }
+
         #endregion
     }
 }
