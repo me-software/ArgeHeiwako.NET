@@ -34,7 +34,7 @@
     <CodeAnalysisRuleSet />
     <Prefer32Bit>false</Prefer32Bit>
     <DocumentationFile>..\..\build\release\net40\ArgeHeiwako.IO.XML</DocumentationFile>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
