@@ -21,8 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>
-    </CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -45,20 +44,22 @@
     <Compile Include="..\VersionInfo.cs">
       <Link>Properties\VersionInfo.cs</Link>
     </Compile>
-    <Compile Include="Abrechnungsunternehmen.cs" />
-    <Compile Include="ArgeVersion.cs" />
-    <Compile Include="KundenNummer.cs" />
-    <Compile Include="LiegenschaftsNummer.cs" />
-    <Compile Include="OrdnungsbegriffAbrechnungsunternehmen.cs" />
+    <Compile Include="Common\Abrechnungsunternehmen.cs" />
+    <Compile Include="Common\ArgeVersion.cs" />
+    <Compile Include="Common\Betrag.cs" />
+    <Compile Include="Common\KundenNummer.cs" />
+    <Compile Include="Common\LiegenschaftsNummer.cs" />
+    <Compile Include="Common\OrdnungsbegriffAbrechnungsunternehmen.cs" />
+    <Compile Include="Common\Prozent.cs" />
     <Compile Include="Ordnungsbegriffe.cs" />
-    <Compile Include="OrdnungsbegriffWohnungsunternehmen.cs" />
+    <Compile Include="Common\OrdnungsbegriffWohnungsunternehmen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="WohnungsNummer.cs" />
+    <Compile Include="Common\WohnungsNummer.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

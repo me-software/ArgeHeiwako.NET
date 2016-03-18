@@ -90,14 +90,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\AbrechnungsunternehmenTests.cs" />
-    <Compile Include="Data\ArgeVersionTests.cs" />
-    <Compile Include="Data\KundenNummerTests.cs" />
-    <Compile Include="Data\WohnungsNummerTests.cs" />
-    <Compile Include="Data\LiegenschaftsNummerTests.cs" />
-    <Compile Include="Data\OrdnungsbegriffAbrechnungsunternehmenTests.cs" />
+    <Compile Include="Data\Common\AbrechnungsunternehmenTests.cs" />
+    <Compile Include="Data\Common\ArgeVersionTests.cs" />
+    <Compile Include="Data\Common\BetragTests.cs" />
+    <Compile Include="Data\Common\KundenNummerTests.cs" />
+    <Compile Include="Data\Common\ProzentTests.cs" />
+    <Compile Include="Data\Common\WohnungsNummerTests.cs" />
+    <Compile Include="Data\Common\LiegenschaftsNummerTests.cs" />
+    <Compile Include="Data\Common\OrdnungsbegriffAbrechnungsunternehmenTests.cs" />
     <Compile Include="Data\OrdnungsbegriffeTests.cs" />
-    <Compile Include="Data\OrdnungsbegriffWohnungsunternehmenTests.cs" />
+    <Compile Include="Data\Common\OrdnungsbegriffWohnungsunternehmenTests.cs" />
     <Compile Include="IO\OrdnungsbegriffeFileTests.cs" />
     <Compile Include="IO\OrdnungsbegriffeWriterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

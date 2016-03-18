@@ -1,4 +1,5 @@
 ﻿using ArgeHeiwako.Data;
+using ArgeHeiwako.Data.Common;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;

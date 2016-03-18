@@ -1,5 +1,6 @@
 ﻿using ArgeHeiwako.Data.Properties;
 using System;
+using ArgeHeiwako.Data.Common;
 
 namespace ArgeHeiwako.Data
 {
