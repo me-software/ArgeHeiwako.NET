@@ -49,6 +49,13 @@ namespace ArgeHeiwako.Tests.Data.Common
             Assert.Equal("prozent", ex.ParamName);
         }
 
+        [Fact]
+        public void Ctor_NotNumericString_ThrowsArgumentException()
+        {
+            var ex = Assert.Throws<ArgumentException>(() => new Prozent(new string('A', 5)));
+            Assert.Equal("prozent", ex.ParamName);
+        }
+
         #endregion
 
         #region Implizit-Operator double()
@@ -69,34 +76,15 @@ namespace ArgeHeiwako.Tests.Data.Common
 
         #region ToString()
 
-        [Fact]
-        public void ToString_1_Returns00100()
+        [Theory]
+        [InlineData("00100", 1)]
+        [InlineData("01000", 10)]
+        [InlineData("10000", 100)]
+        [InlineData("00010", .1)]
+        [InlineData("00001", .01)]
+        public void ToString_1_Returns00100(string expectedValue, decimal data)
         {
-            Assert.Equal("00100", new Prozent(1).ToString());
-        }
-
-        [Fact]
-        public void ToString_10_Returns01000()
-        {
-            Assert.Equal("01000", new Prozent(10).ToString());
-        }
-
-        [Fact]
-        public void ToString_100_Returns10000()
-        {
-            Assert.Equal("10000", new Prozent(100).ToString());
-        }
-
-        [Fact]
-        public void ToString_Dot1_Returns00010()
-        {
-            Assert.Equal("00010", new Prozent(.1M).ToString());
-        }
-
-        [Fact]
-        public void ToString_Dot01_Returns00001()
-        {
-            Assert.Equal("00001", new Prozent(.01M).ToString());
+            Assert.Equal(expectedValue, new Prozent(data).ToString());
         }
 
         #endregion

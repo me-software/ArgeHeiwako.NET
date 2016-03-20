@@ -1,13 +1,11 @@
 ﻿using ArgeHeiwako.Data.Common;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 using Xunit;
 
 namespace ArgeHeiwako.Tests.Data.Common
 {
+    [ExcludeFromCodeCoverage]
     public class BetragTests
     {
         public BetragTests()
@@ -45,6 +43,13 @@ namespace ArgeHeiwako.Tests.Data.Common
         }
 
         [Fact]
+        public void Ctor_StringNotNumericCorrectLength_ThrowsArgumentOutOfRangeException()
+        {
+            var ex = Assert.Throws<ArgumentException>(() => new Betrag(new string('A', 10)));
+            Assert.Equal("betrag", ex.ParamName);
+        }
+
+        [Fact]
         public void Ctor_Number10000000Dot01_ThrowsArgumentOutOfRangeException()
         {
             var ex = Assert.Throws<ArgumentOutOfRangeException>(() => new Betrag(100000000.01M));
@@ -61,7 +66,46 @@ namespace ArgeHeiwako.Tests.Data.Common
         #endregion
 
         #region ToString()
+
+        [Theory]
+        [InlineData("-000000001", -.01)]
+        [InlineData("-000000100", -1)]
+        [InlineData("0000000001", .01)]
+        [InlineData("0000000010", .1)]
+        [InlineData("0000000000", 0)]
+        [InlineData("0000000100", 1)]
+        [InlineData("0000001000", 10)]
+        [InlineData("0000010000", 100)]
+        [InlineData("0000100000", 1000)]
+        [InlineData("0001000000", 10000)]
+        [InlineData("0010000000", 100000)]
+        [InlineData("0100000000", 1000000)]
+        [InlineData("1000000000", 10000000)]
+        public void ToString_Data_ReturnsExpectedStringValue(string expectedValue, decimal data)
+        {
+            Assert.Equal(expectedValue, new Betrag(data).ToString());
+        }
+
         #endregion
 
+        #region op_Implicit_Decimal
+
+        [Theory]
+        [InlineData(1, "0000000100")]
+        [InlineData(.1, "0000000010")]
+        [InlineData(.01, "0000000001")]
+        [InlineData(10, "0000001000")]
+        [InlineData(100, "0000010000")]
+        [InlineData(1000, "0000100000")]
+        [InlineData(10000, "0001000000")]
+        [InlineData(100000, "0010000000")]
+        [InlineData(1000000, "0100000000")]
+        [InlineData(10000000, "1000000000")]
+        public void OpImplicit_StringValue_ReturnsExpectedValue(decimal expectedValue, string data)
+        {
+            Assert.Equal(expectedValue, new Betrag(data));
+        }
+
+        #endregion
     }
 }
