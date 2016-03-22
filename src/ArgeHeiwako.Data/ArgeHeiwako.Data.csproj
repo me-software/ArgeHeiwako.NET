@@ -47,6 +47,7 @@
     <Compile Include="Common\Abrechnungsunternehmen.cs" />
     <Compile Include="Common\ArgeVersion.cs" />
     <Compile Include="Common\Betrag.cs" />
+    <Compile Include="Common\Kostenart.cs" />
     <Compile Include="Common\KundenNummer.cs" />
     <Compile Include="Common\LiegenschaftsNummer.cs" />
     <Compile Include="Common\OrdnungsbegriffAbrechnungsunternehmen.cs" />
