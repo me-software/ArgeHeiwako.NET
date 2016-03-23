@@ -69,6 +69,7 @@
     <Compile Include="Data\Common\KostenartTests.cs" />
     <Compile Include="Data\Common\KundenNummerTests.cs" />
     <Compile Include="Data\Common\ProzentTests.cs" />
+    <Compile Include="Data\Common\SteuerlicheLeistungsartTests.cs" />
     <Compile Include="Data\Common\TagTests.cs" />
     <Compile Include="Data\Common\WohnungsNummerTests.cs" />
     <Compile Include="Data\Common\LiegenschaftsNummerTests.cs" />

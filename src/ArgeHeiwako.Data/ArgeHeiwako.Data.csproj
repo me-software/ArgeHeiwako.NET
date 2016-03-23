@@ -52,6 +52,7 @@
     <Compile Include="Common\LiegenschaftsNummer.cs" />
     <Compile Include="Common\OrdnungsbegriffAbrechnungsunternehmen.cs" />
     <Compile Include="Common\Prozent.cs" />
+    <Compile Include="Common\SteuerlicheLeistungsart.cs" />
     <Compile Include="Common\Tag.cs" />
     <Compile Include="Ordnungsbegriffe.cs" />
     <Compile Include="Common\OrdnungsbegriffWohnungsunternehmen.cs" />
