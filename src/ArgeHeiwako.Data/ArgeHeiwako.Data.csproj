@@ -23,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>true</RunCodeAnalysis>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -52,6 +53,7 @@
     <Compile Include="Common\LiegenschaftsNummer.cs" />
     <Compile Include="Common\OrdnungsbegriffAbrechnungsunternehmen.cs" />
     <Compile Include="Common\Prozent.cs" />
+    <Compile Include="Common\Satzfolgenummer.cs" />
     <Compile Include="Common\SteuerlicheLeistungsart.cs" />
     <Compile Include="Common\Tag.cs" />
     <Compile Include="Ordnungsbegriffe.cs" />
