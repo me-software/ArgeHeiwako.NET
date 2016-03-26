@@ -7,10 +7,10 @@
     /// Ein Abrechnungsunternehmen verwendet grundsätzlich den Begriff einer Liegenschaft. Eine Liegenschaft ist in 
     /// unterschiedliche Einheiten gegliedert, unter denen die Kosten aufgeteilt werden. 
     /// </remarks>
-    public sealed class OrdnungsbegriffAbrechnungsunternehmen
+    public class OrdnungsbegriffAbrechnungsunternehmen
     {
-        private LiegenschaftsNummer liegenschaftsNummer;
-        private WohnungsNummer wohnungsNummer;
+        private readonly LiegenschaftsNummer liegenschaftsNummer;
+        private readonly WohnungsNummer wohnungsNummer;
 
         /// <summary>
         /// Erstellt eine neue <see cref="OrdnungsbegriffAbrechnungsunternehmen"/>-Instanz

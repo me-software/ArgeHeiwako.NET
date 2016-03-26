@@ -24,6 +24,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>true</RunCodeAnalysis>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\ArgeHeiwako.Data.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -45,12 +46,18 @@
     <Compile Include="..\VersionInfo.cs">
       <Link>Properties\VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="AnteilSteuerlicheLeistungsart.cs" />
     <Compile Include="Common\Abrechnungsunternehmen.cs" />
     <Compile Include="Common\ArgeVersion.cs" />
     <Compile Include="Common\Betrag.cs" />
+    <Compile Include="Common\Nummer.cs" />
+    <Compile Include="Common\ParseResult.cs" />
+    <Compile Include="Common\ErweiterterOrdnungsbegriffAbrechnungsunternehmen.cs" />
     <Compile Include="Common\Kostenart.cs" />
     <Compile Include="Common\KundenNummer.cs" />
     <Compile Include="Common\LiegenschaftsNummer.cs" />
+    <Compile Include="Common\Nutzerfolge.cs" />
+    <Compile Include="Common\NutzergruppenNummer.cs" />
     <Compile Include="Common\OrdnungsbegriffAbrechnungsunternehmen.cs" />
     <Compile Include="Common\Prozent.cs" />
     <Compile Include="Common\Satzfolgenummer.cs" />

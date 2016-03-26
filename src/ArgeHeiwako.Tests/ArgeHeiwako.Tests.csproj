@@ -66,8 +66,11 @@
     <Compile Include="Data\Common\AbrechnungsunternehmenTests.cs" />
     <Compile Include="Data\Common\ArgeVersionTests.cs" />
     <Compile Include="Data\Common\BetragTests.cs" />
+    <Compile Include="Data\Common\ErweiteterOrdnungsbegriffAbrechnungsunternehmenTests.cs" />
     <Compile Include="Data\Common\KostenartTests.cs" />
     <Compile Include="Data\Common\KundenNummerTests.cs" />
+    <Compile Include="Data\Common\NutzerfolgeTests.cs" />
+    <Compile Include="Data\Common\NutzergruppenNummerTests.cs" />
     <Compile Include="Data\Common\ProzentTests.cs" />
     <Compile Include="Data\Common\SatzfolgenummerTests.cs" />
     <Compile Include="Data\Common\SteuerlicheLeistungsartTests.cs" />
