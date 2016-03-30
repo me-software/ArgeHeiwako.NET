@@ -47,6 +47,7 @@
       <Link>Properties\VersionInfo.cs</Link>
     </Compile>
     <Compile Include="AnteilSteuerlicheLeistungsart.cs" />
+    <Compile Include="Common\AbrechnungsfolgeNummer.cs" />
     <Compile Include="Common\Abrechnungsunternehmen.cs" />
     <Compile Include="Common\ArgeVersion.cs" />
     <Compile Include="Common\Betrag.cs" />
