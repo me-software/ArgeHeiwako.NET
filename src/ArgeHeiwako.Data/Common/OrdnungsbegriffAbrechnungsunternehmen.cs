@@ -1,4 +1,7 @@
-﻿namespace ArgeHeiwako.Data.Common
+﻿using System;
+using System.Collections.Generic;
+
+namespace ArgeHeiwako.Data.Common
 {
     /// <summary>
     /// Diese Klasse repräsentiert den Ordnungsbegriff eines Abrechnungsunternehmens
@@ -19,8 +22,30 @@
         /// <param name="wohnungsNummer">Identifikationsnummer der Wohnung / Einheit</param>
         public OrdnungsbegriffAbrechnungsunternehmen(LiegenschaftsNummer liegenschaftsNummer, WohnungsNummer wohnungsNummer)
         {
+            if (liegenschaftsNummer == null)
+                throw new ArgumentNullException("liegenschaftsNummer");
+
+            if (wohnungsNummer == null)
+                throw new ArgumentNullException("wohnungsNummer");
+
             this.liegenschaftsNummer = liegenschaftsNummer;
             this.wohnungsNummer = wohnungsNummer;
+        }
+
+        /// <summary>
+        /// Liefert die Liegenschaftsnummer
+        /// </summary>
+        public object LiegenschaftsNummer
+        {
+            get { return liegenschaftsNummer; }
+        }
+
+        /// <summary>
+        /// Liefert die Wohnungsnummer
+        /// </summary>
+        public WohnungsNummer WohnungsNummer
+        {
+            get { return wohnungsNummer; }
         }
 
         /// <summary>
