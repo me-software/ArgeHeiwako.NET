@@ -51,5 +51,21 @@ namespace ArgeHeiwako.Tests.Data.Common
         }
 
         #endregion
+
+        #region ToString()
+
+        [Fact]
+        public void ToString_ReturnsStringLength3()
+        {
+            Assert.Equal(3, Kostenart.Finde("228").ToString().Length);
+        }
+
+        [Fact]
+        public void ToString_ReturnsCorrectString()
+        {
+            Assert.Equal("228", Kostenart.Finde("228").ToString());
+        }
+
+        #endregion
     }
 }

@@ -139,5 +139,14 @@ namespace ArgeHeiwako.Data.Common
 
             return tabelleK[schluessel];
         }
+
+        /// <summary>
+        /// Liefert die formatierte Ausgabe für die Verwendung in einer Datentausch-Datei
+        /// </summary>
+        /// <returns>Der formatierte String für die Datenaustauschdatei</returns>
+        public override string ToString()
+        {
+            return Schluessel;
+        }
     }
 }

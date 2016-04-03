@@ -80,5 +80,21 @@ namespace ArgeHeiwako.Tests.Data.Common
         }
 
         #endregion
+
+        #region ToString()
+
+        [Fact]
+        public void ToString_ReturnsStringLength2()
+        {
+            Assert.Equal(2, SteuerlicheLeistungsart.Finde("00").ToString().Length);
+        }
+
+        [Fact]
+        public void ToString_ReturnsCorrectString()
+        {
+            Assert.Equal("00", SteuerlicheLeistungsart.Finde("00").ToString());
+        }
+
+        #endregion
     }
 }
