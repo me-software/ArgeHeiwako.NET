@@ -26,6 +26,9 @@ namespace ArgeHeiwako.Data
         private readonly Betrag rechnungsbetrag;
         private readonly Tag letzterTagNutzungszeitraum;
         private readonly Abrechnungsunternehmen abrechnungsunternehmen;
+        private readonly string kostenartText;
+        private readonly Satzfolgenummer satzfolgeNummer;
+        private readonly AbrechnungsfolgeNummer abrechnungsfolgeNummer;
 
         /// <summary>
         /// Erstellt eine neue <see cref="AnteilSteuerlicheLeistungsart"/>-Instanz
@@ -40,7 +43,10 @@ namespace ArgeHeiwako.Data
         /// <param name="lohnanteilRechnungsbetrag"></param>
         /// <param name="lohnanteilNutzerAnteil"></param>
         /// <param name="letzterTagNutzungszeitraum"></param>
+        /// <param name="satzfolgeNummer"></param>
         /// <param name="abrechnungsunternehmen"></param>
+        /// <param name="abrechnungsfolgeNummer"></param>
+        /// <param name="kostenartText"></param>
         public AnteilSteuerlicheLeistungsart(
             ErweiterterOrdnungsbegriffAbrechnungsunternehmen ordnungsbegriffAbrechnungsunternehmen,
             OrdnungsbegriffWohnungsunternehmen ordnungsbegriffWohnungsunternehmen,
@@ -52,7 +58,10 @@ namespace ArgeHeiwako.Data
             Betrag lohnanteilRechnungsbetrag,
             Betrag lohnanteilNutzerAnteil,
             Tag letzterTagNutzungszeitraum,
-            Abrechnungsunternehmen abrechnungsunternehmen = null)
+            Satzfolgenummer satzfolgeNummer = null,
+            Abrechnungsunternehmen abrechnungsunternehmen = null,
+            AbrechnungsfolgeNummer abrechnungsfolgeNummer = null,
+            string kostenartText = null)
         {
             #region Contracts
             if (ordnungsbegriffAbrechnungsunternehmen == null)
@@ -88,13 +97,16 @@ namespace ArgeHeiwako.Data
             this.lohnanteilNutzerAnteil = lohnanteilNutzerAnteil;
             this.letzterTagNutzungszeitraum = letzterTagNutzungszeitraum;
 
+            this.satzfolgeNummer = satzfolgeNummer;
             this.abrechnungsunternehmen = abrechnungsunternehmen;
+            this.abrechnungsfolgeNummer = abrechnungsfolgeNummer;
+            this.kostenartText = kostenartText;
         }
 
         /// <summary>
         /// Setzt oder Liefert die optionale <see cref="Common.Satzfolgenummer"/>
         /// </summary>
-        public Satzfolgenummer Satzfolgenummer { get; set; }
+        public Satzfolgenummer Satzfolgenummer { get { return satzfolgeNummer; } }
 
         /// <summary>
         /// Setzt oder Liefert das optionale <see cref="Common.Abrechnungsunternehmen"/>
@@ -104,7 +116,7 @@ namespace ArgeHeiwako.Data
         /// <summary>
         /// Setzt oder Liefert die optionale <see cref="Common.AbrechnungsfolgeNummer"/>
         /// </summary>
-        public AbrechnungsfolgeNummer AbrechnungsfolgeNummer { get; set; }
+        public AbrechnungsfolgeNummer AbrechnungsfolgeNummer { get { return abrechnungsfolgeNummer; } }
 
         /// <summary>
         /// Liefert die <see cref="Common.Kostenart"/> 
@@ -161,6 +173,14 @@ namespace ArgeHeiwako.Data
         /// Liefert den letzten Tag des Nutzungszeitraums
         /// </summary>
         public Tag LetzterTagNutzungszeitraum { get { return letzterTagNutzungszeitraum; } }
+
+        /// <summary>
+        /// Liefert den optionalen Pflichttext für die Kostenart bei speziellen <see cref="Common.Kostenart"/>en
+        /// </summary>
+        public string KostenartText
+        {
+            get { return kostenartText; }
+        }
 
         /// <summary>
         /// Liefert die formatierte Ausgabe für die Verwendung in einer Datentausch-Datei

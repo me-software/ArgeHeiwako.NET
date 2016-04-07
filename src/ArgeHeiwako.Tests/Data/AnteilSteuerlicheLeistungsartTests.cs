@@ -339,8 +339,20 @@ namespace ArgeHeiwako.Tests.Data
         public void SatzfolgeNummer_Get_AfterSetReturnsValue()
         {
             var satzfolgeNummer = new Satzfolgenummer(1);
-            anteilSteuerlicheLeistungsart.Satzfolgenummer = satzfolgeNummer;
-            Assert.Equal(satzfolgeNummer, anteilSteuerlicheLeistungsart.Satzfolgenummer);
+            var item = new AnteilSteuerlicheLeistungsart(
+                ordnungsbegriffAbrechnungsunternehmen,
+                ordnungsbegriffWohnungsunternehmen,
+                kostenart,
+                steuerlicheLeistungsart,
+                rechnungsbetrag,
+                nutzerAnteil,
+                prozentualerNutzerAnteil,
+                lohnanteilRechnungsbetrag,
+                lohnanteilNutzerAnteil,
+                letzterTagNutzungszeitraum,
+                satzfolgeNummer: satzfolgeNummer);
+            
+            Assert.Equal(satzfolgeNummer, item.Satzfolgenummer);
         }
 
         #endregion
@@ -387,15 +399,51 @@ namespace ArgeHeiwako.Tests.Data
         [Fact]
         public void AbrechnungsfolgeNummer_Get_AfterSetReturnsValue()
         {
-            var abrechnungsunternehmen = new AbrechnungsfolgeNummer(" ");
-            anteilSteuerlicheLeistungsart.AbrechnungsfolgeNummer = abrechnungsunternehmen;
-            Assert.Equal(abrechnungsunternehmen, anteilSteuerlicheLeistungsart.AbrechnungsfolgeNummer);
+            var abrechnungsfolgeNummer = new AbrechnungsfolgeNummer(" ");
+            var item = new AnteilSteuerlicheLeistungsart(
+                ordnungsbegriffAbrechnungsunternehmen,
+                ordnungsbegriffWohnungsunternehmen,
+                kostenart,
+                steuerlicheLeistungsart,
+                rechnungsbetrag,
+                nutzerAnteil,
+                prozentualerNutzerAnteil,
+                lohnanteilRechnungsbetrag,
+                lohnanteilNutzerAnteil,
+                letzterTagNutzungszeitraum,
+                abrechnungsfolgeNummer: abrechnungsfolgeNummer);
+            
+            Assert.Equal(abrechnungsfolgeNummer, item.AbrechnungsfolgeNummer);
         }
 
         #endregion
 
         #region KostenartText
+        [Fact]
+        public void KostenartText_Get_DefaultReturnsNull()
+        {
+            Assert.Null(anteilSteuerlicheLeistungsart.KostenartText);
+        }
 
+        [Fact]
+        public void KostenartText_Get_AfterSetReturnsValue()
+        {
+            var kostenartText = "Test";
+            var item = new AnteilSteuerlicheLeistungsart(
+                ordnungsbegriffAbrechnungsunternehmen,
+                ordnungsbegriffWohnungsunternehmen,
+                kostenart,
+                steuerlicheLeistungsart,
+                rechnungsbetrag,
+                nutzerAnteil,
+                prozentualerNutzerAnteil,
+                lohnanteilRechnungsbetrag,
+                lohnanteilNutzerAnteil,
+                letzterTagNutzungszeitraum,
+                kostenartText: kostenartText);
+
+            Assert.Equal(kostenartText, item.KostenartText);
+        }
         #endregion
 
         #region ToString()
