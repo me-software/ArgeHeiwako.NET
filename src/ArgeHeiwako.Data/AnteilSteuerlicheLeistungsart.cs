@@ -1,5 +1,6 @@
 ﻿using ArgeHeiwako.Data.Common;
 using System;
+using System.Collections.Generic;
 
 namespace ArgeHeiwako.Data
 {
@@ -14,16 +15,17 @@ namespace ArgeHeiwako.Data
         /// </summary>
         public const string Satzart = "E835";
 
-        private Kostenart kostenart;
-        private Tag letzterTagNutzungszeitraum;
-        private Betrag lohnanteilNutzerAnteil;
-        private Betrag lohnanteilRechnungsbetrag;
-        private Betrag nutzerAnteil;
-        private ErweiterterOrdnungsbegriffAbrechnungsunternehmen ordnungsbegriffAbrechnungsunternehmen;
-        private OrdnungsbegriffWohnungsunternehmen ordnungsbegriffWohnungsunternehmen;
-        private Prozent prozentualerNutzerAnteil;
-        private Betrag rechnungsbetrag;
-        private SteuerlicheLeistungsart steuerlicheLeistungsart;
+        private readonly Kostenart kostenart;
+        private readonly SteuerlicheLeistungsart steuerlicheLeistungsart;
+        private readonly Betrag lohnanteilNutzerAnteil;
+        private readonly Betrag lohnanteilRechnungsbetrag;
+        private readonly Betrag nutzerAnteil;
+        private readonly ErweiterterOrdnungsbegriffAbrechnungsunternehmen ordnungsbegriffAbrechnungsunternehmen;
+        private readonly OrdnungsbegriffWohnungsunternehmen ordnungsbegriffWohnungsunternehmen;
+        private readonly Prozent prozentualerNutzerAnteil;
+        private readonly Betrag rechnungsbetrag;
+        private readonly Tag letzterTagNutzungszeitraum;
+        private readonly Abrechnungsunternehmen abrechnungsunternehmen;
 
         /// <summary>
         /// Erstellt eine neue <see cref="AnteilSteuerlicheLeistungsart"/>-Instanz
@@ -38,6 +40,7 @@ namespace ArgeHeiwako.Data
         /// <param name="lohnanteilRechnungsbetrag"></param>
         /// <param name="lohnanteilNutzerAnteil"></param>
         /// <param name="letzterTagNutzungszeitraum"></param>
+        /// <param name="abrechnungsunternehmen"></param>
         public AnteilSteuerlicheLeistungsart(
             ErweiterterOrdnungsbegriffAbrechnungsunternehmen ordnungsbegriffAbrechnungsunternehmen,
             OrdnungsbegriffWohnungsunternehmen ordnungsbegriffWohnungsunternehmen,
@@ -48,7 +51,8 @@ namespace ArgeHeiwako.Data
             Prozent prozentualerNutzerAnteil,
             Betrag lohnanteilRechnungsbetrag,
             Betrag lohnanteilNutzerAnteil,
-            Tag letzterTagNutzungszeitraum)
+            Tag letzterTagNutzungszeitraum,
+            Abrechnungsunternehmen abrechnungsunternehmen = null)
         {
             #region Contracts
             if (ordnungsbegriffAbrechnungsunternehmen == null)
@@ -83,6 +87,8 @@ namespace ArgeHeiwako.Data
             this.lohnanteilRechnungsbetrag = lohnanteilRechnungsbetrag;
             this.lohnanteilNutzerAnteil = lohnanteilNutzerAnteil;
             this.letzterTagNutzungszeitraum = letzterTagNutzungszeitraum;
+
+            this.abrechnungsunternehmen = abrechnungsunternehmen;
         }
 
         /// <summary>
@@ -93,12 +99,68 @@ namespace ArgeHeiwako.Data
         /// <summary>
         /// Setzt oder Liefert das optionale <see cref="Common.Abrechnungsunternehmen"/>
         /// </summary>
-        public Abrechnungsunternehmen Abrechnungsunternehmen { get; set; }
+        public Abrechnungsunternehmen Abrechnungsunternehmen { get { return abrechnungsunternehmen; } }
 
         /// <summary>
         /// Setzt oder Liefert die optionale <see cref="Common.AbrechnungsfolgeNummer"/>
         /// </summary>
         public AbrechnungsfolgeNummer AbrechnungsfolgeNummer { get; set; }
+
+        /// <summary>
+        /// Liefert die <see cref="Common.Kostenart"/> 
+        /// </summary>
+        public Kostenart Kostenart { get { return kostenart; } }
+
+        /// <summary>
+        /// Liefert den <see cref="Common.ErweiterterOrdnungsbegriffAbrechnungsunternehmen"/>
+        /// </summary>
+        public ErweiterterOrdnungsbegriffAbrechnungsunternehmen OrdnungsbegriffAbrechnungsunternehmen
+        {
+            get { return ordnungsbegriffAbrechnungsunternehmen; }
+        }
+
+        /// <summary>
+        /// Liefert den <see cref="Common.OrdnungsbegriffWohnungsunternehmen"/>
+        /// </summary>
+        public OrdnungsbegriffWohnungsunternehmen OrdnungsbegriffWohnungsunternehmen
+        {
+            get { return ordnungsbegriffWohnungsunternehmen; }
+        }
+
+        /// <summary>
+        /// Liefert die <see cref="Common.SteuerlicheLeistungsart"/>
+        /// </summary>
+        public SteuerlicheLeistungsart SteuerlicheLeistungsart { get { return steuerlicheLeistungsart; } }
+
+        /// <summary>
+        /// Liefert den gesamten Rechnungsbetrag
+        /// </summary>
+        public Betrag Rechnungsbetrag { get { return rechnungsbetrag; } }
+
+        /// <summary>
+        /// Liefert den Betrag des Anteil des Nutzers am <see cref="Rechnungsbetrag"/>
+        /// </summary>
+        public Betrag NutzerAnteil { get { return nutzerAnteil; } }
+
+        /// <summary>
+        /// Liefert den prozentualen Anteil des Nutzers am <see cref="Rechnungsbetrag"/>
+        /// </summary>
+        public Prozent ProzentualerNutzerAnteil { get { return prozentualerNutzerAnteil; } }
+
+        /// <summary>
+        /// Liefert den Betrag des Lohnanteils des <see cref="Rechnungsbetrag"/>s
+        /// </summary>
+        public Betrag LohnanteilRechnungsbetrag { get { return lohnanteilRechnungsbetrag; } }
+
+        /// <summary>
+        /// Liefert den Lohnanteil im <see cref="NutzerAnteil"/>
+        /// </summary>
+        public Betrag LohnanteilNutzerAnteil { get { return lohnanteilNutzerAnteil; } }
+
+        /// <summary>
+        /// Liefert den letzten Tag des Nutzungszeitraums
+        /// </summary>
+        public Tag LetzterTagNutzungszeitraum { get { return letzterTagNutzungszeitraum; } }
 
         /// <summary>
         /// Liefert die formatierte Ausgabe für die Verwendung in einer Datentausch-Datei

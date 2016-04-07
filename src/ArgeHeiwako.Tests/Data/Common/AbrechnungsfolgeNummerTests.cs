@@ -1,9 +1,11 @@
 ﻿using ArgeHeiwako.Data.Common;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using Xunit;
 
 namespace ArgeHeiwako.Tests.Data.Common
 {
+    [ExcludeFromCodeCoverage]
     public class AbrechnungsfolgeNummerTests
     {
         #region Ctor

@@ -1,14 +1,12 @@
 ﻿using ArgeHeiwako.Data;
 using ArgeHeiwako.Data.Common;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 using Xunit;
 
 namespace ArgeHeiwako.Tests.Data
 {
+    [ExcludeFromCodeCoverage]
     public class AnteilSteuerlicheLeistungsartTests
     {
         private Kostenart kostenart;
@@ -229,6 +227,106 @@ namespace ArgeHeiwako.Tests.Data
 
         #endregion
 
+        #region Kostenart
+
+        [Fact]
+        public void Kostenart_Get_ReturnsBackingField()
+        {
+            Assert.Equal(kostenart, anteilSteuerlicheLeistungsart.Kostenart);
+        }
+
+        #endregion
+
+        #region OrdnungsbegriffAbrechnungsunternehmen
+
+        [Fact]
+        public void OrdnungsbegriffAbrechnungsunternehmen_Get_ReturnsBackingField()
+        {
+            Assert.Equal(ordnungsbegriffAbrechnungsunternehmen, anteilSteuerlicheLeistungsart.OrdnungsbegriffAbrechnungsunternehmen);
+        }
+
+        #endregion
+
+        #region OrdnungsbegriffWohnungsunternehmen
+
+        [Fact]
+        public void OrdnungsbegriffWohnungsunternehmen_Get_ReturnsBackingField()
+        {
+            Assert.Equal(ordnungsbegriffWohnungsunternehmen, anteilSteuerlicheLeistungsart.OrdnungsbegriffWohnungsunternehmen);
+        }
+
+        #endregion
+
+        #region SteuerlicheLeistungsart
+
+        [Fact]
+        public void SteuerlicheLeistungsart_Get_ReturnsBackingField()
+        {
+            Assert.Equal(steuerlicheLeistungsart, anteilSteuerlicheLeistungsart.SteuerlicheLeistungsart);
+        }
+
+        #endregion
+
+        #region Rechnungsbetrag
+
+        [Fact]
+        public void Rechnungsbetrag_Get_ReturnsBackingField()
+        {
+            Assert.Equal(rechnungsbetrag, anteilSteuerlicheLeistungsart.Rechnungsbetrag);
+        }
+
+        #endregion
+
+        #region NutzerAnteil
+
+        [Fact]
+        public void NutzerAnteil_Get_ReturnsBackingField()
+        {
+            Assert.Equal(nutzerAnteil, anteilSteuerlicheLeistungsart.NutzerAnteil);
+        }
+
+        #endregion
+
+        #region ProzentualerNutzerAnteil
+
+        [Fact]
+        public void ProzentualerNutzerAnteil_Get_ReturnsBackingField()
+        {
+            Assert.Equal(prozentualerNutzerAnteil, anteilSteuerlicheLeistungsart.ProzentualerNutzerAnteil);
+        }
+
+        #endregion
+
+        #region ProzentualerNutzerAnteil
+
+        [Fact]
+        public void LohnanteilRechnungsbetrag_Get_ReturnsBackingField()
+        {
+            Assert.Equal(lohnanteilRechnungsbetrag, anteilSteuerlicheLeistungsart.LohnanteilRechnungsbetrag);
+        }
+
+        #endregion
+
+        #region LohnanteilNutzerAnteil
+
+        [Fact]
+        public void LohnanteilNutzerAnteil_Get_ReturnsBackingField()
+        {
+            Assert.Equal(lohnanteilNutzerAnteil, anteilSteuerlicheLeistungsart.LohnanteilNutzerAnteil);
+        }
+
+        #endregion
+
+        #region LetzterTagNutzungszeitraum
+
+        [Fact]
+        public void LetzterTagNutzungszeitraum_Get_ReturnsBackingField()
+        {
+            Assert.Equal(letzterTagNutzungszeitraum, anteilSteuerlicheLeistungsart.LetzterTagNutzungszeitraum);
+        }
+
+        #endregion
+
         #region SatzfolgeNummer
 
         [Fact]
@@ -259,8 +357,21 @@ namespace ArgeHeiwako.Tests.Data
         public void Abrechnungsunternehmen_Get_AfterSetReturnsValue()
         {
             var abrechnungsunternehmen = Abrechnungsunternehmen.Find(30);
-            anteilSteuerlicheLeistungsart.Abrechnungsunternehmen = abrechnungsunternehmen;
-            Assert.Equal(abrechnungsunternehmen, anteilSteuerlicheLeistungsart.Abrechnungsunternehmen);
+
+            var item = new AnteilSteuerlicheLeistungsart(
+                ordnungsbegriffAbrechnungsunternehmen,
+                ordnungsbegriffWohnungsunternehmen,
+                kostenart,
+                steuerlicheLeistungsart,
+                rechnungsbetrag,
+                nutzerAnteil,
+                prozentualerNutzerAnteil,
+                lohnanteilRechnungsbetrag,
+                lohnanteilNutzerAnteil,
+                letzterTagNutzungszeitraum,
+                abrechnungsunternehmen: abrechnungsunternehmen);
+
+            Assert.Equal(abrechnungsunternehmen, item.Abrechnungsunternehmen);
         }
 
         #endregion
