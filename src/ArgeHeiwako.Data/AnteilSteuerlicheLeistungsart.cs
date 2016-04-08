@@ -84,6 +84,8 @@ namespace ArgeHeiwako.Data
                 throw new ArgumentNullException(nameof(lohnanteilNutzerAnteil));
             if (letzterTagNutzungszeitraum == null)
                 throw new ArgumentNullException(nameof(letzterTagNutzungszeitraum));
+            if (kostenartText != null && kostenartText.Length > 25)
+                throw new ArgumentOutOfRangeException(nameof(kostenartText));
             #endregion
 
             this.ordnungsbegriffAbrechnungsunternehmen = ordnungsbegriffAbrechnungsunternehmen;
@@ -101,6 +103,9 @@ namespace ArgeHeiwako.Data
             this.abrechnungsunternehmen = abrechnungsunternehmen;
             this.abrechnungsfolgeNummer = abrechnungsfolgeNummer;
             this.kostenartText = kostenartText;
+
+            if (kostenart.VariableBedeutung && kostenartText == null)
+                throw new ArgumentNullException(nameof(kostenartText));
         }
 
         /// <summary>
@@ -197,7 +202,7 @@ namespace ArgeHeiwako.Data
                 ordnungsbegriffWohnungsunternehmen,
                 (AbrechnungsfolgeNummer == null ? new string(' ', 1) : AbrechnungsfolgeNummer.ToString()),
                 kostenart,
-                new string(' ', 25), // TODO: Implementieren des individuellen Textes
+                KostenartText != null ? kostenartText.PadRight(25) : new string(' ', 25),
                 steuerlicheLeistungsart,
                 rechnungsbetrag,
                 nutzerAnteil,

@@ -225,6 +225,30 @@ namespace ArgeHeiwako.Tests.Data
             Assert.Equal("letzterTagNutzungszeitraum", ex.ParamName);
         }
 
+        [Theory]
+        [InlineData("228")]
+        [InlineData("242")]
+        [InlineData("254")]
+        [InlineData("311")]
+        public void Ctor_KostenartText_TooLongStringThrowsArgumentOutOfRangeException(string kostenartSchluessel)
+        {
+            var variableKostenart = Kostenart.Finde(kostenartSchluessel);
+            var ex = Assert.Throws<ArgumentNullException>(
+                () => new AnteilSteuerlicheLeistungsart(
+                    ordnungsbegriffAbrechnungsunternehmen,
+                    ordnungsbegriffWohnungsunternehmen,
+                    variableKostenart,
+                    steuerlicheLeistungsart,
+                    rechnungsbetrag,
+                    nutzerAnteil,
+                    prozentualerNutzerAnteil,
+                    lohnanteilRechnungsbetrag,
+                    lohnanteilNutzerAnteil,
+                    letzterTagNutzungszeitraum)
+                );
+            Assert.Equal("kostenartText", ex.ParamName);
+        }
+
         #endregion
 
         #region Kostenart
@@ -351,7 +375,7 @@ namespace ArgeHeiwako.Tests.Data
                 lohnanteilNutzerAnteil,
                 letzterTagNutzungszeitraum,
                 satzfolgeNummer: satzfolgeNummer);
-            
+
             Assert.Equal(satzfolgeNummer, item.Satzfolgenummer);
         }
 
@@ -412,7 +436,7 @@ namespace ArgeHeiwako.Tests.Data
                 lohnanteilNutzerAnteil,
                 letzterTagNutzungszeitraum,
                 abrechnungsfolgeNummer: abrechnungsfolgeNummer);
-            
+
             Assert.Equal(abrechnungsfolgeNummer, item.AbrechnungsfolgeNummer);
         }
 
@@ -460,6 +484,90 @@ namespace ArgeHeiwako.Tests.Data
             var expected =
                 "E835         000000001000100011ID                   050                         00000001000000000005000050000000000000000000000311216";
             Assert.Equal(expected, anteilSteuerlicheLeistungsart.ToString());
+        }
+
+        [Fact]
+        public void ToString_KostenartTextSet_ReturnsCorrectString()
+        {
+            var expected =
+                "E835         000000001000100011ID                   050Testkosten               00000001000000000005000050000000000000000000000311216";
+
+            var item = new AnteilSteuerlicheLeistungsart(
+                ordnungsbegriffAbrechnungsunternehmen,
+                ordnungsbegriffWohnungsunternehmen,
+                kostenart,
+                steuerlicheLeistungsart,
+                rechnungsbetrag,
+                nutzerAnteil,
+                prozentualerNutzerAnteil,
+                lohnanteilRechnungsbetrag,
+                lohnanteilNutzerAnteil,
+                letzterTagNutzungszeitraum,
+                kostenartText: "Testkosten");
+            Assert.Equal(expected, item.ToString());
+        }
+
+        [Fact]
+        public void ToString_AbrechnungsfolgeNummerSet_ReturnsCorrectString()
+        {
+            var expected =
+                "E835         000000001000100011ID                  1050                         00000001000000000005000050000000000000000000000311216";
+
+            var item = new AnteilSteuerlicheLeistungsart(
+                ordnungsbegriffAbrechnungsunternehmen,
+                ordnungsbegriffWohnungsunternehmen,
+                kostenart,
+                steuerlicheLeistungsart,
+                rechnungsbetrag,
+                nutzerAnteil,
+                prozentualerNutzerAnteil,
+                lohnanteilRechnungsbetrag,
+                lohnanteilNutzerAnteil,
+                letzterTagNutzungszeitraum,
+                abrechnungsfolgeNummer: new AbrechnungsfolgeNummer("1"));
+            Assert.Equal(expected, item.ToString());
+        }
+
+        [Fact]
+        public void ToString_AbrechnungsunternehmenSet_ReturnsCorrectString()
+        {
+            var expected =
+                "E835       30000000001000100011ID                   050                         00000001000000000005000050000000000000000000000311216";
+
+            var item = new AnteilSteuerlicheLeistungsart(
+                ordnungsbegriffAbrechnungsunternehmen,
+                ordnungsbegriffWohnungsunternehmen,
+                kostenart,
+                steuerlicheLeistungsart,
+                rechnungsbetrag,
+                nutzerAnteil,
+                prozentualerNutzerAnteil,
+                lohnanteilRechnungsbetrag,
+                lohnanteilNutzerAnteil,
+                letzterTagNutzungszeitraum,
+                abrechnungsunternehmen: Abrechnungsunternehmen.Find(30));
+            Assert.Equal(expected, item.ToString());
+        }
+
+        [Fact]
+        public void ToString_SatzfolgeNummerSet_ReturnsCorrectString()
+        {
+            var expected =
+                "E8350000001  000000001000100011ID                   050                         00000001000000000005000050000000000000000000000311216";
+
+            var item = new AnteilSteuerlicheLeistungsart(
+                ordnungsbegriffAbrechnungsunternehmen,
+                ordnungsbegriffWohnungsunternehmen,
+                kostenart,
+                steuerlicheLeistungsart,
+                rechnungsbetrag,
+                nutzerAnteil,
+                prozentualerNutzerAnteil,
+                lohnanteilRechnungsbetrag,
+                lohnanteilNutzerAnteil,
+                letzterTagNutzungszeitraum,
+                satzfolgeNummer: new Satzfolgenummer(1));
+            Assert.Equal(expected, item.ToString());
         }
 
         #endregion

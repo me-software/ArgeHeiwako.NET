@@ -65,5 +65,17 @@ namespace ArgeHeiwako.Tests.Data.Common
             Assert.Equal(value, new Satzfolgenummer(data));
         }
         #endregion
+
+        #region ToString()
+
+        [Theory]
+        [InlineData(1, "0000001")]
+        [InlineData(-1, "-000001")]
+        public void ToString_ValueReturnsCorrectString(int value, string valueString)
+        {
+            Assert.Equal(valueString, new Satzfolgenummer(value).ToString());
+        }
+
+        #endregion
     }
 }
