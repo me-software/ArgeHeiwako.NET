@@ -30,7 +30,9 @@ namespace Test
 
 # Links
 Weitere Informationen: http://me-software.github.io/ArgeHeiwako.NET/
+
 API-Dokumentation: http://me-software.github.io/ArgeHeiwako.NET/docs/index.html
+
 Waffle-Agile-Board: https://waffle.io/me-software/ArgeHeiwako.NET
 
 # Statistiken
