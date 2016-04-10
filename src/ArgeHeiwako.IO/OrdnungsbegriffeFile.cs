@@ -8,25 +8,9 @@ namespace ArgeHeiwako.IO
     /// <summary>
     /// Diese Klasse repräsentiert eine Datenaustauschdatei für den A-Satz
     /// </summary>
-    public sealed class OrdnungsbegriffeFile
+    public sealed class OrdnungsbegriffeFile : ArgeFile
     {
         private const string LINE_END = "\r\n";
-
-        /// <summary>
-        /// Liefert den Erstellungszeitpunkt der Datei
-        /// </summary>
-        public DateTime Created { get; private set; }
-
-        /// <summary>
-        /// Liefert den Dateinamen
-        /// </summary>
-        public string FileName
-        {
-            get
-            {
-                return $"DTA305_{Created.ToString("yyyyMMddHHmmss")}.DAT";
-            }
-        }
 
         /// <summary>
         /// Liefert die Auflistung der enthaltenen <see cref="Ordnungsbegriffe"/>-Instanzen
@@ -70,30 +54,43 @@ namespace ArgeHeiwako.IO
         /// <param name="created">Erstellungszeitpunkt</param>
         /// <param name="ordnungsbegriffe">>Auflistung der zu verwendenden <see cref="Data.Ordnungsbegriffe"/>-Instanzen</param>
         public OrdnungsbegriffeFile(DateTime created, IEnumerable<Ordnungsbegriffe> ordnungsbegriffe)
+            : base(created, Data.Ordnungsbegriffe.Satzart)
         {
-            Created = created;
             Ordnungsbegriffe = ordnungsbegriffe;
         }
 
         /// <summary>
         /// Schreibt die <see cref="Data.Ordnungsbegriffe"/>-Instanzen in die Datei und nutzt das aktuelle Ausführungsverzeichnis
         /// </summary>
-        /// <param name="ordnungsbegriffe">Auflistung der zu schreibenden <see cref="Data.Ordnungsbegriffe"/>-Instanzen</param>
-        /// <exception cref="ArgumentNullException">Wenn der Parameter <paramref name="ordnungsbegriffe"/> NULL ist.</exception>
-        public void Write(IEnumerable<Ordnungsbegriffe> ordnungsbegriffe)
+        public void Write()
         {
-            if (ordnungsbegriffe == null)
-                throw new ArgumentNullException("ordnungsbegriffe");
+            Write(Environment.CurrentDirectory);
+        }
 
-            var filePath = Path.Combine(Environment.CurrentDirectory, FileName);
+        /// <summary>
+        /// Schreibt die <see cref="Data.Ordnungsbegriffe"/>-Instanzen in die Datei und nutzt das aktuelle Ausführungsverzeichnis
+        /// </summary>
+        /// <param name="directory">Das Zielverzeichnis</param>
+        /// <exception cref="ArgumentNullException">Wenn das Verzeichnis <paramref name="directory"/> NULL ist.</exception>
+        public void Write(string directory)
+        {
+            if (directory == null)
+                throw new ArgumentNullException("directory");
+
+            if (!Directory.Exists(directory))
+                Directory.CreateDirectory(directory);
+
+            var filePath = Path.Combine(directory, FileName);
             using (var fileStream = new FileStream(filePath, FileMode.CreateNew))
             {
                 using (var writer = new OrdnungsbegriffeWriter(fileStream))
                 {
-                    foreach(var begriffe in ordnungsbegriffe)
+                    foreach (var begriffe in Ordnungsbegriffe)
                     {
                         writer.Write(begriffe);
                     }
+
+                    fileStream.Flush();
                 }
             }
         }

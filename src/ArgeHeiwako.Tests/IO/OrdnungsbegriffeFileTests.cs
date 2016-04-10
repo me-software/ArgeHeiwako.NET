@@ -11,7 +11,7 @@ using Xunit;
 namespace ArgeHeiwako.Tests.IO
 {
     [ExcludeFromCodeCoverage]
-    public class OrdnungsbegriffeFileTests : IDisposable
+    public class OrdnungsbegriffeFileTests : FileCreationTestBase
     {
         private DateTime creationDate;
         private OrdnungsbegriffeFile file;
@@ -85,42 +85,48 @@ namespace ArgeHeiwako.Tests.IO
         [Fact]
         public void Write_Null_ThrowsArgumentNullException()
         {
-            Assert.Throws<ArgumentNullException>(() => file.Write(null));
-        }
-
-        [Fact]
-        public void Write_Null_ThrowsArgumentNullExceptionParamNameBegriffe()
-        {
             var ex = Assert.Throws<ArgumentNullException>(() => file.Write(null));
-            Assert.Equal("ordnungsbegriffe", ex.ParamName);
+            Assert.Equal("directory", ex.ParamName);
         }
 
         [Fact]
         public void Write_WithEmptyListOfOrdnungsbegriffen_CreatesFileInCurrentDirectory()
         {
-            file.Write(new List<Ordnungsbegriffe>());
-            Assert.True(File.Exists(Path.Combine(Environment.CurrentDirectory, file.FileName)));
+            file.Write();
+            var fileName = Path.Combine(Environment.CurrentDirectory, file.FileName);
+            AddFile(fileName);
+
+            Assert.True(File.Exists(fileName));
         }
 
         [Fact]
-        public void Write_ListWithOneItem_CreatesFileInCurrentDirectory()
+        public void Write_ListWithOneItem_CreatesFileInDirectory()
         {
-            file.Write(new[] { OrdnungsbegriffeTests.CreateDefault() });
-            Assert.True(File.Exists(Path.Combine(Environment.CurrentDirectory, file.FileName)));
+            var directory = Path.Combine(Environment.CurrentDirectory, "test");
+            var fileName = Path.Combine(directory, file.FileName);
+
+            file.Write(directory);
+            AddFile(fileName);
+
+            Assert.True(File.Exists(fileName));
         }
 
         [Fact]
         public void Write_ListWithOneItem_FileSizeEquals130()
         {
-            file.Write(new[] { OrdnungsbegriffeTests.CreateDefault() });
+            var file = new OrdnungsbegriffeFile(new[] { OrdnungsbegriffeTests.CreateDefault() });
+            file.Write();
             Assert.Equal(130, new FileInfo(Path.Combine(Environment.CurrentDirectory, file.FileName)).Length);
         }
 
-        public void Dispose()
+        public override void Dispose()
         {
-            if (File.Exists(file.FileName))
+            base.Dispose();
+
+            var fileName = Path.Combine(Environment.CurrentDirectory, file.FileName);
+            if (File.Exists(fileName))
             {
-                File.Delete(file.FileName);
+                File.Delete(fileName);
             }
         }
 

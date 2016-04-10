@@ -82,6 +82,8 @@
     <Compile Include="Data\Common\OrdnungsbegriffAbrechnungsunternehmenTests.cs" />
     <Compile Include="Data\OrdnungsbegriffeTests.cs" />
     <Compile Include="Data\Common\OrdnungsbegriffWohnungsunternehmenTests.cs" />
+    <Compile Include="IO\ArgeFileTests.cs" />
+    <Compile Include="IO\FileCreationTestBase.cs" />
     <Compile Include="IO\OrdnungsbegriffeFileTests.cs" />
     <Compile Include="IO\OrdnungsbegriffeWriterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

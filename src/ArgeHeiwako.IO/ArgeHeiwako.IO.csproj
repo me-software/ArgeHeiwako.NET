@@ -24,6 +24,7 @@
     <CodeAnalysisRuleSet />
     <Prefer32Bit>false</Prefer32Bit>
     <DocumentationFile>bin\Debug\ArgeHeiwako.IO.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -45,6 +46,8 @@
     <Compile Include="..\VersionInfo.cs">
       <Link>Properties\VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="ArgeFile.cs" />
+    <Compile Include="IArgeFile.cs" />
     <Compile Include="OrdnungsbegriffeFile.cs" />
     <Compile Include="OrdnungsbegriffeWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

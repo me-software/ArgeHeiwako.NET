@@ -233,7 +233,7 @@ namespace ArgeHeiwako.Tests.Data
         public void Ctor_KostenartText_TooLongStringThrowsArgumentOutOfRangeException(string kostenartSchluessel)
         {
             var variableKostenart = Kostenart.Finde(kostenartSchluessel);
-            var ex = Assert.Throws<ArgumentNullException>(
+            var ex = Assert.Throws<ArgumentOutOfRangeException>(
                 () => new AnteilSteuerlicheLeistungsart(
                     ordnungsbegriffAbrechnungsunternehmen,
                     ordnungsbegriffWohnungsunternehmen,
@@ -244,7 +244,8 @@ namespace ArgeHeiwako.Tests.Data
                     prozentualerNutzerAnteil,
                     lohnanteilRechnungsbetrag,
                     lohnanteilNutzerAnteil,
-                    letzterTagNutzungszeitraum)
+                    letzterTagNutzungszeitraum,
+                    kostenartText: new string(' ', 26))
                 );
             Assert.Equal("kostenartText", ex.ParamName);
         }
