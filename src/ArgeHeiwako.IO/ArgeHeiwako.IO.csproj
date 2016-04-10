@@ -48,6 +48,7 @@
     </Compile>
     <Compile Include="AnteilSteuerlicheLeistungsartWriter.cs" />
     <Compile Include="ArgeFile.cs" />
+    <Compile Include="ArgeWriter.cs" />
     <Compile Include="IArgeFile.cs" />
     <Compile Include="IArgeWriter.cs" />
     <Compile Include="OrdnungsbegriffeFile.cs" />
