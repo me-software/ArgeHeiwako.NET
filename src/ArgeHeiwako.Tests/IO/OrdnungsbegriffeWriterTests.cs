@@ -11,14 +11,18 @@ using Xunit;
 namespace ArgeHeiwako.Tests.IO
 {
     [ExcludeFromCodeCoverage]
-    public class OrdnungsbegriffeWriterTests
+    public class OrdnungsbegriffeWriterTests : ArgeWriterTestsBase<Ordnungsbegriffe>
     {
+        public OrdnungsbegriffeWriterTests()
+            : base(130)
+        {
+        }
         #region Write()
 
         [Fact]
         public void WriteTests()
         {
-            byte[] content = GetWrittenBytes();
+            byte[] content = GetBytes();
             using (var stream = new MemoryStream(content))
             {
                 using (var streamReader = new StreamReader(stream))
@@ -28,27 +32,8 @@ namespace ArgeHeiwako.Tests.IO
                 }
             }
         }
-
-        [Fact]
-        public void Write_SingleOrdnungsbegriffe_ByteLengthEqual130()
-        {
-            var content = GetWrittenBytes();
-            Assert.Equal(130, content.Length);
-        }
-
-        [Fact]
-        public void Write_SingleOrdnungsbegriffe_SecondLastByteEqualCR()
-        {
-            byte[] content = GetWrittenBytes();
-            Assert.Equal("\r", OrdnungsbegriffeWriter.WriterEncoding.GetString(content.Skip(128).Take(1).ToArray()));
-        }
-
-        [Fact]
-        public void Write_SingleOrdnungsbegriffe_LastByteEqualLF()
-        {
-            byte[] content = GetWrittenBytes();
-            Assert.Equal("\n", OrdnungsbegriffeWriter.WriterEncoding.GetString(content.Skip(129).Take(1).ToArray()));
-        }
+        
+        
 
         [Fact]
         public void Write_AfterDispose_ThrowsObjectDisposedException()
@@ -71,14 +56,14 @@ namespace ArgeHeiwako.Tests.IO
                 OrdnungsbegriffWohnungsunternehmen("Id"), unternehmen);
         }
 
-        internal static byte[] GetWrittenBytes()
+        public override byte[] GetBytes()
         {
             byte[] content = null;
             using (var stream = new MemoryStream())
             {
                 using (var writer = new OrdnungsbegriffeWriter(stream))
                 {
-                    writer.Write(OrdnungsbegriffeTests.CreateDefault());
+                    writer.Write(GetInstance());
                 }
                 stream.Flush();
                 content = stream.ToArray();
@@ -87,5 +72,9 @@ namespace ArgeHeiwako.Tests.IO
             return content;
         }
 
+        public override Ordnungsbegriffe GetInstance()
+        {
+            return OrdnungsbegriffeTests.CreateDefault();
+        }
     }
 }

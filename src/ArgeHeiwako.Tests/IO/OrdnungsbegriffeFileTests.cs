@@ -136,7 +136,7 @@ namespace ArgeHeiwako.Tests.IO
 
         public void Load_FromStream_ReturnsOrdnungsbegriffeFile()
         {
-            using (var stream = new MemoryStream(OrdnungsbegriffeWriterTests.GetWrittenBytes()))
+            using (var stream = new MemoryStream(GetBytes()))
             {
                 var file = OrdnungsbegriffeFile.Load(stream);
                 Assert.NotNull(file);
@@ -147,7 +147,7 @@ namespace ArgeHeiwako.Tests.IO
         [Fact]
         public void Load_FromStreamWithSingleRow_ReturnsOrdnungsbegriffeFileWithOneItem()
         {
-            using (var stream = new MemoryStream(OrdnungsbegriffeWriterTests.GetWrittenBytes()))
+            using (var stream = new MemoryStream(GetBytes()))
             {
                 var file = OrdnungsbegriffeFile.Load(stream);
                 Assert.NotNull(file);
@@ -159,5 +159,21 @@ namespace ArgeHeiwako.Tests.IO
         }
 
         #endregion
+
+        private byte[] GetBytes()
+        {
+            byte[] content = null;
+            using (var stream = new MemoryStream())
+            {
+                using (var writer = new OrdnungsbegriffeWriter(stream))
+                {
+                    writer.Write(OrdnungsbegriffeTests.CreateDefault());
+                }
+                stream.Flush();
+                content = stream.ToArray();
+            }
+
+            return content;
+        }
     }
 }
