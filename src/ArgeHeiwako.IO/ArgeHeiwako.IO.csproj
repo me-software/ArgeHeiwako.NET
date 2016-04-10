@@ -48,6 +48,7 @@
     </Compile>
     <Compile Include="ArgeFile.cs" />
     <Compile Include="IArgeFile.cs" />
+    <Compile Include="IArgeWriter.cs" />
     <Compile Include="OrdnungsbegriffeFile.cs" />
     <Compile Include="OrdnungsbegriffeWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

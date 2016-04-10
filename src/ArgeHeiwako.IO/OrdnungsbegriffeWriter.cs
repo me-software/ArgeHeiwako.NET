@@ -9,7 +9,7 @@ namespace ArgeHeiwako.IO
     /// Diese Klasse wird genutzt, um die Informationen über <see cref="Ordnungsbegriffe"/> in einen Stream zu 
     /// schreiben.
     /// </summary>
-    public class OrdnungsbegriffeWriter : IDisposable
+    public class OrdnungsbegriffeWriter : IArgeWriter<Ordnungsbegriffe>
     {
         private const int ISO_8859_15_CODE_PAGE = 28605;
         private const string LINE_END = "\r\n";
