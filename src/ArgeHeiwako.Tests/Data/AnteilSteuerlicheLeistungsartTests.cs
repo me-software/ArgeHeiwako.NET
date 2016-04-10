@@ -22,6 +22,12 @@ namespace ArgeHeiwako.Tests.Data
 
         private AnteilSteuerlicheLeistungsart anteilSteuerlicheLeistungsart;
 
+        internal static AnteilSteuerlicheLeistungsart CreateDefault()
+        {
+            var item = new AnteilSteuerlicheLeistungsartTests();
+            return item.anteilSteuerlicheLeistungsart;
+        }
+
         public AnteilSteuerlicheLeistungsartTests()
         {
             ordnungsbegriffAbrechnungsunternehmen = new ErweiterterOrdnungsbegriffAbrechnungsunternehmen(
@@ -51,7 +57,7 @@ namespace ArgeHeiwako.Tests.Data
                 lohnanteilNutzerAnteil,
                 letzterTagNutzungszeitraum);
         }
-
+        
         #region Ctor
 
         [Fact]

@@ -1,10 +1,14 @@
 ﻿using ArgeHeiwako.IO;
+using System;
+using System.Diagnostics.CodeAnalysis;
+using System.IO;
 using System.Linq;
 using Xunit;
 
 namespace ArgeHeiwako.Tests.IO
 {
-    public abstract class ArgeWriterTestsBase<T>
+    [ExcludeFromCodeCoverage]
+    public abstract class ArgeWriterTestsBase<TInstance, TWriter> where TWriter : IArgeWriter<TInstance>
     {
         private int length;
 
@@ -13,11 +17,55 @@ namespace ArgeHeiwako.Tests.IO
             this.length = length;
         }
 
-        public abstract T GetInstance();
+        public abstract string GetWriterName();
 
-        public abstract byte[] GetBytes();
+        public abstract TInstance GetInstance();
+
+        public abstract TWriter GetWriter(Stream stream);
+
+        public abstract void BuildBytes(Stream stream);
+
+        protected byte[] GetBytes()
+        {
+            byte[] content = null;
+            using (var stream = new MemoryStream())
+            {
+                BuildBytes(stream);
+                stream.Flush();
+                content = stream.ToArray();
+            }
+
+            return content;
+        }
 
         #region Write()
+
+        [Fact]
+        public void Write_WritesSingleInstance_EqualsStringRepresentation()
+        {
+            byte[] content = GetBytes();
+            using (var stream = new MemoryStream(content))
+            {
+                using (var streamReader = new StreamReader(stream))
+                {
+                    Assert.Equal(GetInstance().ToString(), streamReader.ReadLine());
+                    Assert.True(streamReader.EndOfStream);
+                }
+            }
+        }
+
+        [Fact]
+        public void Write_AfterDispose_ThrowsObjectDisposedException()
+        {
+            using (var stream = new MemoryStream())
+            {
+                var writer = GetWriter(stream);
+                writer.Dispose();
+
+                var ex = Assert.Throws<ObjectDisposedException>(() => writer.Write(GetInstance()));
+                Assert.Equal(GetWriterName(), ex.ObjectName);
+            }
+        }
 
         [Fact]
         public void Write_SingleInstance_ByteLengthEqualLength()
