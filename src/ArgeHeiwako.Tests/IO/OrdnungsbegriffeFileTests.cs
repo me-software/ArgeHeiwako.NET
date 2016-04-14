@@ -28,7 +28,7 @@ namespace ArgeHeiwako.Tests.IO
         public void Ctor_Default_OrdnungsbegriffeReturnsEmptyCollection()
         {
             var file = new OrdnungsbegriffeFile();
-            Assert.Empty(file.Ordnungsbegriffe);
+            Assert.Empty(file.Datensaetze);
         }
 
         [Fact]
@@ -151,10 +151,10 @@ namespace ArgeHeiwako.Tests.IO
             {
                 var file = OrdnungsbegriffeFile.Load(stream);
                 Assert.NotNull(file);
-                Assert.NotNull(file.Ordnungsbegriffe);
-                Assert.NotEmpty(file.Ordnungsbegriffe);
-                Assert.Equal(1, file.Ordnungsbegriffe.Count());
-                Assert.IsAssignableFrom<Ordnungsbegriffe>(file.Ordnungsbegriffe.First());
+                Assert.NotNull(file.Datensaetze);
+                Assert.NotEmpty(file.Datensaetze);
+                Assert.Equal(1, file.Datensaetze.Count());
+                Assert.IsAssignableFrom<Ordnungsbegriffe>(file.Datensaetze.First());
             }
         }
 

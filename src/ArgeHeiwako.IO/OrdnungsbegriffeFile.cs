@@ -8,14 +8,16 @@ namespace ArgeHeiwako.IO
     /// <summary>
     /// Diese Klasse repräsentiert eine Datenaustauschdatei für den A-Satz
     /// </summary>
-    public sealed class OrdnungsbegriffeFile : ArgeFile
+    public sealed class OrdnungsbegriffeFile : ArgeFile<Ordnungsbegriffe>
     {
         private const string LINE_END = "\r\n";
+        private IEnumerable<Ordnungsbegriffe> data;
 
         /// <summary>
-        /// Liefert die Auflistung der enthaltenen <see cref="Ordnungsbegriffe"/>-Instanzen
+        /// Liefert die Auflistung der enthaltenen <see cref="Datensaetze"/>-Instanzen
         /// </summary>
-        public IEnumerable<Ordnungsbegriffe> Ordnungsbegriffe { get; private set; }
+        public override IEnumerable<Ordnungsbegriffe> Datensaetze { get { return data; }
+        }
 
         /// <summary>
         /// Erstellt eine leere <see cref="OrdnungsbegriffeFile"/>-Instanz
@@ -54,11 +56,11 @@ namespace ArgeHeiwako.IO
         /// <param name="created">Erstellungszeitpunkt</param>
         /// <param name="ordnungsbegriffe">>Auflistung der zu verwendenden <see cref="Data.Ordnungsbegriffe"/>-Instanzen</param>
         public OrdnungsbegriffeFile(DateTime created, IEnumerable<Ordnungsbegriffe> ordnungsbegriffe)
-            : base(created, Data.Ordnungsbegriffe.Satzart)
+            : base(created, Ordnungsbegriffe.Satzart)
         {
-            Ordnungsbegriffe = ordnungsbegriffe;
+            data = ordnungsbegriffe;
         }
-
+         
         /// <summary>
         /// Schreibt die <see cref="Data.Ordnungsbegriffe"/>-Instanzen in die Datei und nutzt das aktuelle Ausführungsverzeichnis
         /// </summary>
@@ -85,7 +87,7 @@ namespace ArgeHeiwako.IO
             {
                 using (var writer = new OrdnungsbegriffeWriter(fileStream))
                 {
-                    foreach (var begriffe in Ordnungsbegriffe)
+                    foreach (var begriffe in Datensaetze)
                     {
                         writer.Write(begriffe);
                     }
@@ -108,7 +110,7 @@ namespace ArgeHeiwako.IO
             {
                 var content = OrdnungsbegriffeWriter.WriterEncoding.GetString(buffer);
                 content = content.Replace(LINE_END, string.Empty);
-                ordnungsbegriffe.Add(Data.Ordnungsbegriffe.FromString(content));
+                ordnungsbegriffe.Add(Ordnungsbegriffe.FromString(content));
             }
 
             return new OrdnungsbegriffeFile(DateTime.Now, ordnungsbegriffe);

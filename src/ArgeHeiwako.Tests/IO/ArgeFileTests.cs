@@ -1,9 +1,12 @@
 ﻿using ArgeHeiwako.IO;
 using System;
 using Xunit;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ArgeHeiwako.Tests.IO
 {
+    [ExcludeFromCodeCoverage]
     public class ArgeFileTests
     {
         #region Ctor
@@ -19,11 +22,20 @@ namespace ArgeHeiwako.Tests.IO
     }
 
     #region ImplClass
-    internal class ArgeFileImpl : ArgeFile
+    [ExcludeFromCodeCoverage]
+    internal class ArgeFileImpl : ArgeFile<int>
     {
         public ArgeFileImpl(DateTime now, string p)
             : base(now, p)
         {
+        }
+
+        public override IEnumerable<int> Datensaetze
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
         }
     }
     #endregion
