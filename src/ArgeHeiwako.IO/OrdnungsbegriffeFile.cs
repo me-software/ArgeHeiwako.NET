@@ -11,44 +11,6 @@ namespace ArgeHeiwako.IO
     public sealed class OrdnungsbegriffeFile : ArgeFile<Ordnungsbegriffe>
     {
         private const string LINE_END = "\r\n";
-        private IEnumerable<Ordnungsbegriffe> data;
-
-        /// <summary>
-        /// Liefert die Auflistung der enthaltenen <see cref="Datensaetze"/>-Instanzen
-        /// </summary>
-        public override IEnumerable<Ordnungsbegriffe> Datensaetze { get { return data; }
-        }
-
-        /// <summary>
-        /// Erstellt eine leere <see cref="OrdnungsbegriffeFile"/>-Instanz
-        /// </summary>
-        /// <remarks>
-        /// Es wird eine leere Liste von <see cref="Data.Ordnungsbegriffe"/>-Instanzen erzeugt, sowie 
-        /// der aktuelle Zeitpunkt als Erstellungszeitpunkt genutzt.
-        /// </remarks>
-        public OrdnungsbegriffeFile() 
-            : this(DateTime.Now, new List<Ordnungsbegriffe>())
-        {
-        }
-
-        /// <summary>
-        /// Erstellt eine leere <see cref="OrdnungsbegriffeFile"/>-Instanz
-        /// </summary>
-        /// <param name="created">Erstellungszeitpunkt</param>
-        public OrdnungsbegriffeFile(DateTime created)
-            : this(created, new List<Ordnungsbegriffe>())
-        {
-        }
-
-        /// <summary>
-        /// Erstellt eine neue <see cref="OrdnungsbegriffeFile"/>-Instanz
-        /// </summary>
-        /// <remarks>Es wird der aktuelle Zeitpunkt als Erstellungszeitpunkt genutzt.</remarks>
-        /// <param name="ordnungsbegriffe">Auflistung der zu verwendenden <see cref="Data.Ordnungsbegriffe"/>-Instanzen</param>
-        public OrdnungsbegriffeFile(IEnumerable<Ordnungsbegriffe> ordnungsbegriffe) 
-            : this(DateTime.Now, ordnungsbegriffe)
-        {
-        }
 
         /// <summary>
         /// Erstellt eine neue <see cref="OrdnungsbegriffeFile"/>-Instanz
@@ -56,9 +18,8 @@ namespace ArgeHeiwako.IO
         /// <param name="created">Erstellungszeitpunkt</param>
         /// <param name="ordnungsbegriffe">>Auflistung der zu verwendenden <see cref="Data.Ordnungsbegriffe"/>-Instanzen</param>
         public OrdnungsbegriffeFile(DateTime created, IEnumerable<Ordnungsbegriffe> ordnungsbegriffe)
-            : base(created, Ordnungsbegriffe.Satzart)
+            : base(created, Ordnungsbegriffe.Satzart, ordnungsbegriffe)
         {
-            data = ordnungsbegriffe;
         }
          
         /// <summary>

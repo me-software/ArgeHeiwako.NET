@@ -11,7 +11,7 @@ using Xunit;
 namespace ArgeHeiwako.Tests.IO
 {
     [ExcludeFromCodeCoverage]
-    public class OrdnungsbegriffeFileTests : FileCreationTestBase
+    public class OrdnungsbegriffeFileTests : FileTestsBase<OrdnungsbegriffeFile, Ordnungsbegriffe>
     {
         private DateTime creationDate;
         private OrdnungsbegriffeFile file;
@@ -19,23 +19,17 @@ namespace ArgeHeiwako.Tests.IO
         public OrdnungsbegriffeFileTests()
         {
             creationDate = DateTime.Now;
-            file = new OrdnungsbegriffeFile(creationDate);
+            file = new OrdnungsbegriffeFile(creationDate, new List<Ordnungsbegriffe>());
         }
 
         #region Ctor
 
-        [Fact]
-        public void Ctor_Default_OrdnungsbegriffeReturnsEmptyCollection()
-        {
-            var file = new OrdnungsbegriffeFile();
-            Assert.Empty(file.Datensaetze);
-        }
 
         [Fact]
         public void Ctor_DateTime_CreatedEqualsDateTime()
         {
             var dateTime = DateTime.Now;
-            var ordnungsbegriffeFile = new OrdnungsbegriffeFile(dateTime);
+            var ordnungsbegriffeFile = new OrdnungsbegriffeFile(dateTime, new List<Ordnungsbegriffe>());
             Assert.Equal(dateTime, ordnungsbegriffeFile.Created);
         }
 
@@ -46,35 +40,28 @@ namespace ArgeHeiwako.Tests.IO
         [Fact]
         public void FileName_StartsWithDTA305()
         {
-            var ordnungsbegriffeFile = new OrdnungsbegriffeFile(DateTime.Now);
+            var ordnungsbegriffeFile = new OrdnungsbegriffeFile(DateTime.Now, new List<Ordnungsbegriffe>());
             Assert.StartsWith("DTA305_", ordnungsbegriffeFile.FileName);
-        }
-
-        [Fact]
-        public void FileName_ExtensionDotDAT()
-        {
-            var ordnungsbegriffeFile = new OrdnungsbegriffeFile(DateTime.Now);
-            Assert.EndsWith(".DAT", ordnungsbegriffeFile.FileName);
         }
 
         [Fact]
         public void FileName_LengthEqual25()
         {
-            var ordnungsbegriffeFile = new OrdnungsbegriffeFile(DateTime.Now);
+            var ordnungsbegriffeFile = new OrdnungsbegriffeFile(DateTime.Now, new List<Ordnungsbegriffe>());
             Assert.Equal(25, ordnungsbegriffeFile.FileName.Length);
         }
 
         [Fact]
         public void FileName_DatePartEqual20150101()
         {
-            var ordnungsbegriffeFile = new OrdnungsbegriffeFile(new DateTime(2015, 1, 1));
+            var ordnungsbegriffeFile = new OrdnungsbegriffeFile(new DateTime(2015, 1, 1), new List<Ordnungsbegriffe>());
             Assert.Equal("20150101", ordnungsbegriffeFile.FileName.Substring(7, 8));
         }
 
         [Fact]
         public void FileName_TimePartEqual161510()
         {
-            var ordnungsbegriffeFile = new OrdnungsbegriffeFile(new DateTime(2015, 1, 1, 16, 15, 10));
+            var ordnungsbegriffeFile = new OrdnungsbegriffeFile(new DateTime(2015, 1, 1, 16, 15, 10), new List<Ordnungsbegriffe>());
             Assert.Equal("161510", ordnungsbegriffeFile.FileName.Substring(15, 6));
         }
 
@@ -114,7 +101,7 @@ namespace ArgeHeiwako.Tests.IO
         [Fact]
         public void Write_ListWithOneItem_FileSizeEquals130()
         {
-            var file = new OrdnungsbegriffeFile(new[] { OrdnungsbegriffeTests.CreateDefault() });
+            var file = new OrdnungsbegriffeFile(DateTime.Now, new[] { OrdnungsbegriffeTests.CreateDefault() });
             file.Write();
             Assert.Equal(130, new FileInfo(Path.Combine(Environment.CurrentDirectory, file.FileName)).Length);
         }
@@ -174,6 +161,11 @@ namespace ArgeHeiwako.Tests.IO
             }
 
             return content;
+        }
+
+        protected override OrdnungsbegriffeFile GetFileInstance()
+        {
+            return new OrdnungsbegriffeFile(DateTime.Now, new List<Ordnungsbegriffe>());
         }
     }
 }

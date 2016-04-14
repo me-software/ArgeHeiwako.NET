@@ -10,6 +10,7 @@ namespace ArgeHeiwako.IO
     {
         private readonly DateTime created;
         private readonly string satzart;
+        private IEnumerable<TData> datensaetze;
 
         /// <summary>
         /// Liefert den Erstellungszeitpunkt der Datei
@@ -36,9 +37,9 @@ namespace ArgeHeiwako.IO
         /// <summary>
         /// Liefert die in der Datei enthaltenen Datensätze 
         /// </summary>
-        public abstract IEnumerable<TData> Datensaetze
+        public IEnumerable<TData> Datensaetze
         {
-            get;
+            get { return datensaetze; }
         }
 
         /// <summary>
@@ -46,13 +47,15 @@ namespace ArgeHeiwako.IO
         /// </summary>
         /// <param name="created">Der Erstellungszeitpunkt der Datei</param>
         /// <param name="satzart">Die Satzart der Datei</param>
-        public ArgeFile(DateTime created, string satzart)
+        /// <param name="datensaetze">Die Datensätze für die Datenaustauschdatei</param>
+        public ArgeFile(DateTime created, string satzart, IEnumerable<TData> datensaetze)
         {
             #region Contracts
             if (satzart == null)
                 throw new ArgumentNullException(nameof(satzart));
             #endregion
 
+            this.datensaetze = datensaetze;
             this.created = created;
             this.satzart = satzart;
         }
