@@ -211,5 +211,24 @@ namespace ArgeHeiwako.Data
                 lohnanteilNutzerAnteil,
                 letzterTagNutzungszeitraum);
         }
+
+
+        /// <summary>
+        /// Erstellt eine neue <see cref="AnteilSteuerlicheLeistungsart"/>-Instanz auf Basis einer Zeile in der Datenaustausch-Datei
+        /// </summary>
+        /// <param name="anteilSteuerlicheLeistungsartString">Die Zeile aus der Datenaustausch-Datei</param>
+        /// <returns>Die ausgelesene <see cref="Ordnungsbegriffe"/>-Instanz</returns>
+        /// <exception cref="ArgumentNullException">Wenn der Parameter <paramref name="anteilSteuerlicheLeistungsartString"/> NULL ist</exception>
+        /// <exception cref="ArgumentException">Wenn der Parameter <paramref name="anteilSteuerlicheLeistungsartString"/> keinen validen E835-Satz enthält</exception>
+        public static AnteilSteuerlicheLeistungsart FromString(string anteilSteuerlicheLeistungsartString)
+        {
+            if (anteilSteuerlicheLeistungsartString == null)
+                throw new ArgumentNullException(nameof(anteilSteuerlicheLeistungsartString));
+
+            if (anteilSteuerlicheLeistungsartString.Length != 133)
+                throw new ArgumentOutOfRangeException(nameof(anteilSteuerlicheLeistungsartString));
+
+            throw new NotImplementedException();
+        }
     }
 }

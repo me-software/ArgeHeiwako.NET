@@ -578,5 +578,37 @@ namespace ArgeHeiwako.Tests.Data
         }
 
         #endregion
+
+        #region FromString()
+
+        [Fact]
+        public void FromString_Null_ThrowsArgumentNullException()
+        {
+            var ex = Assert.Throws<ArgumentNullException>(() => AnteilSteuerlicheLeistungsart.FromString(null));
+            Assert.Equal("anteilSteuerlicheLeistungsartString", ex.ParamName);
+        }
+
+        [Fact]
+        public void FromString_EmptyString_ThrowsArgumentException()
+        {
+            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => AnteilSteuerlicheLeistungsart.FromString(string.Empty));
+            Assert.Equal("anteilSteuerlicheLeistungsartString", ex.ParamName);
+        }
+
+        [Fact]
+        public void FromString_StringLength132Characters_ThrowsArgumentException()
+        {
+            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => AnteilSteuerlicheLeistungsart.FromString(new string(' ', 132)));
+            Assert.Equal("anteilSteuerlicheLeistungsartString", ex.ParamName);
+        }
+
+        [Fact]
+        public void FromString_StringLength134Characters_ThrowsArgumentException()
+        {
+            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => AnteilSteuerlicheLeistungsart.FromString(new string(' ', 134)));
+            Assert.Equal("anteilSteuerlicheLeistungsartString", ex.ParamName);
+        }
+        
+        #endregion
     }
 }

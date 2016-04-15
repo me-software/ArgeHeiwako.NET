@@ -43,12 +43,13 @@ namespace ArgeHeiwako.Tests.IO
             var file = GetFileInstance();
             Assert.Empty(file.Datensaetze);
         }
+        
         #endregion
 
         #region FileName
 
         [Fact]
-        public void FileName_StartsWithDTA305()
+        public void FileName_StartsWithDT()
         {
             var file = GetFileInstance();
             Assert.StartsWith("DT", file.FileName);

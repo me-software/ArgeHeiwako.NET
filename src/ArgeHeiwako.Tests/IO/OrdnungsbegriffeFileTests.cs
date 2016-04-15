@@ -32,7 +32,7 @@ namespace ArgeHeiwako.Tests.IO
             var ordnungsbegriffeFile = new OrdnungsbegriffeFile(dateTime, new List<Ordnungsbegriffe>());
             Assert.Equal(dateTime, ordnungsbegriffeFile.Created);
         }
-
+        
         #endregion
 
         #region FileName
@@ -106,21 +106,11 @@ namespace ArgeHeiwako.Tests.IO
             Assert.Equal(130, new FileInfo(Path.Combine(Environment.CurrentDirectory, file.FileName)).Length);
         }
 
-        public override void Dispose()
-        {
-            base.Dispose();
-
-            var fileName = Path.Combine(Environment.CurrentDirectory, file.FileName);
-            if (File.Exists(fileName))
-            {
-                File.Delete(fileName);
-            }
-        }
-
         #endregion
 
         #region Load()
 
+        [Fact]
         public void Load_FromStream_ReturnsOrdnungsbegriffeFile()
         {
             using (var stream = new MemoryStream(GetBytes()))
@@ -167,5 +157,18 @@ namespace ArgeHeiwako.Tests.IO
         {
             return new OrdnungsbegriffeFile(DateTime.Now, new List<Ordnungsbegriffe>());
         }
+
+
+        public override void Dispose()
+        {
+            base.Dispose();
+
+            var fileName = Path.Combine(Environment.CurrentDirectory, file.FileName);
+            if (File.Exists(fileName))
+            {
+                File.Delete(fileName);
+            }
+        }
+
     }
 }
