@@ -1,4 +1,5 @@
 ﻿using ArgeHeiwako.Data;
+using ArgeHeiwako.Data.Common;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
@@ -50,7 +51,7 @@ namespace ArgeHeiwako.Tests.Data
         [Fact]
         public void ToString_Chars17To18_AbrechnungsunternehmenTechem_Equal30()
         {
-            Assert.Equal("30", CreateDefault(Abrechnungsunternehmen.Find(30)).ToString().Substring(16, 2));
+            Assert.Equal("30", CreateDefault(Abrechnungsunternehmen.Finde(30)).ToString().Substring(16, 2));
         }
 
         [Fact]
@@ -155,7 +156,7 @@ namespace ArgeHeiwako.Tests.Data
         [Fact]
         public void FromString_StringAbrechnungsunternehmen30_AbrechnungsunternehmenEqual30()
         {
-            var valueBuilder = new StringBuilder(CreateDefault(Abrechnungsunternehmen.Find(30)).ToString());
+            var valueBuilder = new StringBuilder(CreateDefault(Abrechnungsunternehmen.Finde(30)).ToString());
             Assert.Equal("30", Ordnungsbegriffe.FromString(valueBuilder.ToString()).Abrechnungsunternehmen.ToString());
         }
 
@@ -198,7 +199,7 @@ namespace ArgeHeiwako.Tests.Data
         [Fact]
         public void Abrechnungsunternehmen_GetRetruns30()
         {
-            Assert.Equal(30, CreateDefault(Abrechnungsunternehmen.Find(30)).Abrechnungsunternehmen.Nummer);
+            Assert.Equal(30, CreateDefault(Abrechnungsunternehmen.Finde(30)).Abrechnungsunternehmen.Nummer);
         }
 
         [Fact]
@@ -214,7 +215,7 @@ namespace ArgeHeiwako.Tests.Data
         [Fact]
         public void OrdnungsbegriffAbrechnungsunternehmen_Get_Returns0000000010001()
         {
-            Assert.Equal("0000000010001", CreateDefault(Abrechnungsunternehmen.Find(30)).OrdnungsbegriffAbrechnungsunternehmen.ToString());
+            Assert.Equal("0000000010001", CreateDefault(Abrechnungsunternehmen.Finde(30)).OrdnungsbegriffAbrechnungsunternehmen.ToString());
         }
 
         #endregion
@@ -224,7 +225,7 @@ namespace ArgeHeiwako.Tests.Data
         [Fact]
         public void OrdnungsbegriffWohnungsunternehmen_Get_Returns1Spaces()
         {
-            Assert.Equal("Id                  ", CreateDefault(Abrechnungsunternehmen.Find(30)).OrdnungsbegriffWohnungsunternehmen.ToString());
+            Assert.Equal("Id                  ", CreateDefault(Abrechnungsunternehmen.Finde(30)).OrdnungsbegriffWohnungsunternehmen.ToString());
         }
 
         #endregion

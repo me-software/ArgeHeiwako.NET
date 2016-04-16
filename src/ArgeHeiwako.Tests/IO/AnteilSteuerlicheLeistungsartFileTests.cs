@@ -11,58 +11,48 @@ using Xunit;
 namespace ArgeHeiwako.Tests.IO
 {
     [ExcludeFromCodeCoverage]
-    public class OrdnungsbegriffeFileTests : FileTestsBase<OrdnungsbegriffeFile, Ordnungsbegriffe>
+    public class AnteilSteuerlicheLeistungsartFileTests : FileTestsBase<AnteilSteuerlicheLeistungsartFile, AnteilSteuerlicheLeistungsart>
     {
-        private DateTime creationDate;
-        private OrdnungsbegriffeFile file;
+        private AnteilSteuerlicheLeistungsartFile file;
 
-        public OrdnungsbegriffeFileTests()
+        public AnteilSteuerlicheLeistungsartFileTests()
         {
-            creationDate = DateTime.Now;
-            file = new OrdnungsbegriffeFile(creationDate, new List<Ordnungsbegriffe>());
+            file = GetFileInstance();
         }
 
-        #region Ctor
-
-
-        [Fact]
-        public void Ctor_DateTime_CreatedEqualsDateTime()
+        protected override AnteilSteuerlicheLeistungsartFile GetFileInstance()
         {
-            var dateTime = DateTime.Now;
-            var ordnungsbegriffeFile = new OrdnungsbegriffeFile(dateTime, new List<Ordnungsbegriffe>());
-            Assert.Equal(dateTime, ordnungsbegriffeFile.Created);
+            return new AnteilSteuerlicheLeistungsartFile(DateTime.Now, new List<AnteilSteuerlicheLeistungsart>());
         }
-        
-        #endregion
 
         #region FileName
 
         [Fact]
-        public void FileName_StartsWithDTA305()
+        public void FileName_Get_StartsWithDTE835_()
         {
-            var ordnungsbegriffeFile = new OrdnungsbegriffeFile(DateTime.Now, new List<Ordnungsbegriffe>());
-            Assert.StartsWith("DTA305_", ordnungsbegriffeFile.FileName);
+            var file = GetFileInstance();
+            Assert.StartsWith("DTE835305_", file.FileName);
         }
 
         [Fact]
         public void FileName_LengthEqual25()
         {
-            var ordnungsbegriffeFile = new OrdnungsbegriffeFile(DateTime.Now, new List<Ordnungsbegriffe>());
-            Assert.Equal(25, ordnungsbegriffeFile.FileName.Length);
+            var ordnungsbegriffeFile = new AnteilSteuerlicheLeistungsartFile(DateTime.Now, new List<AnteilSteuerlicheLeistungsart>());
+            Assert.Equal(28, ordnungsbegriffeFile.FileName.Length);
         }
 
         [Fact]
         public void FileName_DatePartEqual20150101()
         {
-            var ordnungsbegriffeFile = new OrdnungsbegriffeFile(new DateTime(2015, 1, 1), new List<Ordnungsbegriffe>());
-            Assert.Equal("20150101", ordnungsbegriffeFile.FileName.Substring(7, 8));
+            var ordnungsbegriffeFile = new AnteilSteuerlicheLeistungsartFile(new DateTime(2015, 1, 1), new List<AnteilSteuerlicheLeistungsart>());
+            Assert.Equal("20150101", ordnungsbegriffeFile.FileName.Substring(10, 8));
         }
 
         [Fact]
         public void FileName_TimePartEqual161510()
         {
-            var ordnungsbegriffeFile = new OrdnungsbegriffeFile(new DateTime(2015, 1, 1, 16, 15, 10), new List<Ordnungsbegriffe>());
-            Assert.Equal("161510", ordnungsbegriffeFile.FileName.Substring(15, 6));
+            var ordnungsbegriffeFile = new AnteilSteuerlicheLeistungsartFile(new DateTime(2015, 1, 1, 16, 15, 10), new List<AnteilSteuerlicheLeistungsart>());
+            Assert.Equal("161510", ordnungsbegriffeFile.FileName.Substring(18, 6));
         }
 
         #endregion
@@ -101,9 +91,13 @@ namespace ArgeHeiwako.Tests.IO
         [Fact]
         public void Write_ListWithOneItem_FileSizeEquals130()
         {
-            var file = new OrdnungsbegriffeFile(DateTime.Now, new[] { OrdnungsbegriffeTests.CreateDefault() });
+            
+
+            var file = new AnteilSteuerlicheLeistungsartFile(DateTime.Now, new[] { AnteilSteuerlicheLeistungsartTests.CreateDefault() });
+            var fileName = Path.Combine(Environment.CurrentDirectory, file.FileName);
+
             file.Write();
-            Assert.Equal(130, new FileInfo(Path.Combine(Environment.CurrentDirectory, file.FileName)).Length);
+            Assert.Equal(135, new FileInfo(fileName).Length);
         }
 
         #endregion
@@ -111,40 +105,38 @@ namespace ArgeHeiwako.Tests.IO
         #region Load()
 
         [Fact]
-        public void Load_FromStream_ReturnsOrdnungsbegriffeFile()
+        public void Load_FromStream_ReturnsAnteilSteuerlicheLeistungsartFile()
         {
             using (var stream = new MemoryStream(GetBytes()))
             {
-                var file = OrdnungsbegriffeFile.Load(stream);
+                var file = AnteilSteuerlicheLeistungsartFile.Load(stream);
                 Assert.NotNull(file);
-                Assert.IsAssignableFrom<OrdnungsbegriffeFile>(file);
+                Assert.IsAssignableFrom<AnteilSteuerlicheLeistungsartFile>(file);
             }
         }
 
         [Fact]
-        public void Load_FromStreamWithSingleRow_ReturnsOrdnungsbegriffeFileWithOneItem()
+        public void Load_FromStreamWithSingleRow_ReturnsAnteilSteuerlicheLeistungsartFileWithOneItem()
         {
             using (var stream = new MemoryStream(GetBytes()))
             {
-                var file = OrdnungsbegriffeFile.Load(stream);
+                var file = AnteilSteuerlicheLeistungsartFile.Load(stream);
                 Assert.NotNull(file);
                 Assert.NotNull(file.Datensaetze);
                 Assert.NotEmpty(file.Datensaetze);
                 Assert.Equal(1, file.Datensaetze.Count());
-                Assert.IsAssignableFrom<Ordnungsbegriffe>(file.Datensaetze.First());
+                Assert.IsAssignableFrom<AnteilSteuerlicheLeistungsart>(file.Datensaetze.First());
             }
         }
-
-        #endregion
 
         private byte[] GetBytes()
         {
             byte[] content = null;
             using (var stream = new MemoryStream())
             {
-                using (var writer = new OrdnungsbegriffeWriter(stream))
+                using (var writer = new AnteilSteuerlicheLeistungsartWriter(stream))
                 {
-                    writer.Write(OrdnungsbegriffeTests.CreateDefault());
+                    writer.Write(AnteilSteuerlicheLeistungsartTests.CreateDefault());
                 }
                 stream.Flush();
                 content = stream.ToArray();
@@ -153,11 +145,7 @@ namespace ArgeHeiwako.Tests.IO
             return content;
         }
 
-        protected override OrdnungsbegriffeFile GetFileInstance()
-        {
-            return new OrdnungsbegriffeFile(DateTime.Now, new List<Ordnungsbegriffe>());
-        }
-
+        #endregion
 
         public override void Dispose()
         {
@@ -169,6 +157,5 @@ namespace ArgeHeiwako.Tests.IO
                 File.Delete(fileName);
             }
         }
-
     }
 }

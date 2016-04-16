@@ -1,5 +1,6 @@
 ﻿using ArgeHeiwako.Data.Properties;
 using System;
+using ArgeHeiwako.Data.Common;
 
 namespace ArgeHeiwako.Data
 {
@@ -9,7 +10,11 @@ namespace ArgeHeiwako.Data
     /// </summary>
     public sealed class Ordnungsbegriffe
     {
-        private const string Satzart = "A";
+        /// <summary>
+        /// Die Kennzeichnung der Satzart
+        /// </summary>
+        public const string Satzart = "A";
+        
         private readonly ArgeVersion version;
         private readonly KundenNummer kundenNummer;
         private readonly OrdnungsbegriffAbrechnungsunternehmen ordnungsbegriffAbrechnungsunternehmen;

@@ -36,33 +36,6 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet />
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 4.0|AnyCPU'">
-    <OutputPath>bin\Release 4.0\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 4.5|AnyCPU'">
-    <OutputPath>bin\Release 4.5\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 4.6|AnyCPU'">
-    <OutputPath>bin\Release 4.6\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -90,14 +63,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\AbrechnungsunternehmenTests.cs" />
-    <Compile Include="Data\ArgeVersionTests.cs" />
-    <Compile Include="Data\KundenNummerTests.cs" />
-    <Compile Include="Data\WohnungsNummerTests.cs" />
-    <Compile Include="Data\LiegenschaftsNummerTests.cs" />
-    <Compile Include="Data\OrdnungsbegriffAbrechnungsunternehmenTests.cs" />
+    <Compile Include="Data\AnteilSteuerlicheLeistungsartTests.cs" />
+    <Compile Include="Data\Common\AbrechnungsfolgeNummerTests.cs" />
+    <Compile Include="Data\Common\AbrechnungsunternehmenTests.cs" />
+    <Compile Include="Data\Common\ArgeVersionTests.cs" />
+    <Compile Include="Data\Common\BetragTests.cs" />
+    <Compile Include="Data\Common\ErweiteterOrdnungsbegriffAbrechnungsunternehmenTests.cs" />
+    <Compile Include="Data\Common\KostenartTests.cs" />
+    <Compile Include="Data\Common\KundenNummerTests.cs" />
+    <Compile Include="Data\Common\NutzerfolgeTests.cs" />
+    <Compile Include="Data\Common\NutzergruppenNummerTests.cs" />
+    <Compile Include="Data\Common\ProzentTests.cs" />
+    <Compile Include="Data\Common\SatzfolgenummerTests.cs" />
+    <Compile Include="Data\Common\SteuerlicheLeistungsartTests.cs" />
+    <Compile Include="Data\Common\TagTests.cs" />
+    <Compile Include="Data\Common\WohnungsNummerTests.cs" />
+    <Compile Include="Data\Common\LiegenschaftsNummerTests.cs" />
+    <Compile Include="Data\Common\OrdnungsbegriffAbrechnungsunternehmenTests.cs" />
     <Compile Include="Data\OrdnungsbegriffeTests.cs" />
-    <Compile Include="Data\OrdnungsbegriffWohnungsunternehmenTests.cs" />
+    <Compile Include="Data\Common\OrdnungsbegriffWohnungsunternehmenTests.cs" />
+    <Compile Include="IO\AnteilSteuerlicheLeistungsartFileTests.cs" />
+    <Compile Include="IO\AnteilSteuerlicheLeistungsartWriterTests.cs" />
+    <Compile Include="IO\ArgeFileTests.cs" />
+    <Compile Include="IO\ArgeWriterTestsBase.cs" />
+    <Compile Include="IO\FileTestsBase.cs" />
     <Compile Include="IO\OrdnungsbegriffeFileTests.cs" />
     <Compile Include="IO\OrdnungsbegriffeWriterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

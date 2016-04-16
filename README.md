@@ -1,3 +1,6 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/iuu7oppbi0dhyp5v/branch/master?svg=true)](https://ci.appveyor.com/project/m4cx/argeheiwako-net/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/iuu7oppbi0dhyp5v?svg=true)](https://ci.appveyor.com/project/m4cx/argeheiwako-net)
+
 # ArgeHeiwako.NET
 SDK für das Erstellen und Verarbeiten von Datenaustauschdateien nach ARGE-Heiwako (http://www.arge-heiwako.de/)
 
@@ -29,6 +32,10 @@ namespace Test
 ```
 
 # Links
+Weitere Informationen: http://me-software.github.io/ArgeHeiwako.NET/
+
+API-Dokumentation: http://me-software.github.io/ArgeHeiwako.NET/docs/index.html
+
 Waffle-Agile-Board: https://waffle.io/me-software/ArgeHeiwako.NET
 
 # Statistiken
