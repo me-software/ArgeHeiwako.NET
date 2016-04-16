@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgeHeiwako.Data", "ArgeHeiwako.Data\ArgeHeiwako.Data.csproj", "{FAE52BDC-B953-4EE4-BB1A-CE3A01650E9A}"
 EndProject
@@ -51,12 +51,12 @@ Global
 		{BF8DAFE4-8D47-475F-828D-8D45CC514ACA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.0|Any CPU.ActiveCfg = Release 4.0|Any CPU
-		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.0|Any CPU.Build.0 = Release 4.0|Any CPU
-		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.5|Any CPU.ActiveCfg = Release 4.5|Any CPU
-		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.5|Any CPU.Build.0 = Release 4.5|Any CPU
-		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.6|Any CPU.ActiveCfg = Release 4.6|Any CPU
-		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.6|Any CPU.Build.0 = Release 4.6|Any CPU
+		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.0|Any CPU.ActiveCfg = Release|Any CPU
+		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.0|Any CPU.Build.0 = Release|Any CPU
+		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.5|Any CPU.ActiveCfg = Release|Any CPU
+		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.5|Any CPU.Build.0 = Release|Any CPU
+		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.6|Any CPU.ActiveCfg = Release|Any CPU
+		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release 4.6|Any CPU.Build.0 = Release|Any CPU
 		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59393DA6-EDE8-44CE-8BCB-11A59745F259}.Release|Any CPU.Build.0 = Release|Any CPU
 		{87D15C26-22EE-496A-9EA6-089E57778497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
