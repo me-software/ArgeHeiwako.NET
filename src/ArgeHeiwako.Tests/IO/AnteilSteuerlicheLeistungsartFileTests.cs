@@ -3,12 +3,14 @@ using ArgeHeiwako.IO;
 using ArgeHeiwako.Tests.Data;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using Xunit;
 
 namespace ArgeHeiwako.Tests.IO
 {
+    [ExcludeFromCodeCoverage]
     public class AnteilSteuerlicheLeistungsartFileTests : FileTestsBase<AnteilSteuerlicheLeistungsartFile, AnteilSteuerlicheLeistungsart>
     {
         private AnteilSteuerlicheLeistungsartFile file;
@@ -109,7 +111,7 @@ namespace ArgeHeiwako.Tests.IO
             {
                 var file = AnteilSteuerlicheLeistungsartFile.Load(stream);
                 Assert.NotNull(file);
-                Assert.IsAssignableFrom<OrdnungsbegriffeFile>(file);
+                Assert.IsAssignableFrom<AnteilSteuerlicheLeistungsartFile>(file);
             }
         }
 
@@ -123,7 +125,7 @@ namespace ArgeHeiwako.Tests.IO
                 Assert.NotNull(file.Datensaetze);
                 Assert.NotEmpty(file.Datensaetze);
                 Assert.Equal(1, file.Datensaetze.Count());
-                Assert.IsAssignableFrom<Ordnungsbegriffe>(file.Datensaetze.First());
+                Assert.IsAssignableFrom<AnteilSteuerlicheLeistungsart>(file.Datensaetze.First());
             }
         }
 

@@ -64,6 +64,34 @@ namespace ArgeHeiwako.Tests.Data.Common
 
         #endregion
 
+        #region FromString()
+
+        [Fact]
+        public void FromString_StringNull_ThrowsArgumentNullException()
+        {
+            var ex = Assert.Throws<ArgumentNullException>(() => ErweiterterOrdnungsbegriffAbrechnungsunternehmen.FromString(null));
+            Assert.Equal("erweiterterOrdnungsbegriffAbrechnungsunternehmenString", ex.ParamName);
+        }
+
+        [Theory]
+        [InlineData("")]
+        [InlineData("00000000000000000")]
+        [InlineData("0000000000000000000")]
+        public void FromString_StringNotValid_ThrowsArgumentOutOfRangeException(string data)
+        {
+            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => ErweiterterOrdnungsbegriffAbrechnungsunternehmen.FromString(data));
+            Assert.Equal("erweiterterOrdnungsbegriffAbrechnungsunternehmenString", ex.ParamName);
+        }
+
+        [Fact]
+        public void FromString_ValidString_ReturnsValidToString()
+        {
+            var validString = "000000001000100011";
+            Assert.Equal(validString, ErweiterterOrdnungsbegriffAbrechnungsunternehmen.FromString(validString).ToString());
+        }
+
+        #endregion
+
         #region LiegenschaftsNummer 
 
         [Fact]

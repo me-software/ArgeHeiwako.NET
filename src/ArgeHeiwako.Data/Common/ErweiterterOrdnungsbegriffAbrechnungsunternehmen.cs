@@ -12,12 +12,12 @@ namespace ArgeHeiwako.Data.Common
         private readonly Nutzerfolge nutzerfolge;
 
         /// <summary>
-        /// test
+        /// Erstellt eine neue <see cref="ErweiterterOrdnungsbegriffAbrechnungsunternehmen"/>-Instanz
         /// </summary>
-        /// <param name="liegenschaftsNummer"></param>
-        /// <param name="nutzergruppenNummer"></param>
-        /// <param name="wohnungsNummer"></param>
-        /// <param name="nutzerfolge"></param>
+        /// <param name="liegenschaftsNummer">Die Liegenschaftsnummer</param>
+        /// <param name="nutzergruppenNummer">Die Nutzergruppennummer</param>
+        /// <param name="wohnungsNummer">Die Wohnungsnummer</param>
+        /// <param name="nutzerfolge">Die Nutzerfolge</param>
         public ErweiterterOrdnungsbegriffAbrechnungsunternehmen(
             LiegenschaftsNummer liegenschaftsNummer,
             NutzergruppenNummer nutzergruppenNummer,
@@ -33,6 +33,26 @@ namespace ArgeHeiwako.Data.Common
 
             this.nutzergruppenNummer = nutzergruppenNummer;
             this.nutzerfolge = nutzerfolge;
+        }
+
+        /// <summary>
+        /// Erstellt eine neue <see cref="ErweiterterOrdnungsbegriffAbrechnungsunternehmen"/>-Instanz
+        /// </summary>
+        /// <param name="erweiterterOrdnungsbegriffAbrechnungsunternehmenString">Die textuelle Darstellung aus der Datenaustauschdatei</param>
+        public static ErweiterterOrdnungsbegriffAbrechnungsunternehmen FromString(string erweiterterOrdnungsbegriffAbrechnungsunternehmenString)
+        {
+            if (erweiterterOrdnungsbegriffAbrechnungsunternehmenString == null)
+                throw new ArgumentNullException(nameof(erweiterterOrdnungsbegriffAbrechnungsunternehmenString));
+
+            if (erweiterterOrdnungsbegriffAbrechnungsunternehmenString.Length != 18)
+                throw new ArgumentOutOfRangeException(nameof(erweiterterOrdnungsbegriffAbrechnungsunternehmenString));
+
+            var liegenschaftsNummer = new LiegenschaftsNummer(erweiterterOrdnungsbegriffAbrechnungsunternehmenString.Substring(0, 9));
+            var nutzergruppenNummer = new NutzergruppenNummer(erweiterterOrdnungsbegriffAbrechnungsunternehmenString.Substring(9, 4));
+            var wohnungsNummer = new WohnungsNummer(erweiterterOrdnungsbegriffAbrechnungsunternehmenString.Substring(13, 4));
+            var nutzerfolge = new Nutzerfolge(erweiterterOrdnungsbegriffAbrechnungsunternehmenString.Substring(17, 1));
+
+            return new ErweiterterOrdnungsbegriffAbrechnungsunternehmen(liegenschaftsNummer, nutzergruppenNummer, wohnungsNummer, nutzerfolge);
         }
 
         /// <summary>

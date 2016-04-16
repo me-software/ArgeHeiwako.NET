@@ -111,7 +111,7 @@ namespace ArgeHeiwako.Data.Common
             else
                 throw new ArgumentException(Resources.EXP_MSG_VALID_ABRECHNUNGSUNTERNEHMENKENNUNG, "abrechnungsunternehmen");
 
-            return Find(kennungNummeric);
+            return Finde(kennungNummeric);
         }
 
         /// <summary>
@@ -120,9 +120,20 @@ namespace ArgeHeiwako.Data.Common
         /// <param name="nummer">Die numerische Kennung des <see cref="Abrechnungsunternehmen"/></param>
         /// <returns>Das ermittelte <see cref="Abrechnungsunternehmen"/></returns>
         /// <exception cref="KeyNotFoundException">Wenn für die Kennung in <paramref name="nummer"/> kein Abrechnungsunternehmen ermittelt werden kann.</exception>
-        public static Abrechnungsunternehmen Find(int nummer)
+        public static Abrechnungsunternehmen Finde(int nummer)
         {
             return unternehmen[nummer];
+        }
+
+        /// <summary>
+        /// Ermittelt ein <see cref="Abrechnungsunternehmen"/> anhand der übergebenen numerischen Kennung
+        /// </summary>
+        /// <param name="nummer">Die numerische Kennung des <see cref="Abrechnungsunternehmen"/></param>
+        /// <returns>Das ermittelte <see cref="Abrechnungsunternehmen"/></returns>
+        /// <exception cref="KeyNotFoundException">Wenn für die Kennung in <paramref name="nummer"/> kein Abrechnungsunternehmen ermittelt werden kann.</exception>
+        public static Abrechnungsunternehmen Finde(string nummer)
+        {
+            return unternehmen[int.Parse(nummer)];
         }
     }
 }

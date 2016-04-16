@@ -39,13 +39,13 @@ namespace ArgeHeiwako.Tests.Data
         [Fact]
         public void Find_0_ThrowsKeyNotFoundException()
         {
-            Assert.Throws<KeyNotFoundException>(() => Abrechnungsunternehmen.Find(0));
+            Assert.Throws<KeyNotFoundException>(() => Abrechnungsunternehmen.Finde(0));
         }
 
         [Fact]
         public void Find_30_ReturnsTechem()
         {
-            Assert.StartsWith("Techem", Abrechnungsunternehmen.Find(30).Name);
+            Assert.StartsWith("Techem", Abrechnungsunternehmen.Finde(30).Name);
         }
 
         #endregion
@@ -108,7 +108,7 @@ namespace ArgeHeiwako.Tests.Data
         [Fact]
         public void FromString_30_ReturnsTechem()
         {
-            Assert.Equal(Abrechnungsunternehmen.Find(30).ToString(), Abrechnungsunternehmen.FromString("30").ToString());
+            Assert.Equal(Abrechnungsunternehmen.Finde(30).ToString(), Abrechnungsunternehmen.FromString("30").ToString());
         }
 
         #endregion

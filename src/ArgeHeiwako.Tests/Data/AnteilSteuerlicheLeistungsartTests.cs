@@ -363,13 +363,13 @@ namespace ArgeHeiwako.Tests.Data
         [Fact]
         public void SatzfolgeNummer_Get_DefaultReturnsNull()
         {
-            Assert.Null(anteilSteuerlicheLeistungsart.Satzfolgenummer);
+            Assert.Null(anteilSteuerlicheLeistungsart.SatzfolgeNummer);
         }
 
         [Fact]
         public void SatzfolgeNummer_Get_AfterSetReturnsValue()
         {
-            var satzfolgeNummer = new Satzfolgenummer(1);
+            var satzfolgeNummer = new SatzfolgeNummer(1);
             var item = new AnteilSteuerlicheLeistungsart(
                 ordnungsbegriffAbrechnungsunternehmen,
                 ordnungsbegriffWohnungsunternehmen,
@@ -383,7 +383,7 @@ namespace ArgeHeiwako.Tests.Data
                 letzterTagNutzungszeitraum,
                 satzfolgeNummer: satzfolgeNummer);
 
-            Assert.Equal(satzfolgeNummer, item.Satzfolgenummer);
+            Assert.Equal(satzfolgeNummer, item.SatzfolgeNummer);
         }
 
         #endregion
@@ -399,7 +399,7 @@ namespace ArgeHeiwako.Tests.Data
         [Fact]
         public void Abrechnungsunternehmen_Get_AfterSetReturnsValue()
         {
-            var abrechnungsunternehmen = Abrechnungsunternehmen.Find(30);
+            var abrechnungsunternehmen = Abrechnungsunternehmen.Finde(30);
 
             var item = new AnteilSteuerlicheLeistungsart(
                 ordnungsbegriffAbrechnungsunternehmen,
@@ -552,7 +552,7 @@ namespace ArgeHeiwako.Tests.Data
                 lohnanteilRechnungsbetrag,
                 lohnanteilNutzerAnteil,
                 letzterTagNutzungszeitraum,
-                abrechnungsunternehmen: Abrechnungsunternehmen.Find(30));
+                abrechnungsunternehmen: Abrechnungsunternehmen.Finde(30));
             Assert.Equal(expected, item.ToString());
         }
 
@@ -573,7 +573,7 @@ namespace ArgeHeiwako.Tests.Data
                 lohnanteilRechnungsbetrag,
                 lohnanteilNutzerAnteil,
                 letzterTagNutzungszeitraum,
-                satzfolgeNummer: new Satzfolgenummer(1));
+                satzfolgeNummer: new SatzfolgeNummer(1));
             Assert.Equal(expected, item.ToString());
         }
 
@@ -608,7 +608,48 @@ namespace ArgeHeiwako.Tests.Data
             var ex = Assert.Throws<ArgumentOutOfRangeException>(() => AnteilSteuerlicheLeistungsart.FromString(new string(' ', 134)));
             Assert.Equal("anteilSteuerlicheLeistungsartString", ex.ParamName);
         }
+
+        [Fact]
+        public void FromString_DoesNotStartWithE835_ThrowsArgumentOutOfRangeException()
+        {
+            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => AnteilSteuerlicheLeistungsart.FromString(new string(' ', 133)));
+            Assert.Equal("anteilSteuerlicheLeistungsartString", ex.ParamName);
+        }
+
+        [Fact]
+        public void FromString_Field2Pos5To11_ReturnsSatzfolgenummer()
+        {
+            var satzfolgeNummer = new SatzfolgeNummer(1);
+            var satz = new AnteilSteuerlicheLeistungsart(ordnungsbegriffAbrechnungsunternehmen, ordnungsbegriffWohnungsunternehmen, kostenart, steuerlicheLeistungsart, rechnungsbetrag, nutzerAnteil, prozentualerNutzerAnteil, lohnanteilRechnungsbetrag, lohnanteilNutzerAnteil, letzterTagNutzungszeitraum, satzfolgeNummer);
+
+            Assert.Equal(satzfolgeNummer.ToString(), AnteilSteuerlicheLeistungsart.FromString(satz.ToString()).SatzfolgeNummer.ToString());
         
+        }
+
+        [Fact]
+        public void FromString_Field3Pos12To13_ReturnsAbrechnungsunternehmen()
+        {
+            var abrechnungsunternehmen = Abrechnungsunternehmen.Finde(30);
+            var satz = new AnteilSteuerlicheLeistungsart(ordnungsbegriffAbrechnungsunternehmen, ordnungsbegriffWohnungsunternehmen, kostenart, steuerlicheLeistungsart, rechnungsbetrag, nutzerAnteil, prozentualerNutzerAnteil, lohnanteilRechnungsbetrag, lohnanteilNutzerAnteil, letzterTagNutzungszeitraum, abrechnungsunternehmen: abrechnungsunternehmen);
+
+            Assert.Equal(abrechnungsunternehmen, AnteilSteuerlicheLeistungsart.FromString(satz.ToString()).Abrechnungsunternehmen);
+        }
+
+        [Fact]
+        public void FromString_Field4Pos14To31_ReturnsOrdnungsbegriffAbrechnungsunternehmen()
+        {
+            var satz = new AnteilSteuerlicheLeistungsart(ordnungsbegriffAbrechnungsunternehmen, ordnungsbegriffWohnungsunternehmen, kostenart, steuerlicheLeistungsart, rechnungsbetrag, nutzerAnteil, prozentualerNutzerAnteil, lohnanteilRechnungsbetrag, lohnanteilNutzerAnteil, letzterTagNutzungszeitraum);
+
+            Assert.Equal(ordnungsbegriffAbrechnungsunternehmen.ToString(), AnteilSteuerlicheLeistungsart.FromString(satz.ToString()).OrdnungsbegriffAbrechnungsunternehmen.ToString());
+        }
+
+        [Fact]
+        public void FromString_DefaultValidE835_ReturnsValidE835()
+        {
+            var validString = CreateDefault().ToString();
+            Assert.Equal(validString, AnteilSteuerlicheLeistungsart.FromString(validString).ToString());
+        }
+
         #endregion
     }
 }

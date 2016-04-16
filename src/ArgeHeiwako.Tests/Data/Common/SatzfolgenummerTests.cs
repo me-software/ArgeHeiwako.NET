@@ -13,7 +13,7 @@ namespace ArgeHeiwako.Tests.Data.Common
         [Fact]
         public void Ctor_Null_ThrowsArgumentNullException()
         {
-            var ex = Assert.Throws<ArgumentNullException>(() => new Satzfolgenummer(null));
+            var ex = Assert.Throws<ArgumentNullException>(() => new SatzfolgeNummer(null));
             Assert.Equal("satzfolgenummer", ex.ParamName);
         }
 
@@ -24,7 +24,7 @@ namespace ArgeHeiwako.Tests.Data.Common
         [InlineData("AAAAAAA")]
         public void Ctor_IncorrectString_ThrowsArgumentOutOfRangeException(string data)
         {
-            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => new Satzfolgenummer(data));
+            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => new SatzfolgeNummer(data));
             Assert.Equal("satzfolgenummer", ex.ParamName);
         }
 
@@ -33,7 +33,7 @@ namespace ArgeHeiwako.Tests.Data.Common
         [InlineData(-1000000)]
         public void Ctor_IntOutOfRange_ThrowsArgumentOutOfRangeException(int data)
         {
-            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => new Satzfolgenummer(data));
+            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => new SatzfolgeNummer(data));
             Assert.Equal("satzfolgenummer", ex.ParamName);
         }
 
@@ -54,7 +54,7 @@ namespace ArgeHeiwako.Tests.Data.Common
         [InlineData(-1000)]
         public void OpImplicitInt_ReturnsValue(int data)
         {
-            Assert.Equal(data, new Satzfolgenummer(data));
+            Assert.Equal(data, new SatzfolgeNummer(data));
         }
 
         [Theory]
@@ -62,7 +62,7 @@ namespace ArgeHeiwako.Tests.Data.Common
         [InlineData("-000001", -1)]
         public void OpImplicitInt_StringValue_ReturnsIntValue(string data, int value)
         {
-            Assert.Equal(value, new Satzfolgenummer(data));
+            Assert.Equal(value, new SatzfolgeNummer(data));
         }
         #endregion
 
@@ -73,7 +73,7 @@ namespace ArgeHeiwako.Tests.Data.Common
         [InlineData(-1, "-000001")]
         public void ToString_ValueReturnsCorrectString(int value, string valueString)
         {
-            Assert.Equal(valueString, new Satzfolgenummer(value).ToString());
+            Assert.Equal(valueString, new SatzfolgeNummer(value).ToString());
         }
 
         #endregion

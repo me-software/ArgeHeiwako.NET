@@ -5,15 +5,15 @@ namespace ArgeHeiwako.Data.Common
     /// <summary>
     /// Satzfolgenummer innerhalb eines Datenaustausch-Satzes
     /// </summary>
-    public sealed class Satzfolgenummer
+    public sealed class SatzfolgeNummer
     {
         private readonly int satzfolgenummer;
 
         /// <summary>
-        /// Erstellt eine neue <see cref="Satzfolgenummer"/>-Instanz
+        /// Erstellt eine neue <see cref="SatzfolgeNummer"/>-Instanz
         /// </summary>
         /// <param name="satzfolgenummer">Der numerische Wert der Satzfolgenummer.</param>
-        public Satzfolgenummer(int satzfolgenummer)
+        public SatzfolgeNummer(int satzfolgenummer)
         {
             if (satzfolgenummer < -999999 || satzfolgenummer > 9999999)
                 throw new ArgumentOutOfRangeException("satzfolgenummer");
@@ -22,10 +22,10 @@ namespace ArgeHeiwako.Data.Common
         }
 
         /// <summary>
-        /// Erstellt eine neue <see cref="Satzfolgenummer"/>-Instanz
+        /// Erstellt eine neue <see cref="SatzfolgeNummer"/>-Instanz
         /// </summary>
         /// <param name="satzfolgenummer">Der textuelle Wert der Satzfolgenummer aus Datenaustauschdatei.</param>
-        public Satzfolgenummer(string satzfolgenummer)
+        public SatzfolgeNummer(string satzfolgenummer)
         {
             if (satzfolgenummer == null)
                 throw new ArgumentNullException("satzfolgenummer");
@@ -41,11 +41,11 @@ namespace ArgeHeiwako.Data.Common
         }
 
         /// <summary>
-        /// Implizite Konvertierung einer <see cref="Satzfolgenummer"/>-Instanz in den numerischen Wert vom Typ <see cref="int"/>
+        /// Implizite Konvertierung einer <see cref="SatzfolgeNummer"/>-Instanz in den numerischen Wert vom Typ <see cref="int"/>
         /// </summary>
-        /// <param name="folgenummer">Die zu konvertierende <see cref="Satzfolgenummer"/>-Instanz</param>
+        /// <param name="folgenummer">Die zu konvertierende <see cref="SatzfolgeNummer"/>-Instanz</param>
         /// <returns>Der numerische Wert der Satzfolgenummer</returns>
-        public static implicit operator int(Satzfolgenummer folgenummer)
+        public static implicit operator int(SatzfolgeNummer folgenummer)
         {
             return folgenummer.satzfolgenummer;
         }

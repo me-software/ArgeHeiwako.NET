@@ -27,7 +27,7 @@ namespace ArgeHeiwako.Data
         private readonly Tag letzterTagNutzungszeitraum;
         private readonly Abrechnungsunternehmen abrechnungsunternehmen;
         private readonly string kostenartText;
-        private readonly Satzfolgenummer satzfolgeNummer;
+        private readonly SatzfolgeNummer satzfolgeNummer;
         private readonly AbrechnungsfolgeNummer abrechnungsfolgeNummer;
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace ArgeHeiwako.Data
             Betrag lohnanteilRechnungsbetrag,
             Betrag lohnanteilNutzerAnteil,
             Tag letzterTagNutzungszeitraum,
-            Satzfolgenummer satzfolgeNummer = null,
+            SatzfolgeNummer satzfolgeNummer = null,
             Abrechnungsunternehmen abrechnungsunternehmen = null,
             AbrechnungsfolgeNummer abrechnungsfolgeNummer = null,
             string kostenartText = null)
@@ -109,9 +109,9 @@ namespace ArgeHeiwako.Data
         }
 
         /// <summary>
-        /// Setzt oder Liefert die optionale <see cref="Common.Satzfolgenummer"/>
+        /// Setzt oder Liefert die optionale <see cref="Common.SatzfolgeNummer"/>
         /// </summary>
-        public Satzfolgenummer Satzfolgenummer { get { return satzfolgeNummer; } }
+        public SatzfolgeNummer SatzfolgeNummer { get { return satzfolgeNummer; } }
 
         /// <summary>
         /// Setzt oder Liefert das optionale <see cref="Common.Abrechnungsunternehmen"/>
@@ -196,7 +196,7 @@ namespace ArgeHeiwako.Data
             return string.Format(
                 "{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}{11}{12}{13}{14}",
                 Satzart,
-                (Satzfolgenummer == null ? new string(' ', 7) : Satzfolgenummer.ToString()),
+                (SatzfolgeNummer == null ? new string(' ', 7) : SatzfolgeNummer.ToString()),
                 (Abrechnungsunternehmen == null ? new string(' ', 2) : Abrechnungsunternehmen.ToString()),
                 ordnungsbegriffAbrechnungsunternehmen,
                 ordnungsbegriffWohnungsunternehmen,
@@ -228,7 +228,31 @@ namespace ArgeHeiwako.Data
             if (anteilSteuerlicheLeistungsartString.Length != 133)
                 throw new ArgumentOutOfRangeException(nameof(anteilSteuerlicheLeistungsartString));
 
-            throw new NotImplementedException();
+            if (!anteilSteuerlicheLeistungsartString.StartsWith(Satzart))
+                throw new ArgumentOutOfRangeException(nameof(anteilSteuerlicheLeistungsartString));
+
+            var satzfolgeNummerString = anteilSteuerlicheLeistungsartString.Substring(4, 7).Trim().Length == 0 ? null : anteilSteuerlicheLeistungsartString.Substring(4, 7);
+            var satzfolgeNummer = satzfolgeNummerString == null ? null : new SatzfolgeNummer(satzfolgeNummerString);
+
+            var abrechnungsunternehmenString = anteilSteuerlicheLeistungsartString.Substring(11, 2).Trim().Length == 0 ? null : anteilSteuerlicheLeistungsartString.Substring(11, 2);
+            var abrechnungsunternehmen = abrechnungsunternehmenString == null ? null : Abrechnungsunternehmen.Finde(abrechnungsunternehmenString);
+
+
+            var ordnungsbegriffAbrechnungsunternehmen = ErweiterterOrdnungsbegriffAbrechnungsunternehmen.FromString(anteilSteuerlicheLeistungsartString.Substring(13, 18));
+            var ordnungsbegriffWohnungsunternehmen = new OrdnungsbegriffWohnungsunternehmen(anteilSteuerlicheLeistungsartString.Substring(31, 20));
+            var abrechnungsfolgeNummer = new AbrechnungsfolgeNummer(anteilSteuerlicheLeistungsartString.Substring(51, 1));
+            var kostenart = Kostenart.Finde(anteilSteuerlicheLeistungsartString.Substring(52, 3));
+            var kostenartText = anteilSteuerlicheLeistungsartString.Substring(55, 25);
+            var steuerlicheLeistungsart = SteuerlicheLeistungsart.Finde(anteilSteuerlicheLeistungsartString.Substring(80, 2));
+            var rechnungsbetrag = new Betrag(anteilSteuerlicheLeistungsartString.Substring(82, 10));
+            var anteilNutzer = new Betrag(anteilSteuerlicheLeistungsartString.Substring(92, 10));
+            var prozentualerAnteilNutzer = new Prozent(anteilSteuerlicheLeistungsartString.Substring(102, 5));
+            var lohnanteilRechnungsbetrag = new Betrag(anteilSteuerlicheLeistungsartString.Substring(107, 10));
+            var lohnanteilNutzerAnteil = new Betrag(anteilSteuerlicheLeistungsartString.Substring(117, 10));
+            var letzterTagNutzungszeitraum = new Tag(anteilSteuerlicheLeistungsartString.Substring(127, 6));
+
+
+            return new AnteilSteuerlicheLeistungsart(ordnungsbegriffAbrechnungsunternehmen, ordnungsbegriffWohnungsunternehmen, kostenart, steuerlicheLeistungsart, rechnungsbetrag, anteilNutzer, prozentualerAnteilNutzer, lohnanteilRechnungsbetrag, lohnanteilNutzerAnteil, letzterTagNutzungszeitraum, satzfolgeNummer, abrechnungsunternehmen, abrechnungsfolgeNummer, kostenartText);
         }
     }
 }
