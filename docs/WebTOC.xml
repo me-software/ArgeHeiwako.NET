@@ -3,124 +3,332 @@
 
   <HelpTOCNode Title="Willkommen zum ArgeHeiwako .NET SDK" Url="html/2f04566b-5502-41d9-bc3a-e1f503700063.htm" />
   <HelpTOCNode Title="Versions&#252;bersicht" Url="html/00210b05-0165-4495-be4c-9e6a7a3bdcb5.htm" />
-  <HelpTOCNode Id="7084bf2c-ee40-403c-b3b8-a6fcfd844983" Title="ArgeHeiwako.Data" Url="html/954e9586-b847-6aea-8751-b16d19dacc57.htm">
-    <HelpTOCNode Id="e32f91ac-8b89-4d24-862b-8dca23d539f8" Title="Abrechnungsunternehmen Class" Url="html/e0fa6e49-b1ed-0a4d-8a85-27488a1ac6c9.htm">
-      <HelpTOCNode Id="f5b65d40-d5bf-4b6d-b6b6-bc8e2e4cc90e" Title="Abrechnungsunternehmen Properties" Url="html/865a6e28-c350-bb64-44a7-407ed9d316c1.htm">
-        <HelpTOCNode Title="Name Property " Url="html/dbf71200-946a-8188-bd27-ed6eb56dbc2a.htm" />
-        <HelpTOCNode Title="Nummer Property " Url="html/93af64a7-7b1e-06a9-e682-e9f43c38518a.htm" />
+  <HelpTOCNode Id="6771cf6e-357c-49b4-9630-bd70aeeabe10" Title="ArgeHeiwako.Data" Url="html/954e9586-b847-6aea-8751-b16d19dacc57.htm">
+    <HelpTOCNode Id="2b63a089-a5d4-4b5c-abdc-d120a69e0d36" Title="AnteilSteuerlicheLeistungsart Class" Url="html/dcd98dc3-f34b-bcd8-be6a-a04433f5d98f.htm">
+      <HelpTOCNode Title="AnteilSteuerlicheLeistungsart Constructor " Url="html/8b6aa801-78a7-d832-618e-8c8d7a90e285.htm" />
+      <HelpTOCNode Id="4898f9d2-e13c-46d9-bcf1-256249c4624d" Title="AnteilSteuerlicheLeistungsart Properties" Url="html/b03748d2-de96-89d3-500a-36d6963f46d0.htm">
+        <HelpTOCNode Title="AbrechnungsfolgeNummer Property " Url="html/98d11ba5-047f-c336-e7f1-5b5a0f5d4262.htm" />
+        <HelpTOCNode Title="Abrechnungsunternehmen Property " Url="html/c63475fb-85b6-f99e-6621-1a801b5b8170.htm" />
+        <HelpTOCNode Title="Kostenart Property " Url="html/41a08a1f-933f-af23-55ad-a64c30d8c077.htm" />
+        <HelpTOCNode Title="KostenartText Property " Url="html/fff3bf3b-fcdf-b401-bb43-a4b607364291.htm" />
+        <HelpTOCNode Title="LetzterTagNutzungszeitraum Property " Url="html/9cedf431-1b41-d113-eb2b-c190ac19001c.htm" />
+        <HelpTOCNode Title="LohnanteilNutzerAnteil Property " Url="html/12d86989-1ba7-30c2-d4aa-76fff6b029e5.htm" />
+        <HelpTOCNode Title="LohnanteilRechnungsbetrag Property " Url="html/93ff8ec7-396d-cfe8-ba23-a773695e4ec2.htm" />
+        <HelpTOCNode Title="NutzerAnteil Property " Url="html/10beaa1e-434b-ea65-cb35-9770807e211f.htm" />
+        <HelpTOCNode Title="OrdnungsbegriffAbrechnungsunternehmen Property " Url="html/e261fe3f-f492-20e4-7857-d4de26d9b930.htm" />
+        <HelpTOCNode Title="OrdnungsbegriffWohnungsunternehmen Property " Url="html/53356d41-67bb-3b16-9ea2-c42e10a592a8.htm" />
+        <HelpTOCNode Title="ProzentualerNutzerAnteil Property " Url="html/6b4919cb-b24e-1370-b936-b33d43aed78d.htm" />
+        <HelpTOCNode Title="Rechnungsbetrag Property " Url="html/3adac8a5-078c-90b5-eb4e-c2fcbcc41a48.htm" />
+        <HelpTOCNode Title="SatzfolgeNummer Property " Url="html/01fe7313-c124-0381-67a3-7c7492a00226.htm" />
+        <HelpTOCNode Title="SteuerlicheLeistungsart Property " Url="html/ae75fd7a-2a03-885a-ce66-7d3b6dee69eb.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="833b7092-e698-4a72-9e90-fc4e6604b245" Title="Abrechnungsunternehmen Methods" Url="html/41d8f243-b770-7097-ca43-d887a4b96ed0.htm">
-        <HelpTOCNode Title="Find Method " Url="html/2214d0b0-cd97-c10f-37fb-ce3badf336ff.htm" />
-        <HelpTOCNode Title="ToString Method " Url="html/c46a8985-f476-3c7f-29cd-f17497bd2d89.htm" />
+      <HelpTOCNode Id="50c4653b-7dd3-4abe-bb42-033a2c26a43b" Title="AnteilSteuerlicheLeistungsart Methods" Url="html/885c800d-55e5-a3d9-6820-e8fd6a9129f0.htm">
+        <HelpTOCNode Title="FromString Method " Url="html/900b1020-340d-69db-4c48-b5b38ac2141e.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/e45f5c24-a1b4-faf7-eabd-1fff3f6ae2a1.htm" />
       </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="8ac02c20-9598-4dd8-977c-b1ecbcc18cc9" Title="ArgeVersion Class" Url="html/853b3728-acd9-9739-1da3-0fdd98345483.htm">
-      <HelpTOCNode Id="da5f8303-dc2a-40b9-b46d-fef5e379f108" Title="ArgeVersion Constructor " Url="html/7b753c2e-8f1f-ac87-d3c9-c10fdf8fa84f.htm">
-        <HelpTOCNode Title="ArgeVersion Constructor " Url="html/14a885a0-c4c2-57c6-fd8c-94707599b009.htm" />
-        <HelpTOCNode Title="ArgeVersion Constructor (String)" Url="html/de63e3ea-86e5-a585-4b03-528b901a1b49.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="ac9a25b2-b210-4366-bf20-f9ff6c9e99af" Title="ArgeVersion Methods" Url="html/cb27a5d5-b08d-4874-7d83-d63d01703ff4.htm">
-        <HelpTOCNode Title="ToString Method " Url="html/a94e0e7c-e767-8329-2903-ebb55436bf2d.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="8198d0e5-9c5b-4546-b138-b20acb381b6f" Title="KundenNummer Class" Url="html/2b8a5001-16a5-9be4-c7d2-d5bb090f6199.htm">
-      <HelpTOCNode Id="37512ba8-f10f-4afc-8e1a-6c9792e38b54" Title="KundenNummer Constructor " Url="html/5a0ca4ab-5305-4738-7d20-17411f368ade.htm">
-        <HelpTOCNode Title="KundenNummer Constructor (Int64)" Url="html/6930fa98-487c-2f96-0d7d-de6c900239a5.htm" />
-        <HelpTOCNode Title="KundenNummer Constructor (String)" Url="html/e17c46ef-152b-9432-23bb-3b66bdce0db4.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="7cf4377a-556f-4c20-92d9-335911ca69ba" Title="KundenNummer Methods" Url="html/9a84e973-b423-cef6-5fb3-46aa4c6d231f.htm">
-        <HelpTOCNode Title="ToString Method " Url="html/a6833e93-bc36-c21e-84b4-8c399afcd392.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="e2b10cbe-4ff5-4c28-91de-e2217757d902" Title="KundenNummer Fields" Url="html/5a712cfa-2024-fe2b-fbfb-d56ae26dcbd5.htm">
-        <HelpTOCNode Title="MaxValue Field" Url="html/d3c53801-b3de-7790-0412-16004a3c9145.htm" />
-        <HelpTOCNode Title="MinValue Field" Url="html/7accd687-385b-3664-6c12-58b7ff47502c.htm" />
+      <HelpTOCNode Id="467170f8-5d18-4bd3-aa65-2db53ce4301c" Title="AnteilSteuerlicheLeistungsart Fields" Url="html/9c6b7947-04e1-4284-d6fd-198b0a375daf.htm">
+        <HelpTOCNode Title="Satzart Field" Url="html/1705fdb8-aa24-6356-9338-c34ef3bad478.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="a2a110f5-ad6c-4c8a-b701-e75139dd192b" Title="LiegenschaftsNummer Class" Url="html/7e790398-178e-4716-5c51-21b8220c6362.htm">
-      <HelpTOCNode Id="22a95527-c4f3-4a2e-b4b6-49455ee5e9bf" Title="LiegenschaftsNummer Constructor " Url="html/1f5e86c9-5907-7d19-638a-325b36215ac5.htm">
-        <HelpTOCNode Title="LiegenschaftsNummer Constructor (Int32)" Url="html/ac342da9-640c-282e-d154-e45aba0c7af9.htm" />
-        <HelpTOCNode Title="LiegenschaftsNummer Constructor (String)" Url="html/e17b5675-3c6d-a362-3581-97110cc0f230.htm" />
+    <HelpTOCNode Id="92a00fe9-c305-4794-9a5b-27004e1950b5" Title="Ordnungsbegriffe Class" Url="html/8b02fab9-5028-23d4-ef38-2a252ab8f925.htm">
+      <HelpTOCNode Id="f12d427a-c2cb-46b7-bf40-f74f279343ed" Title="Ordnungsbegriffe Constructor " Url="html/2281f012-356b-b66b-59d7-3ebb6fae42c9.htm">
+        <HelpTOCNode Title="Ordnungsbegriffe Constructor (ArgeVersion, KundenNummer, OrdnungsbegriffAbrechnungsunternehmen, OrdnungsbegriffWohnungsunternehmen)" Url="html/e7a5a4c6-58c7-03b0-5d92-7ad06792f381.htm" />
+        <HelpTOCNode Title="Ordnungsbegriffe Constructor (ArgeVersion, KundenNummer, OrdnungsbegriffAbrechnungsunternehmen, OrdnungsbegriffWohnungsunternehmen, Abrechnungsunternehmen)" Url="html/f12f9b3f-1629-2967-b34e-8b83763ea7fb.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="fbe7a292-db26-48e1-aa95-fd4ad813d140" Title="LiegenschaftsNummer Methods" Url="html/de38cb44-35a9-e4e6-37ab-fc99e15475d8.htm">
-        <HelpTOCNode Title="ToString Method " Url="html/a323bdd5-c5d2-1645-6645-e601524bc3ac.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="70fbe13a-3d1b-4b50-8ccb-be3bf14693c6" Title="LiegenschaftsNummer Type Conversions" Url="html/0ccb9337-5cb7-b533-3fe1-bd76a6ec4b7a.htm">
-        <HelpTOCNode Title="Implicit Conversion (LiegenschaftsNummer to Int32)" Url="html/f4196ce1-5464-8e6e-1e2a-6e32abf71e7d.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="5cdafd0e-85a7-48bb-8f3a-dbd9faa2fb8c" Title="OrdnungsbegriffAbrechnungsunternehmen Class" Url="html/10260c14-6a2c-b83f-8d1c-82b59c5286cb.htm">
-      <HelpTOCNode Title="OrdnungsbegriffAbrechnungsunternehmen Constructor " Url="html/297b90d2-3b31-fe82-a7eb-0030b573fe6a.htm" />
-      <HelpTOCNode Id="a7627292-d99e-477f-bb38-7c107caab9e5" Title="OrdnungsbegriffAbrechnungsunternehmen Methods" Url="html/ea489efe-460b-0797-3eff-5acb6f73713e.htm">
-        <HelpTOCNode Title="ToString Method " Url="html/052250a6-9c99-da29-2490-c99d4decef14.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="3e9b1def-fb77-43e1-b738-43b256f19b5e" Title="Ordnungsbegriffe Class" Url="html/8b02fab9-5028-23d4-ef38-2a252ab8f925.htm">
-      <HelpTOCNode Id="d831585f-275b-4f68-a4ef-33c24637053d" Title="Ordnungsbegriffe Constructor " Url="html/2281f012-356b-b66b-59d7-3ebb6fae42c9.htm">
-        <HelpTOCNode Title="Ordnungsbegriffe Constructor (ArgeVersion, KundenNummer, OrdnungsbegriffAbrechnungsunternehmen, OrdnungsbegriffWohnungsunternehmen)" Url="html/74aa26db-e296-7a08-b137-063d3c903907.htm" />
-        <HelpTOCNode Title="Ordnungsbegriffe Constructor (ArgeVersion, KundenNummer, OrdnungsbegriffAbrechnungsunternehmen, OrdnungsbegriffWohnungsunternehmen, Abrechnungsunternehmen)" Url="html/4bb3c366-9309-4438-32e8-8f900e22e376.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="cdf01a76-d13d-499a-9910-5518402e06fa" Title="Ordnungsbegriffe Properties" Url="html/7b460ee1-fbb6-06f7-5c26-56b642c50b29.htm">
+      <HelpTOCNode Id="c890cbfa-a956-408c-a148-09a43f660804" Title="Ordnungsbegriffe Properties" Url="html/7b460ee1-fbb6-06f7-5c26-56b642c50b29.htm">
         <HelpTOCNode Title="Abrechnungsunternehmen Property " Url="html/da84fcbf-61b8-156c-df39-9ba7ea417d51.htm" />
         <HelpTOCNode Title="KundenNummer Property " Url="html/618c210f-096b-b775-0f8a-5ef1b0dc1e9f.htm" />
         <HelpTOCNode Title="OrdnungsbegriffAbrechnungsunternehmen Property " Url="html/2f399997-4e77-a9a2-9742-5e3ebc2ddfa2.htm" />
         <HelpTOCNode Title="OrdnungsbegriffWohnungsunternehmen Property " Url="html/29605cc3-a36a-aa10-04b6-f6b5025a4bae.htm" />
         <HelpTOCNode Title="Version Property " Url="html/c0f8879b-5d7c-042d-18df-c2701851ca12.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="ce06338e-451c-4aff-af6f-6645fb373efa" Title="Ordnungsbegriffe Methods" Url="html/cc17358e-2410-554b-3fce-e5489c3e7af4.htm">
+      <HelpTOCNode Id="addf9059-af57-4862-bda2-4b6db06223b0" Title="Ordnungsbegriffe Methods" Url="html/cc17358e-2410-554b-3fce-e5489c3e7af4.htm">
         <HelpTOCNode Title="FromString Method " Url="html/f1871c56-92e5-4b8a-ccb0-c74dcf95fa06.htm" />
         <HelpTOCNode Title="ToString Method " Url="html/cd3f288b-b8ca-3ea6-a07b-052442809bfc.htm" />
       </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="3ee59169-3f77-403a-8ca3-634755ed8f0f" Title="OrdnungsbegriffWohnungsunternehmen Class" Url="html/2ac6d28e-2ca1-31a1-0433-81c41ce287fe.htm">
-      <HelpTOCNode Title="OrdnungsbegriffWohnungsunternehmen Constructor " Url="html/f418b71b-172a-037b-c79e-ddf8b61d53b7.htm" />
-      <HelpTOCNode Id="b26184ab-61c0-4b53-a71f-151ccd234a4e" Title="OrdnungsbegriffWohnungsunternehmen Methods" Url="html/40f1ac7a-88ae-052c-fecb-85ef9ad7e13f.htm">
-        <HelpTOCNode Title="ToString Method " Url="html/fb2c532a-8cef-f5f5-d26c-cbe3d949e088.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="810b42af-dd42-4268-bd40-b5413541607f" Title="WohnungsNummer Class" Url="html/2c3c249f-e03c-51ad-eb29-af9da0172321.htm">
-      <HelpTOCNode Id="f17e7235-acfe-4ef8-809d-77c3ed7e4cf1" Title="WohnungsNummer Constructor " Url="html/939bdf2d-9fde-b8e9-b42e-34a4e68ff56b.htm">
-        <HelpTOCNode Title="WohnungsNummer Constructor (Int16)" Url="html/9f343f2d-baa9-c00a-71c2-ae1736d26d43.htm" />
-        <HelpTOCNode Title="WohnungsNummer Constructor (String)" Url="html/41d7236a-f834-5af0-ecff-685c52e6f0ed.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="41d84f28-795f-4943-8110-7da0fb3f79ea" Title="WohnungsNummer Methods" Url="html/6fbe5cf6-7020-dd7d-7869-269cf6f58085.htm">
-        <HelpTOCNode Title="ToString Method " Url="html/eca1c6a9-d21b-fa8e-2f3b-92bc70b483e3.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="f27bf3fd-a239-4273-bfe4-76e3c44d4811" Title="WohnungsNummer Type Conversions" Url="html/165857eb-a18c-ebad-29fa-37ecd17f342e.htm">
-        <HelpTOCNode Title="Implicit Conversion (WohnungsNummer to Int16)" Url="html/6f2491ad-1bb5-e5f5-dbc8-dc1b463e3540.htm" />
+      <HelpTOCNode Id="e8ed80a6-9b06-437b-995f-d35a5726f8e7" Title="Ordnungsbegriffe Fields" Url="html/3f9b9e81-e904-0542-8712-b047844cbc62.htm">
+        <HelpTOCNode Title="Satzart Field" Url="html/fd03a655-b87b-7c34-41e8-e7d555654f13.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="c8661b19-ea54-4784-b86f-121e4feb0a2b" Title="ArgeHeiwako.IO" Url="html/f7047b17-c193-aa4c-41bb-080a7e813cbc.htm">
-    <HelpTOCNode Id="07146a0b-29d4-4369-8a35-06cdaa485ed2" Title="OrdnungsbegriffeFile Class" Url="html/905587d6-3506-cb51-981b-43116361da1e.htm">
-      <HelpTOCNode Id="40895f1b-005e-4c02-9c78-2fd1f8568820" Title="OrdnungsbegriffeFile Constructor " Url="html/70ead4da-8f72-b12d-8893-45f6ba983742.htm">
-        <HelpTOCNode Title="OrdnungsbegriffeFile Constructor " Url="html/061b9f48-d487-5db5-16be-c5921b266c3f.htm" />
-        <HelpTOCNode Title="OrdnungsbegriffeFile Constructor (DateTime)" Url="html/f8701765-ca04-78a1-d89c-347e72e7fbc3.htm" />
-        <HelpTOCNode Title="OrdnungsbegriffeFile Constructor (IEnumerable(Ordnungsbegriffe))" Url="html/a1f5aa53-9ece-07c5-35aa-5cc6bde5b6bc.htm" />
-        <HelpTOCNode Title="OrdnungsbegriffeFile Constructor (DateTime, IEnumerable(Ordnungsbegriffe))" Url="html/02413263-ef40-d7a2-a958-82c50b783c06.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="7bbd578d-0788-4b29-aa1e-6278f8095b53" Title="OrdnungsbegriffeFile Properties" Url="html/fa678f02-7cae-6bdf-5473-f2112169c9e1.htm">
-        <HelpTOCNode Title="Created Property " Url="html/20b1925e-ef32-1492-afe8-c7fc50e6c923.htm" />
-        <HelpTOCNode Title="FileName Property " Url="html/b960939e-3ec9-0d0c-5223-b347c8806ce8.htm" />
-        <HelpTOCNode Title="Ordnungsbegriffe Property " Url="html/0054ee93-a37a-e5fa-8b81-5356433a4eb3.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="8f2c2cd5-7ce8-469e-ab59-9e37c8ab3283" Title="OrdnungsbegriffeFile Methods" Url="html/33e9d5de-9540-6bc0-4ac3-6950050ff519.htm">
-        <HelpTOCNode Title="Load Method " Url="html/c7a65dc7-619c-c497-34aa-8feb76dcff06.htm" />
-        <HelpTOCNode Title="Write Method " Url="html/85747548-1168-f01d-be9e-89601516bb52.htm" />
+  <HelpTOCNode Id="e1958bb8-1aa5-4b78-836e-3c8d742daa88" Title="ArgeHeiwako.Data.Common" Url="html/d087642c-29f2-d355-2f23-296300fa9819.htm">
+    <HelpTOCNode Id="5602d8a1-ded0-4fc6-bdea-24c4d3d4b5b3" Title="AbrechnungsfolgeNummer Class" Url="html/d3d12f79-89ec-fee9-c7bc-265556cd332c.htm">
+      <HelpTOCNode Title="AbrechnungsfolgeNummer Constructor " Url="html/1935ac5a-944b-d9a9-89f2-8b16d227b2a8.htm" />
+      <HelpTOCNode Id="8982bb78-36d0-46f8-b07c-67a15808a728" Title="AbrechnungsfolgeNummer Methods" Url="html/3d96fd70-d50c-9ee4-7d87-66683443aebe.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/dd3b3718-014d-309d-0e27-8f63f06bb240.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="87b4a691-2439-4e78-8471-56ee33576b8b" Title="OrdnungsbegriffeWriter Class" Url="html/4a6ffe74-4aec-470e-be52-41d8fa921c69.htm">
-      <HelpTOCNode Title="OrdnungsbegriffeWriter Constructor " Url="html/6423cf97-6214-6ed4-c6d2-e9fcb1840879.htm" />
-      <HelpTOCNode Id="5c77b371-1a4d-4908-9618-e344803c03f1" Title="OrdnungsbegriffeWriter Methods" Url="html/298c5793-b668-3ca3-dd6b-6d0d3a63f1d1.htm">
-        <HelpTOCNode Id="c848c0b2-edd6-4dce-8593-2e03425a0b7f" Title="Dispose Method " Url="html/c424fa1e-c18a-7951-e0bf-6eea4aaf2c43.htm">
-          <HelpTOCNode Title="Dispose Method " Url="html/c2794d56-dc45-e2ec-6f22-6e22c88f9cfe.htm" />
-          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/60e537ef-a7f4-05ea-f1b1-cb58ce0b1622.htm" />
+    <HelpTOCNode Id="b5d16bbd-e3ae-4d44-b62c-526e714ce294" Title="Abrechnungsunternehmen Class" Url="html/de8efdba-4784-c461-6f0f-1ba8dc95291f.htm">
+      <HelpTOCNode Id="09388977-c773-4032-a4b6-438f349bbdbf" Title="Abrechnungsunternehmen Properties" Url="html/a93bc273-8fbf-8556-fca2-b1559d97ba8e.htm">
+        <HelpTOCNode Title="Name Property " Url="html/a1f060de-5a49-ae32-3b99-4cf4c210f520.htm" />
+        <HelpTOCNode Title="Nummer Property " Url="html/f3d31ac6-c401-e3df-b77b-e4c07aade922.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="b58bc7a9-9fdc-467f-a05e-0505104033f4" Title="Abrechnungsunternehmen Methods" Url="html/1687b9fc-12b9-cdc0-abb8-bf1600f34d7a.htm">
+        <HelpTOCNode Id="fd169728-2a5f-4987-8b3d-56c412aa7530" Title="Finde Method " Url="html/8bc78fcf-f626-c216-ee4c-797f2422da4e.htm">
+          <HelpTOCNode Title="Finde Method (Int32)" Url="html/eedb356b-03a0-c6b4-d829-31116c23a49c.htm" />
+          <HelpTOCNode Title="Finde Method (String)" Url="html/1157e721-6d9a-b7f7-1932-ebec4aca8db1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Title="Finalize Method " Url="html/3a751037-7829-358c-9124-3c75b047ec02.htm" />
-        <HelpTOCNode Title="Write Method " Url="html/f926e765-d10b-eabf-8d0e-7101618cbc00.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/e1815438-f289-41be-2588-e898e1a00d3d.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="988272a4-33ce-4ae4-a029-a1ed64d3dba1" Title="OrdnungsbegriffeWriter Fields" Url="html/a6be74ef-dd00-9161-6fc3-61ea997118b7.htm">
-        <HelpTOCNode Title="WriterEncoding Field" Url="html/b369df31-abec-83fd-a695-7380b392ae77.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="8ea50883-c369-4e73-a4fa-10fcb362aa76" Title="ArgeVersion Class" Url="html/4dc27ce1-ede8-351d-b48e-9055514f6d70.htm">
+      <HelpTOCNode Id="0af1d0f4-fb22-410a-a54f-4c82bf3b2df8" Title="ArgeVersion Constructor " Url="html/d15270d4-2af8-5c17-e417-767a777825db.htm">
+        <HelpTOCNode Title="ArgeVersion Constructor " Url="html/d93f3a53-5234-2a55-0a6b-59a3e117da10.htm" />
+        <HelpTOCNode Title="ArgeVersion Constructor (String)" Url="html/0103c2ff-3b0b-ecb9-0b5a-e7611adaf0ab.htm" />
       </HelpTOCNode>
+      <HelpTOCNode Id="3143bcef-6e1e-4c4d-bc94-f29294324c7f" Title="ArgeVersion Methods" Url="html/8a182992-6675-6863-a942-ccdd47c9010c.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/5cd36961-5227-644c-ba87-71f8a54a9daf.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="028db091-c1b9-4cbd-977d-12ccd4f87a86" Title="Betrag Class" Url="html/00cf561d-1cb3-d8ed-966e-5a91e0a3b474.htm">
+      <HelpTOCNode Id="4727cc71-f293-443e-8c93-443028e03f0e" Title="Betrag Constructor " Url="html/ed618bad-b7e5-753d-6127-adf0a53c5d36.htm">
+        <HelpTOCNode Title="Betrag Constructor (Decimal)" Url="html/44524107-7bd8-e256-1ae6-5a17856a472e.htm" />
+        <HelpTOCNode Title="Betrag Constructor (String)" Url="html/e0429b39-845e-93b0-97df-f65f9a0afd5c.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="fbfddd30-35b5-4ea7-86d0-4d8f8fc04371" Title="Betrag Methods" Url="html/c5dedfd8-b126-96fd-87c5-ca92b4f5856b.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/67a16030-d32a-b76e-dd55-e587e16b05b6.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="2eecc2b1-f92b-485f-a463-610a2cd0abf0" Title="Betrag Type Conversions" Url="html/cd5579cf-15f6-08f2-9c7d-f8070f1fff17.htm">
+        <HelpTOCNode Title="Implicit Conversion (Betrag to Decimal)" Url="html/573fb813-a469-91e6-09f6-bbc6e49c802e.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="86a2e82e-367e-4a25-887f-c046704f0c58" Title="ErweiterterOrdnungsbegriffAbrechnungsunternehmen Class" Url="html/556f3dbb-7104-c86e-4565-36f8adc85900.htm">
+      <HelpTOCNode Title="ErweiterterOrdnungsbegriffAbrechnungsunternehmen Constructor " Url="html/9297a82d-f36f-663d-b376-627a98f67a19.htm" />
+      <HelpTOCNode Id="659b2433-7f11-470e-965b-24751a6ade61" Title="ErweiterterOrdnungsbegriffAbrechnungsunternehmen Properties" Url="html/eb62c0a9-c1eb-8a4a-bb93-7a458083fe0e.htm">
+        <HelpTOCNode Title="Nutzerfolge Property " Url="html/e5cc7d54-174a-c68d-861a-33a5d3a843fe.htm" />
+        <HelpTOCNode Title="NutzergruppenNummer Property " Url="html/b0143144-6f57-4224-f70c-9c46c43d29b2.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="be381dea-3c35-4dcc-a695-cc2e86eafca1" Title="ErweiterterOrdnungsbegriffAbrechnungsunternehmen Methods" Url="html/368a1647-ae2a-8de2-ac50-b91c0190552f.htm">
+        <HelpTOCNode Title="FromString Method " Url="html/20f2a850-fd73-3fd3-95f7-ff96997c5a6d.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/8f153867-27fd-a6b9-fc70-54fe32152d41.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="3c9cc618-c839-476e-af04-6157b255f1ae" Title="Kostenart Class" Url="html/3d341582-5754-81ac-8757-46cc60b7a77f.htm">
+      <HelpTOCNode Id="2f8cc02c-fc5c-4cc7-a2c0-cec7b0c3809a" Title="Kostenart Properties" Url="html/f704c8ff-9d37-93c3-9e63-02c40667e469.htm">
+        <HelpTOCNode Title="Bedeutung Property " Url="html/c672e3b3-e829-f608-1d26-2f45df63c96b.htm" />
+        <HelpTOCNode Title="Schluessel Property " Url="html/4028afee-f0b6-7d29-bc5d-6c674ef5b14c.htm" />
+        <HelpTOCNode Title="VariableBedeutung Property " Url="html/cdcad3fa-8bb7-2360-b421-555127bb791b.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="c8056cf9-ef03-462c-b66b-22e9e4440146" Title="Kostenart Methods" Url="html/46b9a182-f3bd-d715-62b2-40a884a8a907.htm">
+        <HelpTOCNode Title="Finde Method " Url="html/85fcf687-dfb5-7611-aaca-5d1b89d15795.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/18949897-f7ab-8192-0c12-8913ca72cad3.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="dc04099f-a3b9-4ebc-9639-2529ae0de580" Title="KundenNummer Class" Url="html/7237385d-fa6c-92cc-fdf9-38460a0d355c.htm">
+      <HelpTOCNode Id="3fe17a3a-53d6-4271-9674-e65cb1d65131" Title="KundenNummer Constructor " Url="html/986d084c-46f2-548d-c715-b1dfa83cf419.htm">
+        <HelpTOCNode Title="KundenNummer Constructor (Int64)" Url="html/ba22f6ec-61ca-a70f-9e44-ce485ba38b04.htm" />
+        <HelpTOCNode Title="KundenNummer Constructor (String)" Url="html/6a27ec29-e51f-cf26-122d-3a375f442831.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="efc91083-4016-492c-8544-d3da95d2eae7" Title="KundenNummer Methods" Url="html/898d2131-acb8-c459-7353-03f4830fac45.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/8b174af0-d47d-fddc-4591-cab8f16d5260.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a30052ef-adee-47cb-a1c9-d4a9dd971447" Title="KundenNummer Fields" Url="html/b5b4db0e-519f-4430-7207-2a8d2c5edd77.htm">
+        <HelpTOCNode Title="MaxValue Field" Url="html/ac401ccb-c720-8a1c-71ef-d9bfe6d52919.htm" />
+        <HelpTOCNode Title="MinValue Field" Url="html/bd46fa47-05b0-fb50-66c0-ec2c2bb045c3.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="a727ffef-8e37-4589-aa86-66c0d2146b10" Title="LiegenschaftsNummer Class" Url="html/f59101e6-724b-b0ea-6d2f-5d04e9aaae28.htm">
+      <HelpTOCNode Id="c944ba11-5c9e-4532-a708-03b71fff8cea" Title="LiegenschaftsNummer Constructor " Url="html/bc2264f6-72de-6ef8-3af9-894cf0806dca.htm">
+        <HelpTOCNode Title="LiegenschaftsNummer Constructor (Int32)" Url="html/3460c01e-d094-3c39-a036-e8c3f8f125fd.htm" />
+        <HelpTOCNode Title="LiegenschaftsNummer Constructor (String)" Url="html/9d31928c-d944-6e2e-2de3-4188cf966b8e.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="5f58521e-a5cd-44b7-b9c3-683c07d4a3ee" Title="LiegenschaftsNummer Methods" Url="html/391f2630-01f1-499d-ae5d-73dbb6b70d1a.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/ad55f7cb-6522-5ab9-8bcd-9a99dd846d00.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="89b9fafa-2161-4546-b17c-36d372a96cf3" Title="LiegenschaftsNummer Type Conversions" Url="html/d143c09f-e3b7-b407-0e2f-17a31fe09de5.htm">
+        <HelpTOCNode Title="Implicit Conversion (LiegenschaftsNummer to Int32)" Url="html/954a398d-82ae-1d20-fd5b-6a3b5aa0a5b9.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="83724458-bf05-4e9d-81fa-338bc0dc2b10" Title="Nummer(T) Class" Url="html/715d85bb-e780-c6c0-4d4a-c901da1849e1.htm">
+      <HelpTOCNode Id="5627156e-bffd-45bb-8fac-39aa88bf7caa" Title="Nummer(T) Constructor " Url="html/2ae9f446-9ac7-f7ce-1d45-cef2902bb05f.htm">
+        <HelpTOCNode Title="Nummer(T) Constructor (String, Int32, String, Func(String, ParseResult(T)))" Url="html/3b87b8a4-dad1-a279-39d4-75fe25c00710.htm" />
+        <HelpTOCNode Title="Nummer(T) Constructor (T, T, T, String)" Url="html/ed8d04df-6274-4300-c4ca-fb2a01a4c4ab.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Nummer(T) Methods" Url="html/391d76e5-9fc8-92b6-ba5e-1bc250da6c26.htm" />
+      <HelpTOCNode Id="44cfadf2-bc41-4b56-8c1a-e2dfca627863" Title="Nummer(T) Type Conversions" Url="html/aa627124-9ddb-13cc-8ad3-9631672f0c26.htm">
+        <HelpTOCNode Title="Implicit Conversion (Nummer(T) to T)" Url="html/7144aecf-d9b7-120a-9802-49451e15e19d.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="14824ba5-caf0-4ae7-901a-40d96888ee66" Title="Nummer(T) Fields" Url="html/4cd03502-bb15-67b2-e692-4a261af24544.htm">
+        <HelpTOCNode Title="value Field" Url="html/a3a3a5b0-307e-7506-48da-b752b0bed992.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="7ba90d42-45d6-4210-8078-f42425de9d40" Title="Nutzerfolge Class" Url="html/b34e8801-375a-40d6-9b1e-bd6a17294124.htm">
+      <HelpTOCNode Id="393fccf1-214d-4c74-8d45-ef7f366083c6" Title="Nutzerfolge Constructor " Url="html/502d0380-3658-ab6a-c4a2-1bcf85d914e1.htm">
+        <HelpTOCNode Title="Nutzerfolge Constructor (Int16)" Url="html/191c342e-763f-af49-01da-c471d304c5ca.htm" />
+        <HelpTOCNode Title="Nutzerfolge Constructor (String)" Url="html/1f7d770a-97b4-6107-6ec7-5f28c2b3a674.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="1fbfbcd1-d788-4902-a873-cdae4cbb1df9" Title="Nutzerfolge Methods" Url="html/d50c52de-52ed-50d9-2b74-802e0dbee7d4.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/fb02bec6-cf7d-2d48-4916-c849ec65cbdb.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Nutzerfolge Fields" Url="html/e7df3a04-18f2-abdb-c0a7-d8dfb086f255.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="075b27f6-64e8-41e4-a080-d6daf795d81e" Title="NutzergruppenNummer Class" Url="html/be6d393e-1ae5-7932-2309-4e67f678fab8.htm">
+      <HelpTOCNode Id="e389b336-301d-452b-845f-0a3cebf5de70" Title="NutzergruppenNummer Constructor " Url="html/8510fec0-8103-adce-5c83-94fbc419f3f7.htm">
+        <HelpTOCNode Title="NutzergruppenNummer Constructor (Int16)" Url="html/78b98ab4-0016-b718-4780-4e7b9a807bbf.htm" />
+        <HelpTOCNode Title="NutzergruppenNummer Constructor (String)" Url="html/8e818fb5-7204-753b-a7d3-36a8072704ab.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="612bfada-7234-4d33-81b4-577ac7737891" Title="NutzergruppenNummer Methods" Url="html/389d0812-0621-1808-5134-380e8e080d73.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/d9cd563c-535b-314e-2780-45f7118ec80d.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="c20fa372-297e-4bd6-9bdf-54874eb7ce0e" Title="NutzergruppenNummer Type Conversions" Url="html/8f0cad70-1090-40a6-1d37-631e69a98228.htm">
+        <HelpTOCNode Title="Implicit Conversion (NutzergruppenNummer to Int16)" Url="html/ed62347b-4050-acc3-f493-e0645a4560a6.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="f51dd4dd-7e4d-4a78-af93-e03687b9bbea" Title="NutzergruppenNummer Fields" Url="html/0e1e0071-75a0-2e76-0ce0-34b2857f138d.htm">
+        <HelpTOCNode Title="MaxValue Field" Url="html/17ecb49d-27fa-4f37-a024-092fbe870e16.htm" />
+        <HelpTOCNode Title="MinValue Field" Url="html/9598c04e-46f9-4053-e895-5895add046b7.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c5bad73f-1fca-4f59-bfad-9253bd202e06" Title="OrdnungsbegriffAbrechnungsunternehmen Class" Url="html/8c429877-55bf-6d9a-d1cb-0e9acf4771a2.htm">
+      <HelpTOCNode Title="OrdnungsbegriffAbrechnungsunternehmen Constructor " Url="html/2651699d-a2d1-27c2-6ff9-4fb5e3ff2b8c.htm" />
+      <HelpTOCNode Id="3dff7c6d-025d-4628-8bae-1dc152986234" Title="OrdnungsbegriffAbrechnungsunternehmen Properties" Url="html/89744455-0d69-f14f-1883-cbc77accec81.htm">
+        <HelpTOCNode Title="LiegenschaftsNummer Property " Url="html/68db47cc-50bf-15ad-6799-6f8d745498d7.htm" />
+        <HelpTOCNode Title="WohnungsNummer Property " Url="html/95245c66-de68-d27e-60da-60b45655273c.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="58e8690f-493e-48ba-a277-94e7d2f83d3b" Title="OrdnungsbegriffAbrechnungsunternehmen Methods" Url="html/64f2300c-40c4-b4ce-18a7-3bd9f1f8c4bd.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/ba7ba469-ad03-7a4d-3f4b-b86210d61fc2.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="79ed5f6e-fea8-4c36-bef9-b85e254df10f" Title="OrdnungsbegriffWohnungsunternehmen Class" Url="html/92030d5c-9052-4a43-2874-f62d497a259b.htm">
+      <HelpTOCNode Title="OrdnungsbegriffWohnungsunternehmen Constructor " Url="html/d34cdd12-f864-3e5c-83ea-68d1220d314e.htm" />
+      <HelpTOCNode Id="87db794b-df73-4eee-a6b5-354b1583aec7" Title="OrdnungsbegriffWohnungsunternehmen Methods" Url="html/bdb2a279-e3aa-7261-0019-69521dd4e416.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/4e48ebd9-623a-e00b-eaab-cb7b70927a6d.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="3529993f-7ef2-4399-8ce2-aa68111e1490" Title="ParseResult(T) Class" Url="html/df9dcce7-a879-64cb-ec61-c5d27a9277d6.htm">
+      <HelpTOCNode Title="ParseResult(T) Constructor " Url="html/5c82065c-2b9a-d5fc-adf4-f46e233e22a9.htm" />
+      <HelpTOCNode Id="6fa18430-4d76-46f0-8df3-6f19b87b1e72" Title="ParseResult(T) Properties" Url="html/215cb930-86de-5548-18b0-0a9c11cf49ee.htm">
+        <HelpTOCNode Title="Success Property " Url="html/8922a537-2498-078d-84de-875d217582a5.htm" />
+        <HelpTOCNode Title="Value Property " Url="html/4f8924d6-e112-54c6-c8d8-74dc85c0294e.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="ParseResult(T) Methods" Url="html/6dabd509-5d61-135c-d8a7-f265af1ca36c.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="c109c654-8f76-4dfe-88e8-91da1ecdeddd" Title="Prozent Class" Url="html/6539bd9e-cf67-8107-a059-646c5b7dac1a.htm">
+      <HelpTOCNode Id="fe8cdaa4-1910-4902-8bcc-8840a64a4e87" Title="Prozent Constructor " Url="html/bcdce235-bac2-08e1-b22c-9fa60b7a022d.htm">
+        <HelpTOCNode Title="Prozent Constructor (Decimal)" Url="html/93a690ec-1125-64fc-958d-af0365c66ccf.htm" />
+        <HelpTOCNode Title="Prozent Constructor (String)" Url="html/2ac98a54-c87e-057f-3ae6-bf4da56999c7.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="4ec6f5aa-8777-425d-a02d-d281555a4880" Title="Prozent Methods" Url="html/db0610d7-40a8-21eb-10ce-2d9957281d48.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/8c0c45ce-0657-7100-ec98-56bfc8e9e3bc.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="6dce3226-122e-47fb-b644-9a471ba17f2a" Title="Prozent Type Conversions" Url="html/588ed86e-760a-fe4b-3bfb-3ef319ecb056.htm">
+        <HelpTOCNode Title="Implicit Conversion (Prozent to Decimal)" Url="html/727b42c3-d043-2993-f2ff-3f64355f90f7.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="257412c4-5cc0-4c45-8e6f-2101564cfd77" Title="SatzfolgeNummer Class" Url="html/ba699b3f-eb34-02c5-bb3f-aea35e222bb2.htm">
+      <HelpTOCNode Id="0b3d59a8-24a6-48af-b3a8-5b0e8a4774c1" Title="SatzfolgeNummer Constructor " Url="html/ce6f4862-586f-eadf-fb2e-b2d5e7c6761a.htm">
+        <HelpTOCNode Title="SatzfolgeNummer Constructor (Int32)" Url="html/6052f3b7-9040-341c-90f9-2d462b9895b0.htm" />
+        <HelpTOCNode Title="SatzfolgeNummer Constructor (String)" Url="html/9804b7ce-c864-7724-696f-bd97849c6c0f.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="cb1d8e1f-657f-43ab-aa05-85981f110612" Title="SatzfolgeNummer Methods" Url="html/6d172b41-e103-1afb-7e9b-421ad0a493a1.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/f78a4a6a-b3eb-c399-2eac-4a092a2abe41.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="cbb0e60c-7fb5-43ec-8d9a-429ca1273f6b" Title="SatzfolgeNummer Type Conversions" Url="html/26a37b47-fa0c-de0b-e05c-5f5222780690.htm">
+        <HelpTOCNode Title="Implicit Conversion (SatzfolgeNummer to Int32)" Url="html/a89cc736-570c-1d3b-a9b9-f5d854782862.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="7adce0dc-ec47-44c3-85da-a5c440711cfc" Title="SteuerlicheLeistungsart Class" Url="html/29be6fd8-0d8f-0c59-811f-7df09e338388.htm">
+      <HelpTOCNode Id="e61fbc6d-9ab7-490e-855a-687e24602a50" Title="SteuerlicheLeistungsart Properties" Url="html/7a70efc0-a54c-fb8b-a412-c5c503a5a10c.htm">
+        <HelpTOCNode Title="Bedeutung Property " Url="html/de6b913c-57d8-92c8-f8e4-e5a7ae1b89e1.htm" />
+        <HelpTOCNode Title="Schluessel Property " Url="html/596347da-da8c-3132-5a19-0c77d4dcfb4c.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="89a9b13b-6073-4483-a74a-feafe61262cb" Title="SteuerlicheLeistungsart Methods" Url="html/131e9cc3-21d2-40be-bf31-2a2354ad1c88.htm">
+        <HelpTOCNode Title="Finde Method " Url="html/a995e2b9-edac-cfce-6fb2-da8e4f2572ed.htm" />
+        <HelpTOCNode Title="IsGueltigFuer Method " Url="html/c7d2441d-7d2f-3568-f329-0f4f61413e58.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/3e6811ed-6ab2-ad9d-41f3-4aba5e12787b.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d2810786-901d-4e72-8dfe-c6cc651129a1" Title="Tag Class" Url="html/48791a5e-e3bd-f570-dba5-cb8144f7cfc3.htm">
+      <HelpTOCNode Id="8dc7d4e6-751c-4f79-acad-8708fb12c811" Title="Tag Constructor " Url="html/93e9b577-acc1-9e04-3725-df271b18450d.htm">
+        <HelpTOCNode Title="Tag Constructor (DateTime)" Url="html/cb97f0c2-bcf2-957a-9ae3-4e4d75e057d4.htm" />
+        <HelpTOCNode Title="Tag Constructor (String)" Url="html/ed2c6b65-b575-c99f-b5a1-437669c60b8f.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="fc368649-0b8c-4b52-acdc-bc8dc66adfb8" Title="Tag Methods" Url="html/e1bc33ab-d7e0-a43c-3a44-899bda1d48ca.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/f4838114-8ba7-88c5-65b6-f8c3034b1fd6.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="829499d3-f020-47bb-be4d-f419c1b1755d" Title="Tag Type Conversions" Url="html/d864dc1f-86a3-22dd-ca9a-f68c46266a8e.htm">
+        <HelpTOCNode Title="Implicit Conversion (Tag to DateTime)" Url="html/b3c6c99a-0734-eb49-ff77-cc7a053292ac.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="2cc1a365-f1b3-4edb-91dc-7b5a18a6e62b" Title="WohnungsNummer Class" Url="html/3b637ed8-3fcd-2af2-d271-8bf00b44f515.htm">
+      <HelpTOCNode Id="0eca3daf-29b5-42bd-b6ca-54f1d8558d2a" Title="WohnungsNummer Constructor " Url="html/06e068d2-b1fa-4bd6-fb46-0b96dbef8a2e.htm">
+        <HelpTOCNode Title="WohnungsNummer Constructor (Int16)" Url="html/4b60dd92-ef59-9934-611e-05073cb17d55.htm" />
+        <HelpTOCNode Title="WohnungsNummer Constructor (String)" Url="html/aa4dc7c8-4aa4-df14-bb1a-7469fb9544b0.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="ebcb21b2-7fd8-479f-b4de-4d813940922c" Title="WohnungsNummer Methods" Url="html/7096d16f-1d05-4d8e-7987-94055c8eb9b8.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/87f800b3-e8af-871b-ec98-4816fe302732.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="61b371af-0c17-49b2-9f4c-de28a90dc587" Title="WohnungsNummer Type Conversions" Url="html/5775ff5b-574a-63d7-1efc-b0142a69fc0c.htm">
+        <HelpTOCNode Title="Implicit Conversion (WohnungsNummer to Int16)" Url="html/7ee9fd89-9230-63e6-7efc-833cb9ac5fc2.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="a1df1a17-de25-45db-8942-02da9063656f" Title="ArgeHeiwako.IO" Url="html/f7047b17-c193-aa4c-41bb-080a7e813cbc.htm">
+    <HelpTOCNode Id="db83babe-dd0b-4fac-9656-b5ecd9574789" Title="AnteilSteuerlicheLeistungsartFile Class" Url="html/0bbfc3da-2c2a-9fed-c903-b54e94872eca.htm">
+      <HelpTOCNode Title="AnteilSteuerlicheLeistungsartFile Constructor " Url="html/961e50df-42bf-a440-7c9d-99ac2e16da76.htm" />
+      <HelpTOCNode Title="AnteilSteuerlicheLeistungsartFile Properties" Url="html/6b262c8d-1216-f389-a137-111634984461.htm" />
+      <HelpTOCNode Id="14a532eb-58ef-4ac3-b550-ead0a5fb9027" Title="AnteilSteuerlicheLeistungsartFile Methods" Url="html/8f70e1a8-db48-2113-e004-c51ccfe9eb66.htm">
+        <HelpTOCNode Title="Load Method " Url="html/ebb3f19d-fe9f-c1e9-6f9e-753699d6bb93.htm" />
+        <HelpTOCNode Id="a72027ec-50e4-49c9-aa6e-51cca7add292" Title="Write Method " Url="html/59cd7996-8966-76fb-30c1-0c5697f8f325.htm">
+          <HelpTOCNode Title="Write Method " Url="html/c2d9f859-3038-5476-5e8b-d2a852384ba3.htm" />
+          <HelpTOCNode Title="Write Method (String)" Url="html/e73059c0-b8ec-714d-b5bf-cf4417659dd1.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="14cfa1c0-9720-4ee3-a75a-2ce1cbd2f556" Title="AnteilSteuerlicheLeistungsartFile Fields" Url="html/f86dda8d-868d-3bf4-1d65-09a2f4a7665c.htm">
+        <HelpTOCNode Title="Satzart Field" Url="html/e6b65275-18b9-6132-4dcf-09d6024f007f.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="8767ab0c-2942-4f40-91ed-2cc42765f777" Title="AnteilSteuerlicheLeistungsartWriter Class" Url="html/e4362f89-51aa-7ba4-1b15-274f326fd6e7.htm">
+      <HelpTOCNode Title="AnteilSteuerlicheLeistungsartWriter Constructor " Url="html/80047ae5-8b6e-c827-9ab2-ffd200337621.htm" />
+      <HelpTOCNode Title="AnteilSteuerlicheLeistungsartWriter Methods" Url="html/0bc7f4e6-ce0a-fc56-a09e-cfc0b5a91cb2.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="ccc65380-3f38-46c1-a8a4-ac7385cb27d4" Title="ArgeFile(TData) Class" Url="html/f891190e-de86-a091-8e7c-70e4d54969be.htm">
+      <HelpTOCNode Title="ArgeFile(TData) Constructor " Url="html/bd754e96-811b-69f5-485a-f6698eb40a34.htm" />
+      <HelpTOCNode Id="7de33a16-4e54-4929-a3f9-8c67dbcd20d8" Title="ArgeFile(TData) Properties" Url="html/89990994-d903-9a3c-ac4d-1d8262cad12c.htm">
+        <HelpTOCNode Title="Created Property " Url="html/86b5b8e4-a8b9-0106-e175-23496cc31bd9.htm" />
+        <HelpTOCNode Title="Datensaetze Property " Url="html/ec4b970d-ea00-121c-7b4f-c14c2c297c3b.htm" />
+        <HelpTOCNode Title="FileName Property " Url="html/6a528eac-cdee-ea3c-262f-aaa3d4c2051c.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="ArgeFile(TData) Methods" Url="html/67c9fc9f-a1a8-8e03-a5a9-f2c174591bf8.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="b36f6678-8720-4dd9-8e55-13b8525cb4a9" Title="ArgeWriter(TInstance) Class" Url="html/899e1039-d076-b69f-a65a-68cf2c015644.htm">
+      <HelpTOCNode Title="ArgeWriter(TInstance) Constructor " Url="html/9acd78eb-89aa-9183-2efc-f49ff1a2dd0c.htm" />
+      <HelpTOCNode Id="48ff206c-3c98-4c1a-82b1-a8945086d60b" Title="ArgeWriter(TInstance) Methods" Url="html/541ee2ac-cfb4-8df7-a875-4c2f91a233a8.htm">
+        <HelpTOCNode Id="ae8c21ec-9c4a-4d83-bc0e-a1acd9b7a65b" Title="Dispose Method " Url="html/725cbf2d-d445-fd38-66b7-caa6b341dca5.htm">
+          <HelpTOCNode Title="Dispose Method " Url="html/f94571b0-9211-b53b-879c-34db9cbbb8ba.htm" />
+          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/1059b4d7-e695-6371-9e2a-a5dc1c256353.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Write Method " Url="html/2d26f00d-7cee-5330-7ca8-56cc837ede4a.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="97a29d5d-141f-4716-82f8-ff4150e80347" Title="ArgeWriter(TInstance) Fields" Url="html/fc9413a6-0c48-3126-8536-ee929dd62940.htm">
+        <HelpTOCNode Title="WriterEncoding Field" Url="html/cd21b4f2-0432-bdad-08a3-86ef9666817b.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d282fc59-e7bc-4b44-a33e-ec798f96edef" Title="IArgeFile(TData) Interface" Url="html/af622b77-e8a5-12c7-26c0-f16caa5fc553.htm">
+      <HelpTOCNode Id="aa16e405-cff6-4eb9-a034-403c150b8a41" Title="IArgeFile(TData) Properties" Url="html/28cad441-d760-b730-b9d3-d4b5be81b2da.htm">
+        <HelpTOCNode Title="Created Property " Url="html/fbf0f1f3-da6f-309a-7029-349abcb64b70.htm" />
+        <HelpTOCNode Title="Datensaetze Property " Url="html/172f00b7-8acd-e3d6-ce4d-c4fdf71d21dd.htm" />
+        <HelpTOCNode Title="FileName Property " Url="html/364a663f-bc0e-1c02-35c1-61911c24dcc3.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b2a3e9e4-6285-4936-b29c-4ffd19e4668a" Title="IArgeWriter(T) Interface" Url="html/4ac213cd-86a2-ff82-8575-69e28a544477.htm">
+      <HelpTOCNode Id="941b75a3-0b58-43c2-9d53-af518b8264a9" Title="IArgeWriter(T) Methods" Url="html/85947d09-1e83-f7c2-70bf-7e912434691c.htm">
+        <HelpTOCNode Title="Write Method " Url="html/c6615ffe-a231-63a3-eaa6-c533af138c46.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f7d8863d-6c30-484d-818c-4caec92ee6ce" Title="OrdnungsbegriffeFile Class" Url="html/905587d6-3506-cb51-981b-43116361da1e.htm">
+      <HelpTOCNode Title="OrdnungsbegriffeFile Constructor " Url="html/02413263-ef40-d7a2-a958-82c50b783c06.htm" />
+      <HelpTOCNode Title="OrdnungsbegriffeFile Properties" Url="html/fa678f02-7cae-6bdf-5473-f2112169c9e1.htm" />
+      <HelpTOCNode Id="a1f00604-4b72-4e80-a4d3-23d31417b0e8" Title="OrdnungsbegriffeFile Methods" Url="html/33e9d5de-9540-6bc0-4ac3-6950050ff519.htm">
+        <HelpTOCNode Title="Load Method " Url="html/c7a65dc7-619c-c497-34aa-8feb76dcff06.htm" />
+        <HelpTOCNode Id="37050a13-100d-43c4-97ec-00f348e03641" Title="Write Method " Url="html/8765851b-33f1-f714-e470-ca1373eb0fe6.htm">
+          <HelpTOCNode Title="Write Method " Url="html/8b26c0f1-558f-2c51-b7cd-bcdbfd3aaa4a.htm" />
+          <HelpTOCNode Title="Write Method (String)" Url="html/e1f4f67d-d408-7958-305d-d5496ea6a19f.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ceeab3b5-86fd-4688-b366-a2ce7343b35e" Title="OrdnungsbegriffeWriter Class" Url="html/4a6ffe74-4aec-470e-be52-41d8fa921c69.htm">
+      <HelpTOCNode Title="OrdnungsbegriffeWriter Constructor " Url="html/6423cf97-6214-6ed4-c6d2-e9fcb1840879.htm" />
+      <HelpTOCNode Title="OrdnungsbegriffeWriter Methods" Url="html/298c5793-b668-3ca3-dd6b-6d0d3a63f1d1.htm" />
     </HelpTOCNode>
   </HelpTOCNode>
 </HelpTOC>

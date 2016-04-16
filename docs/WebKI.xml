@@ -1,156 +1,522 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpKI>
-  <HelpKINode Title="Abrechnungsunternehmen class">
-    <HelpKINode Title="Abrechnungsunternehmen Class" Url="html/e0fa6e49-b1ed-0a4d-8a85-27488a1ac6c9.htm" />
-    <HelpKINode Title="about Abrechnungsunternehmen class" Url="html/e0fa6e49-b1ed-0a4d-8a85-27488a1ac6c9.htm" />
-    <HelpKINode Title="methods" Url="html/41d8f243-b770-7097-ca43-d887a4b96ed0.htm" />
-    <HelpKINode Title="properties" Url="html/865a6e28-c350-bb64-44a7-407ed9d316c1.htm" />
+  <HelpKINode Title="AbrechnungsfolgeNummer class">
+    <HelpKINode Title="AbrechnungsfolgeNummer Class" Url="html/d3d12f79-89ec-fee9-c7bc-265556cd332c.htm" />
+    <HelpKINode Title="about AbrechnungsfolgeNummer class" Url="html/d3d12f79-89ec-fee9-c7bc-265556cd332c.htm" />
+    <HelpKINode Title="constructor" Url="html/1935ac5a-944b-d9a9-89f2-8b16d227b2a8.htm" />
+    <HelpKINode Title="methods" Url="html/3d96fd70-d50c-9ee4-7d87-66683443aebe.htm" />
   </HelpKINode>
-  <HelpKINode Title="Abrechnungsunternehmen property" Url="html/da84fcbf-61b8-156c-df39-9ba7ea417d51.htm" />
-  <HelpKINode Title="Abrechnungsunternehmen.Find method" Url="html/2214d0b0-cd97-c10f-37fb-ce3badf336ff.htm" />
-  <HelpKINode Title="Abrechnungsunternehmen.Name property" Url="html/dbf71200-946a-8188-bd27-ed6eb56dbc2a.htm" />
-  <HelpKINode Title="Abrechnungsunternehmen.Nummer property" Url="html/93af64a7-7b1e-06a9-e682-e9f43c38518a.htm" />
-  <HelpKINode Title="Abrechnungsunternehmen.ToString method" Url="html/c46a8985-f476-3c7f-29cd-f17497bd2d89.htm" />
+  <HelpKINode Title="AbrechnungsfolgeNummer property" Url="html/98d11ba5-047f-c336-e7f1-5b5a0f5d4262.htm" />
+  <HelpKINode Title="AbrechnungsfolgeNummer.AbrechnungsfolgeNummer constructor" Url="html/1935ac5a-944b-d9a9-89f2-8b16d227b2a8.htm" />
+  <HelpKINode Title="AbrechnungsfolgeNummer.ToString method" Url="html/dd3b3718-014d-309d-0e27-8f63f06bb240.htm" />
+  <HelpKINode Title="Abrechnungsunternehmen class">
+    <HelpKINode Title="Abrechnungsunternehmen Class" Url="html/de8efdba-4784-c461-6f0f-1ba8dc95291f.htm" />
+    <HelpKINode Title="about Abrechnungsunternehmen class" Url="html/de8efdba-4784-c461-6f0f-1ba8dc95291f.htm" />
+    <HelpKINode Title="methods" Url="html/1687b9fc-12b9-cdc0-abb8-bf1600f34d7a.htm" />
+    <HelpKINode Title="properties" Url="html/a93bc273-8fbf-8556-fca2-b1559d97ba8e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Abrechnungsunternehmen property">
+    <HelpKINode Title="AnteilSteuerlicheLeistungsart.Abrechnungsunternehmen Property " Url="html/c63475fb-85b6-f99e-6621-1a801b5b8170.htm" />
+    <HelpKINode Title="Ordnungsbegriffe.Abrechnungsunternehmen Property " Url="html/da84fcbf-61b8-156c-df39-9ba7ea417d51.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Abrechnungsunternehmen.Finde method" Url="html/8bc78fcf-f626-c216-ee4c-797f2422da4e.htm" />
+  <HelpKINode Title="Abrechnungsunternehmen.Name property" Url="html/a1f060de-5a49-ae32-3b99-4cf4c210f520.htm" />
+  <HelpKINode Title="Abrechnungsunternehmen.Nummer property" Url="html/f3d31ac6-c401-e3df-b77b-e4c07aade922.htm" />
+  <HelpKINode Title="Abrechnungsunternehmen.ToString method" Url="html/e1815438-f289-41be-2588-e898e1a00d3d.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart class">
+    <HelpKINode Title="AnteilSteuerlicheLeistungsart Class" Url="html/dcd98dc3-f34b-bcd8-be6a-a04433f5d98f.htm" />
+    <HelpKINode Title="about AnteilSteuerlicheLeistungsart class" Url="html/dcd98dc3-f34b-bcd8-be6a-a04433f5d98f.htm" />
+    <HelpKINode Title="constructor" Url="html/8b6aa801-78a7-d832-618e-8c8d7a90e285.htm" />
+    <HelpKINode Title="fields" Url="html/9c6b7947-04e1-4284-d6fd-198b0a375daf.htm" />
+    <HelpKINode Title="methods" Url="html/885c800d-55e5-a3d9-6820-e8fd6a9129f0.htm" />
+    <HelpKINode Title="properties" Url="html/b03748d2-de96-89d3-500a-36d6963f46d0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.AbrechnungsfolgeNummer property" Url="html/98d11ba5-047f-c336-e7f1-5b5a0f5d4262.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.Abrechnungsunternehmen property" Url="html/c63475fb-85b6-f99e-6621-1a801b5b8170.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.AnteilSteuerlicheLeistungsart constructor" Url="html/8b6aa801-78a7-d832-618e-8c8d7a90e285.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.FromString method" Url="html/900b1020-340d-69db-4c48-b5b38ac2141e.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.Kostenart property" Url="html/41a08a1f-933f-af23-55ad-a64c30d8c077.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.KostenartText property" Url="html/fff3bf3b-fcdf-b401-bb43-a4b607364291.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.LetzterTagNutzungszeitraum property" Url="html/9cedf431-1b41-d113-eb2b-c190ac19001c.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.LohnanteilNutzerAnteil property" Url="html/12d86989-1ba7-30c2-d4aa-76fff6b029e5.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.LohnanteilRechnungsbetrag property" Url="html/93ff8ec7-396d-cfe8-ba23-a773695e4ec2.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.NutzerAnteil property" Url="html/10beaa1e-434b-ea65-cb35-9770807e211f.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.OrdnungsbegriffAbrechnungsunternehmen property" Url="html/e261fe3f-f492-20e4-7857-d4de26d9b930.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.OrdnungsbegriffWohnungsunternehmen property" Url="html/53356d41-67bb-3b16-9ea2-c42e10a592a8.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.ProzentualerNutzerAnteil property" Url="html/6b4919cb-b24e-1370-b936-b33d43aed78d.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.Rechnungsbetrag property" Url="html/3adac8a5-078c-90b5-eb4e-c2fcbcc41a48.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.Satzart field" Url="html/1705fdb8-aa24-6356-9338-c34ef3bad478.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.SatzfolgeNummer property" Url="html/01fe7313-c124-0381-67a3-7c7492a00226.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.SteuerlicheLeistungsart property" Url="html/ae75fd7a-2a03-885a-ce66-7d3b6dee69eb.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsart.ToString method" Url="html/e45f5c24-a1b4-faf7-eabd-1fff3f6ae2a1.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsartFile class">
+    <HelpKINode Title="AnteilSteuerlicheLeistungsartFile Class" Url="html/0bbfc3da-2c2a-9fed-c903-b54e94872eca.htm" />
+    <HelpKINode Title="about AnteilSteuerlicheLeistungsartFile class" Url="html/0bbfc3da-2c2a-9fed-c903-b54e94872eca.htm" />
+    <HelpKINode Title="constructor" Url="html/961e50df-42bf-a440-7c9d-99ac2e16da76.htm" />
+    <HelpKINode Title="fields" Url="html/f86dda8d-868d-3bf4-1d65-09a2f4a7665c.htm" />
+    <HelpKINode Title="methods" Url="html/8f70e1a8-db48-2113-e004-c51ccfe9eb66.htm" />
+    <HelpKINode Title="properties" Url="html/6b262c8d-1216-f389-a137-111634984461.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AnteilSteuerlicheLeistungsartFile.AnteilSteuerlicheLeistungsartFile constructor" Url="html/961e50df-42bf-a440-7c9d-99ac2e16da76.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsartFile.Load method" Url="html/ebb3f19d-fe9f-c1e9-6f9e-753699d6bb93.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsartFile.Satzart field" Url="html/e6b65275-18b9-6132-4dcf-09d6024f007f.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsartFile.Write method" Url="html/59cd7996-8966-76fb-30c1-0c5697f8f325.htm" />
+  <HelpKINode Title="AnteilSteuerlicheLeistungsartWriter class">
+    <HelpKINode Title="AnteilSteuerlicheLeistungsartWriter Class" Url="html/e4362f89-51aa-7ba4-1b15-274f326fd6e7.htm" />
+    <HelpKINode Title="about AnteilSteuerlicheLeistungsartWriter class" Url="html/e4362f89-51aa-7ba4-1b15-274f326fd6e7.htm" />
+    <HelpKINode Title="constructor" Url="html/80047ae5-8b6e-c827-9ab2-ffd200337621.htm" />
+    <HelpKINode Title="methods" Url="html/0bc7f4e6-ce0a-fc56-a09e-cfc0b5a91cb2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AnteilSteuerlicheLeistungsartWriter.AnteilSteuerlicheLeistungsartWriter constructor" Url="html/80047ae5-8b6e-c827-9ab2-ffd200337621.htm" />
+  <HelpKINode Title="ArgeFile(Of TData) class">
+    <HelpKINode Title="ArgeFile(TData) Class" Url="html/f891190e-de86-a091-8e7c-70e4d54969be.htm" />
+    <HelpKINode Title="about ArgeFile(Of TData) class" Url="html/f891190e-de86-a091-8e7c-70e4d54969be.htm" />
+    <HelpKINode Title="constructor" Url="html/bd754e96-811b-69f5-485a-f6698eb40a34.htm" />
+    <HelpKINode Title="methods" Url="html/67c9fc9f-a1a8-8e03-a5a9-f2c174591bf8.htm" />
+    <HelpKINode Title="properties" Url="html/89990994-d903-9a3c-ac4d-1d8262cad12c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ArgeFile(Of TData).ArgeFile constructor" Url="html/bd754e96-811b-69f5-485a-f6698eb40a34.htm" />
+  <HelpKINode Title="ArgeFile(Of TData).Created property" Url="html/86b5b8e4-a8b9-0106-e175-23496cc31bd9.htm" />
+  <HelpKINode Title="ArgeFile(Of TData).Datensaetze property" Url="html/ec4b970d-ea00-121c-7b4f-c14c2c297c3b.htm" />
+  <HelpKINode Title="ArgeFile(Of TData).FileName property" Url="html/6a528eac-cdee-ea3c-262f-aaa3d4c2051c.htm" />
+  <HelpKINode Title="ArgeFile&lt;TData&gt; class">
+    <HelpKINode Title="ArgeFile(TData) Class" Url="html/f891190e-de86-a091-8e7c-70e4d54969be.htm" />
+    <HelpKINode Title="about ArgeFile&lt;TData&gt; class" Url="html/f891190e-de86-a091-8e7c-70e4d54969be.htm" />
+    <HelpKINode Title="constructor" Url="html/bd754e96-811b-69f5-485a-f6698eb40a34.htm" />
+    <HelpKINode Title="methods" Url="html/67c9fc9f-a1a8-8e03-a5a9-f2c174591bf8.htm" />
+    <HelpKINode Title="properties" Url="html/89990994-d903-9a3c-ac4d-1d8262cad12c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ArgeFile&lt;TData&gt;.ArgeFile constructor" Url="html/bd754e96-811b-69f5-485a-f6698eb40a34.htm" />
+  <HelpKINode Title="ArgeFile&lt;TData&gt;.Created property" Url="html/86b5b8e4-a8b9-0106-e175-23496cc31bd9.htm" />
+  <HelpKINode Title="ArgeFile&lt;TData&gt;.Datensaetze property" Url="html/ec4b970d-ea00-121c-7b4f-c14c2c297c3b.htm" />
+  <HelpKINode Title="ArgeFile&lt;TData&gt;.FileName property" Url="html/6a528eac-cdee-ea3c-262f-aaa3d4c2051c.htm" />
   <HelpKINode Title="ArgeHeiwako.Data namespace" Url="html/954e9586-b847-6aea-8751-b16d19dacc57.htm" />
-  <HelpKINode Title="ArgeHeiwako.Data.Abrechnungsunternehmen class" Url="html/e0fa6e49-b1ed-0a4d-8a85-27488a1ac6c9.htm" />
-  <HelpKINode Title="ArgeHeiwako.Data.ArgeVersion class" Url="html/853b3728-acd9-9739-1da3-0fdd98345483.htm" />
-  <HelpKINode Title="ArgeHeiwako.Data.KundenNummer class" Url="html/2b8a5001-16a5-9be4-c7d2-d5bb090f6199.htm" />
-  <HelpKINode Title="ArgeHeiwako.Data.LiegenschaftsNummer class" Url="html/7e790398-178e-4716-5c51-21b8220c6362.htm" />
-  <HelpKINode Title="ArgeHeiwako.Data.OrdnungsbegriffAbrechnungsunternehmen class" Url="html/10260c14-6a2c-b83f-8d1c-82b59c5286cb.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.AnteilSteuerlicheLeistungsart class" Url="html/dcd98dc3-f34b-bcd8-be6a-a04433f5d98f.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common namespace" Url="html/d087642c-29f2-d355-2f23-296300fa9819.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.AbrechnungsfolgeNummer class" Url="html/d3d12f79-89ec-fee9-c7bc-265556cd332c.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.Abrechnungsunternehmen class" Url="html/de8efdba-4784-c461-6f0f-1ba8dc95291f.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.ArgeVersion class" Url="html/4dc27ce1-ede8-351d-b48e-9055514f6d70.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.Betrag class" Url="html/00cf561d-1cb3-d8ed-966e-5a91e0a3b474.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.ErweiterterOrdnungsbegriffAbrechnungsunternehmen class" Url="html/556f3dbb-7104-c86e-4565-36f8adc85900.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.Kostenart class" Url="html/3d341582-5754-81ac-8757-46cc60b7a77f.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.KundenNummer class" Url="html/7237385d-fa6c-92cc-fdf9-38460a0d355c.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.LiegenschaftsNummer class" Url="html/f59101e6-724b-b0ea-6d2f-5d04e9aaae28.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.Nummer(Of T) class" Url="html/715d85bb-e780-c6c0-4d4a-c901da1849e1.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.Nummer&lt;T&gt; class" Url="html/715d85bb-e780-c6c0-4d4a-c901da1849e1.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.Nutzerfolge class" Url="html/b34e8801-375a-40d6-9b1e-bd6a17294124.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.NutzergruppenNummer class" Url="html/be6d393e-1ae5-7932-2309-4e67f678fab8.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.OrdnungsbegriffAbrechnungsunternehmen class" Url="html/8c429877-55bf-6d9a-d1cb-0e9acf4771a2.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.OrdnungsbegriffWohnungsunternehmen class" Url="html/92030d5c-9052-4a43-2874-f62d497a259b.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.ParseResult(Of T) class" Url="html/df9dcce7-a879-64cb-ec61-c5d27a9277d6.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.ParseResult&lt;T&gt; class" Url="html/df9dcce7-a879-64cb-ec61-c5d27a9277d6.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.Prozent class" Url="html/6539bd9e-cf67-8107-a059-646c5b7dac1a.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.SatzfolgeNummer class" Url="html/ba699b3f-eb34-02c5-bb3f-aea35e222bb2.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.SteuerlicheLeistungsart class" Url="html/29be6fd8-0d8f-0c59-811f-7df09e338388.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.Tag class" Url="html/48791a5e-e3bd-f570-dba5-cb8144f7cfc3.htm" />
+  <HelpKINode Title="ArgeHeiwako.Data.Common.WohnungsNummer class" Url="html/3b637ed8-3fcd-2af2-d271-8bf00b44f515.htm" />
   <HelpKINode Title="ArgeHeiwako.Data.Ordnungsbegriffe class" Url="html/8b02fab9-5028-23d4-ef38-2a252ab8f925.htm" />
-  <HelpKINode Title="ArgeHeiwako.Data.OrdnungsbegriffWohnungsunternehmen class" Url="html/2ac6d28e-2ca1-31a1-0433-81c41ce287fe.htm" />
-  <HelpKINode Title="ArgeHeiwako.Data.WohnungsNummer class" Url="html/2c3c249f-e03c-51ad-eb29-af9da0172321.htm" />
   <HelpKINode Title="ArgeHeiwako.IO namespace" Url="html/f7047b17-c193-aa4c-41bb-080a7e813cbc.htm" />
+  <HelpKINode Title="ArgeHeiwako.IO.AnteilSteuerlicheLeistungsartFile class" Url="html/0bbfc3da-2c2a-9fed-c903-b54e94872eca.htm" />
+  <HelpKINode Title="ArgeHeiwako.IO.AnteilSteuerlicheLeistungsartWriter class" Url="html/e4362f89-51aa-7ba4-1b15-274f326fd6e7.htm" />
+  <HelpKINode Title="ArgeHeiwako.IO.ArgeFile(Of TData) class" Url="html/f891190e-de86-a091-8e7c-70e4d54969be.htm" />
+  <HelpKINode Title="ArgeHeiwako.IO.ArgeFile&lt;TData&gt; class" Url="html/f891190e-de86-a091-8e7c-70e4d54969be.htm" />
+  <HelpKINode Title="ArgeHeiwako.IO.ArgeWriter(Of TInstance) class" Url="html/899e1039-d076-b69f-a65a-68cf2c015644.htm" />
+  <HelpKINode Title="ArgeHeiwako.IO.ArgeWriter&lt;TInstance&gt; class" Url="html/899e1039-d076-b69f-a65a-68cf2c015644.htm" />
+  <HelpKINode Title="ArgeHeiwako.IO.IArgeFile(Of TData) interface" Url="html/af622b77-e8a5-12c7-26c0-f16caa5fc553.htm" />
+  <HelpKINode Title="ArgeHeiwako.IO.IArgeFile&lt;TData&gt; interface" Url="html/af622b77-e8a5-12c7-26c0-f16caa5fc553.htm" />
+  <HelpKINode Title="ArgeHeiwako.IO.IArgeWriter(Of T) interface" Url="html/4ac213cd-86a2-ff82-8575-69e28a544477.htm" />
+  <HelpKINode Title="ArgeHeiwako.IO.IArgeWriter&lt;T&gt; interface" Url="html/4ac213cd-86a2-ff82-8575-69e28a544477.htm" />
   <HelpKINode Title="ArgeHeiwako.IO.OrdnungsbegriffeFile class" Url="html/905587d6-3506-cb51-981b-43116361da1e.htm" />
   <HelpKINode Title="ArgeHeiwako.IO.OrdnungsbegriffeWriter class" Url="html/4a6ffe74-4aec-470e-be52-41d8fa921c69.htm" />
   <HelpKINode Title="ArgeVersion class">
-    <HelpKINode Title="ArgeVersion Class" Url="html/853b3728-acd9-9739-1da3-0fdd98345483.htm" />
-    <HelpKINode Title="about ArgeVersion class" Url="html/853b3728-acd9-9739-1da3-0fdd98345483.htm" />
-    <HelpKINode Title="constructor" Url="html/7b753c2e-8f1f-ac87-d3c9-c10fdf8fa84f.htm" />
-    <HelpKINode Title="methods" Url="html/cb27a5d5-b08d-4874-7d83-d63d01703ff4.htm" />
+    <HelpKINode Title="ArgeVersion Class" Url="html/4dc27ce1-ede8-351d-b48e-9055514f6d70.htm" />
+    <HelpKINode Title="about ArgeVersion class" Url="html/4dc27ce1-ede8-351d-b48e-9055514f6d70.htm" />
+    <HelpKINode Title="constructor" Url="html/d15270d4-2af8-5c17-e417-767a777825db.htm" />
+    <HelpKINode Title="methods" Url="html/8a182992-6675-6863-a942-ccdd47c9010c.htm" />
   </HelpKINode>
-  <HelpKINode Title="ArgeVersion.ArgeVersion constructor" Url="html/7b753c2e-8f1f-ac87-d3c9-c10fdf8fa84f.htm" />
-  <HelpKINode Title="ArgeVersion.ToString method" Url="html/a94e0e7c-e767-8329-2903-ebb55436bf2d.htm" />
-  <HelpKINode Title="Created property" Url="html/20b1925e-ef32-1492-afe8-c7fc50e6c923.htm" />
-  <HelpKINode Title="Dispose method" Url="html/c424fa1e-c18a-7951-e0bf-6eea4aaf2c43.htm" />
-  <HelpKINode Title="FileName property" Url="html/b960939e-3ec9-0d0c-5223-b347c8806ce8.htm" />
-  <HelpKINode Title="Finalize method" Url="html/3a751037-7829-358c-9124-3c75b047ec02.htm" />
-  <HelpKINode Title="Find method" Url="html/2214d0b0-cd97-c10f-37fb-ce3badf336ff.htm" />
-  <HelpKINode Title="FromString method" Url="html/f1871c56-92e5-4b8a-ccb0-c74dcf95fa06.htm" />
+  <HelpKINode Title="ArgeVersion.ArgeVersion constructor" Url="html/d15270d4-2af8-5c17-e417-767a777825db.htm" />
+  <HelpKINode Title="ArgeVersion.ToString method" Url="html/5cd36961-5227-644c-ba87-71f8a54a9daf.htm" />
+  <HelpKINode Title="ArgeWriter(Of TInstance) class">
+    <HelpKINode Title="ArgeWriter(TInstance) Class" Url="html/899e1039-d076-b69f-a65a-68cf2c015644.htm" />
+    <HelpKINode Title="about ArgeWriter(Of TInstance) class" Url="html/899e1039-d076-b69f-a65a-68cf2c015644.htm" />
+    <HelpKINode Title="constructor" Url="html/9acd78eb-89aa-9183-2efc-f49ff1a2dd0c.htm" />
+    <HelpKINode Title="fields" Url="html/fc9413a6-0c48-3126-8536-ee929dd62940.htm" />
+    <HelpKINode Title="methods" Url="html/541ee2ac-cfb4-8df7-a875-4c2f91a233a8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ArgeWriter(Of TInstance).ArgeWriter constructor" Url="html/9acd78eb-89aa-9183-2efc-f49ff1a2dd0c.htm" />
+  <HelpKINode Title="ArgeWriter(Of TInstance).Dispose method" Url="html/725cbf2d-d445-fd38-66b7-caa6b341dca5.htm" />
+  <HelpKINode Title="ArgeWriter(Of TInstance).Write method" Url="html/2d26f00d-7cee-5330-7ca8-56cc837ede4a.htm" />
+  <HelpKINode Title="ArgeWriter(Of TInstance).WriterEncoding field" Url="html/cd21b4f2-0432-bdad-08a3-86ef9666817b.htm" />
+  <HelpKINode Title="ArgeWriter&lt;TInstance&gt; class">
+    <HelpKINode Title="ArgeWriter(TInstance) Class" Url="html/899e1039-d076-b69f-a65a-68cf2c015644.htm" />
+    <HelpKINode Title="about ArgeWriter&lt;TInstance&gt; class" Url="html/899e1039-d076-b69f-a65a-68cf2c015644.htm" />
+    <HelpKINode Title="constructor" Url="html/9acd78eb-89aa-9183-2efc-f49ff1a2dd0c.htm" />
+    <HelpKINode Title="fields" Url="html/fc9413a6-0c48-3126-8536-ee929dd62940.htm" />
+    <HelpKINode Title="methods" Url="html/541ee2ac-cfb4-8df7-a875-4c2f91a233a8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ArgeWriter&lt;TInstance&gt;.ArgeWriter constructor" Url="html/9acd78eb-89aa-9183-2efc-f49ff1a2dd0c.htm" />
+  <HelpKINode Title="ArgeWriter&lt;TInstance&gt;.Dispose method" Url="html/725cbf2d-d445-fd38-66b7-caa6b341dca5.htm" />
+  <HelpKINode Title="ArgeWriter&lt;TInstance&gt;.Write method" Url="html/2d26f00d-7cee-5330-7ca8-56cc837ede4a.htm" />
+  <HelpKINode Title="ArgeWriter&lt;TInstance&gt;.WriterEncoding field" Url="html/cd21b4f2-0432-bdad-08a3-86ef9666817b.htm" />
+  <HelpKINode Title="Bedeutung property">
+    <HelpKINode Title="Kostenart.Bedeutung Property " Url="html/c672e3b3-e829-f608-1d26-2f45df63c96b.htm" />
+    <HelpKINode Title="SteuerlicheLeistungsart.Bedeutung Property " Url="html/de6b913c-57d8-92c8-f8e4-e5a7ae1b89e1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Betrag class">
+    <HelpKINode Title="Betrag Class" Url="html/00cf561d-1cb3-d8ed-966e-5a91e0a3b474.htm" />
+    <HelpKINode Title="about Betrag class" Url="html/00cf561d-1cb3-d8ed-966e-5a91e0a3b474.htm" />
+    <HelpKINode Title="constructor" Url="html/ed618bad-b7e5-753d-6127-adf0a53c5d36.htm" />
+    <HelpKINode Title="methods" Url="html/c5dedfd8-b126-96fd-87c5-ca92b4f5856b.htm" />
+    <HelpKINode Title="type conversions" Url="html/cd5579cf-15f6-08f2-9c7d-f8070f1fff17.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Betrag to Decimal conversion" Url="html/573fb813-a469-91e6-09f6-bbc6e49c802e.htm" />
+  <HelpKINode Title="Betrag.Betrag constructor" Url="html/ed618bad-b7e5-753d-6127-adf0a53c5d36.htm" />
+  <HelpKINode Title="Betrag.ToString method" Url="html/67a16030-d32a-b76e-dd55-e587e16b05b6.htm" />
+  <HelpKINode Title="Created property">
+    <HelpKINode Title="ArgeFile(TData).Created Property " Url="html/86b5b8e4-a8b9-0106-e175-23496cc31bd9.htm" />
+    <HelpKINode Title="IArgeFile(TData).Created Property " Url="html/fbf0f1f3-da6f-309a-7029-349abcb64b70.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Datensaetze property">
+    <HelpKINode Title="ArgeFile(TData).Datensaetze Property " Url="html/ec4b970d-ea00-121c-7b4f-c14c2c297c3b.htm" />
+    <HelpKINode Title="IArgeFile(TData).Datensaetze Property " Url="html/172f00b7-8acd-e3d6-ce4d-c4fdf71d21dd.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dispose method" Url="html/725cbf2d-d445-fd38-66b7-caa6b341dca5.htm" />
+  <HelpKINode Title="ErweiterterOrdnungsbegriffAbrechnungsunternehmen class">
+    <HelpKINode Title="ErweiterterOrdnungsbegriffAbrechnungsunternehmen Class" Url="html/556f3dbb-7104-c86e-4565-36f8adc85900.htm" />
+    <HelpKINode Title="about ErweiterterOrdnungsbegriffAbrechnungsunternehmen class" Url="html/556f3dbb-7104-c86e-4565-36f8adc85900.htm" />
+    <HelpKINode Title="constructor" Url="html/9297a82d-f36f-663d-b376-627a98f67a19.htm" />
+    <HelpKINode Title="methods" Url="html/368a1647-ae2a-8de2-ac50-b91c0190552f.htm" />
+    <HelpKINode Title="properties" Url="html/eb62c0a9-c1eb-8a4a-bb93-7a458083fe0e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ErweiterterOrdnungsbegriffAbrechnungsunternehmen.ErweiterterOrdnungsbegriffAbrechnungsunternehmen constructor" Url="html/9297a82d-f36f-663d-b376-627a98f67a19.htm" />
+  <HelpKINode Title="ErweiterterOrdnungsbegriffAbrechnungsunternehmen.FromString method" Url="html/20f2a850-fd73-3fd3-95f7-ff96997c5a6d.htm" />
+  <HelpKINode Title="ErweiterterOrdnungsbegriffAbrechnungsunternehmen.Nutzerfolge property" Url="html/e5cc7d54-174a-c68d-861a-33a5d3a843fe.htm" />
+  <HelpKINode Title="ErweiterterOrdnungsbegriffAbrechnungsunternehmen.NutzergruppenNummer property" Url="html/b0143144-6f57-4224-f70c-9c46c43d29b2.htm" />
+  <HelpKINode Title="ErweiterterOrdnungsbegriffAbrechnungsunternehmen.ToString method" Url="html/8f153867-27fd-a6b9-fc70-54fe32152d41.htm" />
+  <HelpKINode Title="FileName property">
+    <HelpKINode Title="ArgeFile(TData).FileName Property " Url="html/6a528eac-cdee-ea3c-262f-aaa3d4c2051c.htm" />
+    <HelpKINode Title="IArgeFile(TData).FileName Property " Url="html/364a663f-bc0e-1c02-35c1-61911c24dcc3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Finde method">
+    <HelpKINode Title="Abrechnungsunternehmen.Finde Method " Url="html/8bc78fcf-f626-c216-ee4c-797f2422da4e.htm" />
+    <HelpKINode Title="Kostenart.Finde Method " Url="html/85fcf687-dfb5-7611-aaca-5d1b89d15795.htm" />
+    <HelpKINode Title="SteuerlicheLeistungsart.Finde Method " Url="html/a995e2b9-edac-cfce-6fb2-da8e4f2572ed.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FromString method">
+    <HelpKINode Title="AnteilSteuerlicheLeistungsart.FromString Method " Url="html/900b1020-340d-69db-4c48-b5b38ac2141e.htm" />
+    <HelpKINode Title="ErweiterterOrdnungsbegriffAbrechnungsunternehmen.FromString Method " Url="html/20f2a850-fd73-3fd3-95f7-ff96997c5a6d.htm" />
+    <HelpKINode Title="Ordnungsbegriffe.FromString Method " Url="html/f1871c56-92e5-4b8a-ccb0-c74dcf95fa06.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IArgeFile(Of TData) interface">
+    <HelpKINode Title="IArgeFile(TData) Interface" Url="html/af622b77-e8a5-12c7-26c0-f16caa5fc553.htm" />
+    <HelpKINode Title="about IArgeFile(Of TData) interface" Url="html/af622b77-e8a5-12c7-26c0-f16caa5fc553.htm" />
+    <HelpKINode Title="properties" Url="html/28cad441-d760-b730-b9d3-d4b5be81b2da.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IArgeFile(Of TData).Created property" Url="html/fbf0f1f3-da6f-309a-7029-349abcb64b70.htm" />
+  <HelpKINode Title="IArgeFile(Of TData).Datensaetze property" Url="html/172f00b7-8acd-e3d6-ce4d-c4fdf71d21dd.htm" />
+  <HelpKINode Title="IArgeFile(Of TData).FileName property" Url="html/364a663f-bc0e-1c02-35c1-61911c24dcc3.htm" />
+  <HelpKINode Title="IArgeFile&lt;TData&gt; interface">
+    <HelpKINode Title="IArgeFile(TData) Interface" Url="html/af622b77-e8a5-12c7-26c0-f16caa5fc553.htm" />
+    <HelpKINode Title="about IArgeFile&lt;TData&gt; interface" Url="html/af622b77-e8a5-12c7-26c0-f16caa5fc553.htm" />
+    <HelpKINode Title="properties" Url="html/28cad441-d760-b730-b9d3-d4b5be81b2da.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IArgeFile&lt;TData&gt;.Created property" Url="html/fbf0f1f3-da6f-309a-7029-349abcb64b70.htm" />
+  <HelpKINode Title="IArgeFile&lt;TData&gt;.Datensaetze property" Url="html/172f00b7-8acd-e3d6-ce4d-c4fdf71d21dd.htm" />
+  <HelpKINode Title="IArgeFile&lt;TData&gt;.FileName property" Url="html/364a663f-bc0e-1c02-35c1-61911c24dcc3.htm" />
+  <HelpKINode Title="IArgeWriter(Of T) interface">
+    <HelpKINode Title="IArgeWriter(T) Interface" Url="html/4ac213cd-86a2-ff82-8575-69e28a544477.htm" />
+    <HelpKINode Title="about IArgeWriter(Of T) interface" Url="html/4ac213cd-86a2-ff82-8575-69e28a544477.htm" />
+    <HelpKINode Title="methods" Url="html/85947d09-1e83-f7c2-70bf-7e912434691c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IArgeWriter(Of T).Write method" Url="html/c6615ffe-a231-63a3-eaa6-c533af138c46.htm" />
+  <HelpKINode Title="IArgeWriter&lt;T&gt; interface">
+    <HelpKINode Title="IArgeWriter(T) Interface" Url="html/4ac213cd-86a2-ff82-8575-69e28a544477.htm" />
+    <HelpKINode Title="about IArgeWriter&lt;T&gt; interface" Url="html/4ac213cd-86a2-ff82-8575-69e28a544477.htm" />
+    <HelpKINode Title="methods" Url="html/85947d09-1e83-f7c2-70bf-7e912434691c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IArgeWriter&lt;T&gt;.Write method" Url="html/c6615ffe-a231-63a3-eaa6-c533af138c46.htm" />
+  <HelpKINode Title="IsGueltigFuer method" Url="html/c7d2441d-7d2f-3568-f329-0f4f61413e58.htm" />
+  <HelpKINode Title="Kostenart class">
+    <HelpKINode Title="Kostenart Class" Url="html/3d341582-5754-81ac-8757-46cc60b7a77f.htm" />
+    <HelpKINode Title="about Kostenart class" Url="html/3d341582-5754-81ac-8757-46cc60b7a77f.htm" />
+    <HelpKINode Title="methods" Url="html/46b9a182-f3bd-d715-62b2-40a884a8a907.htm" />
+    <HelpKINode Title="properties" Url="html/f704c8ff-9d37-93c3-9e63-02c40667e469.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Kostenart property" Url="html/41a08a1f-933f-af23-55ad-a64c30d8c077.htm" />
+  <HelpKINode Title="Kostenart.Bedeutung property" Url="html/c672e3b3-e829-f608-1d26-2f45df63c96b.htm" />
+  <HelpKINode Title="Kostenart.Finde method" Url="html/85fcf687-dfb5-7611-aaca-5d1b89d15795.htm" />
+  <HelpKINode Title="Kostenart.Schluessel property" Url="html/4028afee-f0b6-7d29-bc5d-6c674ef5b14c.htm" />
+  <HelpKINode Title="Kostenart.ToString method" Url="html/18949897-f7ab-8192-0c12-8913ca72cad3.htm" />
+  <HelpKINode Title="Kostenart.VariableBedeutung property" Url="html/cdcad3fa-8bb7-2360-b421-555127bb791b.htm" />
+  <HelpKINode Title="KostenartText property" Url="html/fff3bf3b-fcdf-b401-bb43-a4b607364291.htm" />
   <HelpKINode Title="KundenNummer class">
-    <HelpKINode Title="KundenNummer Class" Url="html/2b8a5001-16a5-9be4-c7d2-d5bb090f6199.htm" />
-    <HelpKINode Title="about KundenNummer class" Url="html/2b8a5001-16a5-9be4-c7d2-d5bb090f6199.htm" />
-    <HelpKINode Title="constructor" Url="html/5a0ca4ab-5305-4738-7d20-17411f368ade.htm" />
-    <HelpKINode Title="fields" Url="html/5a712cfa-2024-fe2b-fbfb-d56ae26dcbd5.htm" />
-    <HelpKINode Title="methods" Url="html/9a84e973-b423-cef6-5fb3-46aa4c6d231f.htm" />
+    <HelpKINode Title="KundenNummer Class" Url="html/7237385d-fa6c-92cc-fdf9-38460a0d355c.htm" />
+    <HelpKINode Title="about KundenNummer class" Url="html/7237385d-fa6c-92cc-fdf9-38460a0d355c.htm" />
+    <HelpKINode Title="constructor" Url="html/986d084c-46f2-548d-c715-b1dfa83cf419.htm" />
+    <HelpKINode Title="fields" Url="html/b5b4db0e-519f-4430-7207-2a8d2c5edd77.htm" />
+    <HelpKINode Title="methods" Url="html/898d2131-acb8-c459-7353-03f4830fac45.htm" />
   </HelpKINode>
   <HelpKINode Title="KundenNummer property" Url="html/618c210f-096b-b775-0f8a-5ef1b0dc1e9f.htm" />
-  <HelpKINode Title="KundenNummer.KundenNummer constructor" Url="html/5a0ca4ab-5305-4738-7d20-17411f368ade.htm" />
-  <HelpKINode Title="KundenNummer.MaxValue field" Url="html/d3c53801-b3de-7790-0412-16004a3c9145.htm" />
-  <HelpKINode Title="KundenNummer.MinValue field" Url="html/7accd687-385b-3664-6c12-58b7ff47502c.htm" />
-  <HelpKINode Title="KundenNummer.ToString method" Url="html/a6833e93-bc36-c21e-84b4-8c399afcd392.htm" />
+  <HelpKINode Title="KundenNummer.KundenNummer constructor" Url="html/986d084c-46f2-548d-c715-b1dfa83cf419.htm" />
+  <HelpKINode Title="KundenNummer.MaxValue field" Url="html/ac401ccb-c720-8a1c-71ef-d9bfe6d52919.htm" />
+  <HelpKINode Title="KundenNummer.MinValue field" Url="html/bd46fa47-05b0-fb50-66c0-ec2c2bb045c3.htm" />
+  <HelpKINode Title="KundenNummer.ToString method" Url="html/8b174af0-d47d-fddc-4591-cab8f16d5260.htm" />
+  <HelpKINode Title="LetzterTagNutzungszeitraum property" Url="html/9cedf431-1b41-d113-eb2b-c190ac19001c.htm" />
   <HelpKINode Title="LiegenschaftsNummer class">
-    <HelpKINode Title="LiegenschaftsNummer Class" Url="html/7e790398-178e-4716-5c51-21b8220c6362.htm" />
-    <HelpKINode Title="about LiegenschaftsNummer class" Url="html/7e790398-178e-4716-5c51-21b8220c6362.htm" />
-    <HelpKINode Title="constructor" Url="html/1f5e86c9-5907-7d19-638a-325b36215ac5.htm" />
-    <HelpKINode Title="methods" Url="html/de38cb44-35a9-e4e6-37ab-fc99e15475d8.htm" />
-    <HelpKINode Title="type conversions" Url="html/0ccb9337-5cb7-b533-3fe1-bd76a6ec4b7a.htm" />
+    <HelpKINode Title="LiegenschaftsNummer Class" Url="html/f59101e6-724b-b0ea-6d2f-5d04e9aaae28.htm" />
+    <HelpKINode Title="about LiegenschaftsNummer class" Url="html/f59101e6-724b-b0ea-6d2f-5d04e9aaae28.htm" />
+    <HelpKINode Title="constructor" Url="html/bc2264f6-72de-6ef8-3af9-894cf0806dca.htm" />
+    <HelpKINode Title="methods" Url="html/391f2630-01f1-499d-ae5d-73dbb6b70d1a.htm" />
+    <HelpKINode Title="type conversions" Url="html/d143c09f-e3b7-b407-0e2f-17a31fe09de5.htm" />
   </HelpKINode>
-  <HelpKINode Title="LiegenschaftsNummer to Int32 conversion" Url="html/f4196ce1-5464-8e6e-1e2a-6e32abf71e7d.htm" />
-  <HelpKINode Title="LiegenschaftsNummer.LiegenschaftsNummer constructor" Url="html/1f5e86c9-5907-7d19-638a-325b36215ac5.htm" />
-  <HelpKINode Title="LiegenschaftsNummer.ToString method" Url="html/a323bdd5-c5d2-1645-6645-e601524bc3ac.htm" />
-  <HelpKINode Title="Load method" Url="html/c7a65dc7-619c-c497-34aa-8feb76dcff06.htm" />
-  <HelpKINode Title="MaxValue field" Url="html/d3c53801-b3de-7790-0412-16004a3c9145.htm" />
-  <HelpKINode Title="MinValue field" Url="html/7accd687-385b-3664-6c12-58b7ff47502c.htm" />
-  <HelpKINode Title="Name property" Url="html/dbf71200-946a-8188-bd27-ed6eb56dbc2a.htm" />
-  <HelpKINode Title="Nummer property" Url="html/93af64a7-7b1e-06a9-e682-e9f43c38518a.htm" />
+  <HelpKINode Title="LiegenschaftsNummer property" Url="html/68db47cc-50bf-15ad-6799-6f8d745498d7.htm" />
+  <HelpKINode Title="LiegenschaftsNummer to Int32 conversion" Url="html/954a398d-82ae-1d20-fd5b-6a3b5aa0a5b9.htm" />
+  <HelpKINode Title="LiegenschaftsNummer.LiegenschaftsNummer constructor" Url="html/bc2264f6-72de-6ef8-3af9-894cf0806dca.htm" />
+  <HelpKINode Title="LiegenschaftsNummer.ToString method" Url="html/ad55f7cb-6522-5ab9-8bcd-9a99dd846d00.htm" />
+  <HelpKINode Title="Load method">
+    <HelpKINode Title="AnteilSteuerlicheLeistungsartFile.Load Method " Url="html/ebb3f19d-fe9f-c1e9-6f9e-753699d6bb93.htm" />
+    <HelpKINode Title="OrdnungsbegriffeFile.Load Method " Url="html/c7a65dc7-619c-c497-34aa-8feb76dcff06.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LohnanteilNutzerAnteil property" Url="html/12d86989-1ba7-30c2-d4aa-76fff6b029e5.htm" />
+  <HelpKINode Title="LohnanteilRechnungsbetrag property" Url="html/93ff8ec7-396d-cfe8-ba23-a773695e4ec2.htm" />
+  <HelpKINode Title="MaxValue field">
+    <HelpKINode Title="KundenNummer.MaxValue Field" Url="html/ac401ccb-c720-8a1c-71ef-d9bfe6d52919.htm" />
+    <HelpKINode Title="NutzergruppenNummer.MaxValue Field" Url="html/17ecb49d-27fa-4f37-a024-092fbe870e16.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MinValue field">
+    <HelpKINode Title="KundenNummer.MinValue Field" Url="html/bd46fa47-05b0-fb50-66c0-ec2c2bb045c3.htm" />
+    <HelpKINode Title="NutzergruppenNummer.MinValue Field" Url="html/9598c04e-46f9-4053-e895-5895add046b7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Name property" Url="html/a1f060de-5a49-ae32-3b99-4cf4c210f520.htm" />
+  <HelpKINode Title="Nummer property" Url="html/f3d31ac6-c401-e3df-b77b-e4c07aade922.htm" />
+  <HelpKINode Title="Nummer(Of T) class">
+    <HelpKINode Title="Nummer(T) Class" Url="html/715d85bb-e780-c6c0-4d4a-c901da1849e1.htm" />
+    <HelpKINode Title="about Nummer(Of T) class" Url="html/715d85bb-e780-c6c0-4d4a-c901da1849e1.htm" />
+    <HelpKINode Title="constructor" Url="html/2ae9f446-9ac7-f7ce-1d45-cef2902bb05f.htm" />
+    <HelpKINode Title="fields" Url="html/4cd03502-bb15-67b2-e692-4a261af24544.htm" />
+    <HelpKINode Title="methods" Url="html/391d76e5-9fc8-92b6-ba5e-1bc250da6c26.htm" />
+    <HelpKINode Title="type conversions" Url="html/aa627124-9ddb-13cc-8ad3-9631672f0c26.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Nummer(Of T) to T conversion" Url="html/7144aecf-d9b7-120a-9802-49451e15e19d.htm" />
+  <HelpKINode Title="Nummer(Of T).Nummer constructor" Url="html/2ae9f446-9ac7-f7ce-1d45-cef2902bb05f.htm" />
+  <HelpKINode Title="Nummer(Of T).value field" Url="html/a3a3a5b0-307e-7506-48da-b752b0bed992.htm" />
+  <HelpKINode Title="Nummer&lt;T&gt; class">
+    <HelpKINode Title="Nummer(T) Class" Url="html/715d85bb-e780-c6c0-4d4a-c901da1849e1.htm" />
+    <HelpKINode Title="about Nummer&lt;T&gt; class" Url="html/715d85bb-e780-c6c0-4d4a-c901da1849e1.htm" />
+    <HelpKINode Title="constructor" Url="html/2ae9f446-9ac7-f7ce-1d45-cef2902bb05f.htm" />
+    <HelpKINode Title="fields" Url="html/4cd03502-bb15-67b2-e692-4a261af24544.htm" />
+    <HelpKINode Title="methods" Url="html/391d76e5-9fc8-92b6-ba5e-1bc250da6c26.htm" />
+    <HelpKINode Title="type conversions" Url="html/aa627124-9ddb-13cc-8ad3-9631672f0c26.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Nummer&lt;T&gt; to T conversion" Url="html/7144aecf-d9b7-120a-9802-49451e15e19d.htm" />
+  <HelpKINode Title="Nummer&lt;T&gt;.Nummer constructor" Url="html/2ae9f446-9ac7-f7ce-1d45-cef2902bb05f.htm" />
+  <HelpKINode Title="Nummer&lt;T&gt;.value field" Url="html/a3a3a5b0-307e-7506-48da-b752b0bed992.htm" />
+  <HelpKINode Title="NutzerAnteil property" Url="html/10beaa1e-434b-ea65-cb35-9770807e211f.htm" />
+  <HelpKINode Title="Nutzerfolge class">
+    <HelpKINode Title="Nutzerfolge Class" Url="html/b34e8801-375a-40d6-9b1e-bd6a17294124.htm" />
+    <HelpKINode Title="about Nutzerfolge class" Url="html/b34e8801-375a-40d6-9b1e-bd6a17294124.htm" />
+    <HelpKINode Title="constructor" Url="html/502d0380-3658-ab6a-c4a2-1bcf85d914e1.htm" />
+    <HelpKINode Title="fields" Url="html/e7df3a04-18f2-abdb-c0a7-d8dfb086f255.htm" />
+    <HelpKINode Title="methods" Url="html/d50c52de-52ed-50d9-2b74-802e0dbee7d4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Nutzerfolge property" Url="html/e5cc7d54-174a-c68d-861a-33a5d3a843fe.htm" />
+  <HelpKINode Title="Nutzerfolge.Nutzerfolge constructor" Url="html/502d0380-3658-ab6a-c4a2-1bcf85d914e1.htm" />
+  <HelpKINode Title="Nutzerfolge.ToString method" Url="html/fb02bec6-cf7d-2d48-4916-c849ec65cbdb.htm" />
+  <HelpKINode Title="NutzergruppenNummer class">
+    <HelpKINode Title="NutzergruppenNummer Class" Url="html/be6d393e-1ae5-7932-2309-4e67f678fab8.htm" />
+    <HelpKINode Title="about NutzergruppenNummer class" Url="html/be6d393e-1ae5-7932-2309-4e67f678fab8.htm" />
+    <HelpKINode Title="constructor" Url="html/8510fec0-8103-adce-5c83-94fbc419f3f7.htm" />
+    <HelpKINode Title="fields" Url="html/0e1e0071-75a0-2e76-0ce0-34b2857f138d.htm" />
+    <HelpKINode Title="methods" Url="html/389d0812-0621-1808-5134-380e8e080d73.htm" />
+    <HelpKINode Title="type conversions" Url="html/8f0cad70-1090-40a6-1d37-631e69a98228.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NutzergruppenNummer property" Url="html/b0143144-6f57-4224-f70c-9c46c43d29b2.htm" />
+  <HelpKINode Title="NutzergruppenNummer to Int16 conversion" Url="html/ed62347b-4050-acc3-f493-e0645a4560a6.htm" />
+  <HelpKINode Title="NutzergruppenNummer.MaxValue field" Url="html/17ecb49d-27fa-4f37-a024-092fbe870e16.htm" />
+  <HelpKINode Title="NutzergruppenNummer.MinValue field" Url="html/9598c04e-46f9-4053-e895-5895add046b7.htm" />
+  <HelpKINode Title="NutzergruppenNummer.NutzergruppenNummer constructor" Url="html/8510fec0-8103-adce-5c83-94fbc419f3f7.htm" />
+  <HelpKINode Title="NutzergruppenNummer.ToString method" Url="html/d9cd563c-535b-314e-2780-45f7118ec80d.htm" />
   <HelpKINode Title="OrdnungsbegriffAbrechnungsunternehmen class">
-    <HelpKINode Title="OrdnungsbegriffAbrechnungsunternehmen Class" Url="html/10260c14-6a2c-b83f-8d1c-82b59c5286cb.htm" />
-    <HelpKINode Title="about OrdnungsbegriffAbrechnungsunternehmen class" Url="html/10260c14-6a2c-b83f-8d1c-82b59c5286cb.htm" />
-    <HelpKINode Title="constructor" Url="html/297b90d2-3b31-fe82-a7eb-0030b573fe6a.htm" />
-    <HelpKINode Title="methods" Url="html/ea489efe-460b-0797-3eff-5acb6f73713e.htm" />
+    <HelpKINode Title="OrdnungsbegriffAbrechnungsunternehmen Class" Url="html/8c429877-55bf-6d9a-d1cb-0e9acf4771a2.htm" />
+    <HelpKINode Title="about OrdnungsbegriffAbrechnungsunternehmen class" Url="html/8c429877-55bf-6d9a-d1cb-0e9acf4771a2.htm" />
+    <HelpKINode Title="constructor" Url="html/2651699d-a2d1-27c2-6ff9-4fb5e3ff2b8c.htm" />
+    <HelpKINode Title="methods" Url="html/64f2300c-40c4-b4ce-18a7-3bd9f1f8c4bd.htm" />
+    <HelpKINode Title="properties" Url="html/89744455-0d69-f14f-1883-cbc77accec81.htm" />
   </HelpKINode>
-  <HelpKINode Title="OrdnungsbegriffAbrechnungsunternehmen property" Url="html/2f399997-4e77-a9a2-9742-5e3ebc2ddfa2.htm" />
-  <HelpKINode Title="OrdnungsbegriffAbrechnungsunternehmen.OrdnungsbegriffAbrechnungsunternehmen constructor" Url="html/297b90d2-3b31-fe82-a7eb-0030b573fe6a.htm" />
-  <HelpKINode Title="OrdnungsbegriffAbrechnungsunternehmen.ToString method" Url="html/052250a6-9c99-da29-2490-c99d4decef14.htm" />
+  <HelpKINode Title="OrdnungsbegriffAbrechnungsunternehmen property">
+    <HelpKINode Title="AnteilSteuerlicheLeistungsart.OrdnungsbegriffAbrechnungsunternehmen Property " Url="html/e261fe3f-f492-20e4-7857-d4de26d9b930.htm" />
+    <HelpKINode Title="Ordnungsbegriffe.OrdnungsbegriffAbrechnungsunternehmen Property " Url="html/2f399997-4e77-a9a2-9742-5e3ebc2ddfa2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OrdnungsbegriffAbrechnungsunternehmen.LiegenschaftsNummer property" Url="html/68db47cc-50bf-15ad-6799-6f8d745498d7.htm" />
+  <HelpKINode Title="OrdnungsbegriffAbrechnungsunternehmen.OrdnungsbegriffAbrechnungsunternehmen constructor" Url="html/2651699d-a2d1-27c2-6ff9-4fb5e3ff2b8c.htm" />
+  <HelpKINode Title="OrdnungsbegriffAbrechnungsunternehmen.ToString method" Url="html/ba7ba469-ad03-7a4d-3f4b-b86210d61fc2.htm" />
+  <HelpKINode Title="OrdnungsbegriffAbrechnungsunternehmen.WohnungsNummer property" Url="html/95245c66-de68-d27e-60da-60b45655273c.htm" />
   <HelpKINode Title="Ordnungsbegriffe class">
     <HelpKINode Title="Ordnungsbegriffe Class" Url="html/8b02fab9-5028-23d4-ef38-2a252ab8f925.htm" />
     <HelpKINode Title="about Ordnungsbegriffe class" Url="html/8b02fab9-5028-23d4-ef38-2a252ab8f925.htm" />
     <HelpKINode Title="constructor" Url="html/2281f012-356b-b66b-59d7-3ebb6fae42c9.htm" />
+    <HelpKINode Title="fields" Url="html/3f9b9e81-e904-0542-8712-b047844cbc62.htm" />
     <HelpKINode Title="methods" Url="html/cc17358e-2410-554b-3fce-e5489c3e7af4.htm" />
     <HelpKINode Title="properties" Url="html/7b460ee1-fbb6-06f7-5c26-56b642c50b29.htm" />
   </HelpKINode>
-  <HelpKINode Title="Ordnungsbegriffe property" Url="html/0054ee93-a37a-e5fa-8b81-5356433a4eb3.htm" />
   <HelpKINode Title="Ordnungsbegriffe.Abrechnungsunternehmen property" Url="html/da84fcbf-61b8-156c-df39-9ba7ea417d51.htm" />
   <HelpKINode Title="Ordnungsbegriffe.FromString method" Url="html/f1871c56-92e5-4b8a-ccb0-c74dcf95fa06.htm" />
   <HelpKINode Title="Ordnungsbegriffe.KundenNummer property" Url="html/618c210f-096b-b775-0f8a-5ef1b0dc1e9f.htm" />
   <HelpKINode Title="Ordnungsbegriffe.OrdnungsbegriffAbrechnungsunternehmen property" Url="html/2f399997-4e77-a9a2-9742-5e3ebc2ddfa2.htm" />
   <HelpKINode Title="Ordnungsbegriffe.Ordnungsbegriffe constructor" Url="html/2281f012-356b-b66b-59d7-3ebb6fae42c9.htm" />
   <HelpKINode Title="Ordnungsbegriffe.OrdnungsbegriffWohnungsunternehmen property" Url="html/29605cc3-a36a-aa10-04b6-f6b5025a4bae.htm" />
+  <HelpKINode Title="Ordnungsbegriffe.Satzart field" Url="html/fd03a655-b87b-7c34-41e8-e7d555654f13.htm" />
   <HelpKINode Title="Ordnungsbegriffe.ToString method" Url="html/cd3f288b-b8ca-3ea6-a07b-052442809bfc.htm" />
   <HelpKINode Title="Ordnungsbegriffe.Version property" Url="html/c0f8879b-5d7c-042d-18df-c2701851ca12.htm" />
   <HelpKINode Title="OrdnungsbegriffeFile class">
     <HelpKINode Title="OrdnungsbegriffeFile Class" Url="html/905587d6-3506-cb51-981b-43116361da1e.htm" />
     <HelpKINode Title="about OrdnungsbegriffeFile class" Url="html/905587d6-3506-cb51-981b-43116361da1e.htm" />
-    <HelpKINode Title="constructor" Url="html/70ead4da-8f72-b12d-8893-45f6ba983742.htm" />
+    <HelpKINode Title="constructor" Url="html/02413263-ef40-d7a2-a958-82c50b783c06.htm" />
     <HelpKINode Title="methods" Url="html/33e9d5de-9540-6bc0-4ac3-6950050ff519.htm" />
     <HelpKINode Title="properties" Url="html/fa678f02-7cae-6bdf-5473-f2112169c9e1.htm" />
   </HelpKINode>
-  <HelpKINode Title="OrdnungsbegriffeFile.Created property" Url="html/20b1925e-ef32-1492-afe8-c7fc50e6c923.htm" />
-  <HelpKINode Title="OrdnungsbegriffeFile.FileName property" Url="html/b960939e-3ec9-0d0c-5223-b347c8806ce8.htm" />
   <HelpKINode Title="OrdnungsbegriffeFile.Load method" Url="html/c7a65dc7-619c-c497-34aa-8feb76dcff06.htm" />
-  <HelpKINode Title="OrdnungsbegriffeFile.Ordnungsbegriffe property" Url="html/0054ee93-a37a-e5fa-8b81-5356433a4eb3.htm" />
-  <HelpKINode Title="OrdnungsbegriffeFile.OrdnungsbegriffeFile constructor" Url="html/70ead4da-8f72-b12d-8893-45f6ba983742.htm" />
-  <HelpKINode Title="OrdnungsbegriffeFile.Write method" Url="html/85747548-1168-f01d-be9e-89601516bb52.htm" />
+  <HelpKINode Title="OrdnungsbegriffeFile.OrdnungsbegriffeFile constructor" Url="html/02413263-ef40-d7a2-a958-82c50b783c06.htm" />
+  <HelpKINode Title="OrdnungsbegriffeFile.Write method" Url="html/8765851b-33f1-f714-e470-ca1373eb0fe6.htm" />
   <HelpKINode Title="OrdnungsbegriffeWriter class">
     <HelpKINode Title="OrdnungsbegriffeWriter Class" Url="html/4a6ffe74-4aec-470e-be52-41d8fa921c69.htm" />
     <HelpKINode Title="about OrdnungsbegriffeWriter class" Url="html/4a6ffe74-4aec-470e-be52-41d8fa921c69.htm" />
     <HelpKINode Title="constructor" Url="html/6423cf97-6214-6ed4-c6d2-e9fcb1840879.htm" />
-    <HelpKINode Title="fields" Url="html/a6be74ef-dd00-9161-6fc3-61ea997118b7.htm" />
     <HelpKINode Title="methods" Url="html/298c5793-b668-3ca3-dd6b-6d0d3a63f1d1.htm" />
   </HelpKINode>
-  <HelpKINode Title="OrdnungsbegriffeWriter.Dispose method" Url="html/c424fa1e-c18a-7951-e0bf-6eea4aaf2c43.htm" />
-  <HelpKINode Title="OrdnungsbegriffeWriter.Finalize method" Url="html/3a751037-7829-358c-9124-3c75b047ec02.htm" />
   <HelpKINode Title="OrdnungsbegriffeWriter.OrdnungsbegriffeWriter constructor" Url="html/6423cf97-6214-6ed4-c6d2-e9fcb1840879.htm" />
-  <HelpKINode Title="OrdnungsbegriffeWriter.Write method" Url="html/f926e765-d10b-eabf-8d0e-7101618cbc00.htm" />
-  <HelpKINode Title="OrdnungsbegriffeWriter.WriterEncoding field" Url="html/b369df31-abec-83fd-a695-7380b392ae77.htm" />
   <HelpKINode Title="OrdnungsbegriffWohnungsunternehmen class">
-    <HelpKINode Title="OrdnungsbegriffWohnungsunternehmen Class" Url="html/2ac6d28e-2ca1-31a1-0433-81c41ce287fe.htm" />
-    <HelpKINode Title="about OrdnungsbegriffWohnungsunternehmen class" Url="html/2ac6d28e-2ca1-31a1-0433-81c41ce287fe.htm" />
-    <HelpKINode Title="constructor" Url="html/f418b71b-172a-037b-c79e-ddf8b61d53b7.htm" />
-    <HelpKINode Title="methods" Url="html/40f1ac7a-88ae-052c-fecb-85ef9ad7e13f.htm" />
+    <HelpKINode Title="OrdnungsbegriffWohnungsunternehmen Class" Url="html/92030d5c-9052-4a43-2874-f62d497a259b.htm" />
+    <HelpKINode Title="about OrdnungsbegriffWohnungsunternehmen class" Url="html/92030d5c-9052-4a43-2874-f62d497a259b.htm" />
+    <HelpKINode Title="constructor" Url="html/d34cdd12-f864-3e5c-83ea-68d1220d314e.htm" />
+    <HelpKINode Title="methods" Url="html/bdb2a279-e3aa-7261-0019-69521dd4e416.htm" />
   </HelpKINode>
-  <HelpKINode Title="OrdnungsbegriffWohnungsunternehmen property" Url="html/29605cc3-a36a-aa10-04b6-f6b5025a4bae.htm" />
-  <HelpKINode Title="OrdnungsbegriffWohnungsunternehmen.OrdnungsbegriffWohnungsunternehmen constructor" Url="html/f418b71b-172a-037b-c79e-ddf8b61d53b7.htm" />
-  <HelpKINode Title="OrdnungsbegriffWohnungsunternehmen.ToString method" Url="html/fb2c532a-8cef-f5f5-d26c-cbe3d949e088.htm" />
+  <HelpKINode Title="OrdnungsbegriffWohnungsunternehmen property">
+    <HelpKINode Title="AnteilSteuerlicheLeistungsart.OrdnungsbegriffWohnungsunternehmen Property " Url="html/53356d41-67bb-3b16-9ea2-c42e10a592a8.htm" />
+    <HelpKINode Title="Ordnungsbegriffe.OrdnungsbegriffWohnungsunternehmen Property " Url="html/29605cc3-a36a-aa10-04b6-f6b5025a4bae.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OrdnungsbegriffWohnungsunternehmen.OrdnungsbegriffWohnungsunternehmen constructor" Url="html/d34cdd12-f864-3e5c-83ea-68d1220d314e.htm" />
+  <HelpKINode Title="OrdnungsbegriffWohnungsunternehmen.ToString method" Url="html/4e48ebd9-623a-e00b-eaab-cb7b70927a6d.htm" />
+  <HelpKINode Title="ParseResult(Of T) class">
+    <HelpKINode Title="ParseResult(T) Class" Url="html/df9dcce7-a879-64cb-ec61-c5d27a9277d6.htm" />
+    <HelpKINode Title="about ParseResult(Of T) class" Url="html/df9dcce7-a879-64cb-ec61-c5d27a9277d6.htm" />
+    <HelpKINode Title="constructor" Url="html/5c82065c-2b9a-d5fc-adf4-f46e233e22a9.htm" />
+    <HelpKINode Title="methods" Url="html/6dabd509-5d61-135c-d8a7-f265af1ca36c.htm" />
+    <HelpKINode Title="properties" Url="html/215cb930-86de-5548-18b0-0a9c11cf49ee.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ParseResult(Of T).ParseResult constructor" Url="html/5c82065c-2b9a-d5fc-adf4-f46e233e22a9.htm" />
+  <HelpKINode Title="ParseResult(Of T).Success property" Url="html/8922a537-2498-078d-84de-875d217582a5.htm" />
+  <HelpKINode Title="ParseResult(Of T).Value property" Url="html/4f8924d6-e112-54c6-c8d8-74dc85c0294e.htm" />
+  <HelpKINode Title="ParseResult&lt;T&gt; class">
+    <HelpKINode Title="ParseResult(T) Class" Url="html/df9dcce7-a879-64cb-ec61-c5d27a9277d6.htm" />
+    <HelpKINode Title="about ParseResult&lt;T&gt; class" Url="html/df9dcce7-a879-64cb-ec61-c5d27a9277d6.htm" />
+    <HelpKINode Title="constructor" Url="html/5c82065c-2b9a-d5fc-adf4-f46e233e22a9.htm" />
+    <HelpKINode Title="methods" Url="html/6dabd509-5d61-135c-d8a7-f265af1ca36c.htm" />
+    <HelpKINode Title="properties" Url="html/215cb930-86de-5548-18b0-0a9c11cf49ee.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ParseResult&lt;T&gt;.ParseResult constructor" Url="html/5c82065c-2b9a-d5fc-adf4-f46e233e22a9.htm" />
+  <HelpKINode Title="ParseResult&lt;T&gt;.Success property" Url="html/8922a537-2498-078d-84de-875d217582a5.htm" />
+  <HelpKINode Title="ParseResult&lt;T&gt;.Value property" Url="html/4f8924d6-e112-54c6-c8d8-74dc85c0294e.htm" />
+  <HelpKINode Title="Prozent class">
+    <HelpKINode Title="Prozent Class" Url="html/6539bd9e-cf67-8107-a059-646c5b7dac1a.htm" />
+    <HelpKINode Title="about Prozent class" Url="html/6539bd9e-cf67-8107-a059-646c5b7dac1a.htm" />
+    <HelpKINode Title="constructor" Url="html/bcdce235-bac2-08e1-b22c-9fa60b7a022d.htm" />
+    <HelpKINode Title="methods" Url="html/db0610d7-40a8-21eb-10ce-2d9957281d48.htm" />
+    <HelpKINode Title="type conversions" Url="html/588ed86e-760a-fe4b-3bfb-3ef319ecb056.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Prozent to Decimal conversion" Url="html/727b42c3-d043-2993-f2ff-3f64355f90f7.htm" />
+  <HelpKINode Title="Prozent.Prozent constructor" Url="html/bcdce235-bac2-08e1-b22c-9fa60b7a022d.htm" />
+  <HelpKINode Title="Prozent.ToString method" Url="html/8c0c45ce-0657-7100-ec98-56bfc8e9e3bc.htm" />
+  <HelpKINode Title="ProzentualerNutzerAnteil property" Url="html/6b4919cb-b24e-1370-b936-b33d43aed78d.htm" />
+  <HelpKINode Title="Rechnungsbetrag property" Url="html/3adac8a5-078c-90b5-eb4e-c2fcbcc41a48.htm" />
+  <HelpKINode Title="Satzart field">
+    <HelpKINode Title="AnteilSteuerlicheLeistungsart.Satzart Field" Url="html/1705fdb8-aa24-6356-9338-c34ef3bad478.htm" />
+    <HelpKINode Title="AnteilSteuerlicheLeistungsartFile.Satzart Field" Url="html/e6b65275-18b9-6132-4dcf-09d6024f007f.htm" />
+    <HelpKINode Title="Ordnungsbegriffe.Satzart Field" Url="html/fd03a655-b87b-7c34-41e8-e7d555654f13.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SatzfolgeNummer class">
+    <HelpKINode Title="SatzfolgeNummer Class" Url="html/ba699b3f-eb34-02c5-bb3f-aea35e222bb2.htm" />
+    <HelpKINode Title="about SatzfolgeNummer class" Url="html/ba699b3f-eb34-02c5-bb3f-aea35e222bb2.htm" />
+    <HelpKINode Title="constructor" Url="html/ce6f4862-586f-eadf-fb2e-b2d5e7c6761a.htm" />
+    <HelpKINode Title="methods" Url="html/6d172b41-e103-1afb-7e9b-421ad0a493a1.htm" />
+    <HelpKINode Title="type conversions" Url="html/26a37b47-fa0c-de0b-e05c-5f5222780690.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SatzfolgeNummer property" Url="html/01fe7313-c124-0381-67a3-7c7492a00226.htm" />
+  <HelpKINode Title="SatzfolgeNummer to Int32 conversion" Url="html/a89cc736-570c-1d3b-a9b9-f5d854782862.htm" />
+  <HelpKINode Title="SatzfolgeNummer.SatzfolgeNummer constructor" Url="html/ce6f4862-586f-eadf-fb2e-b2d5e7c6761a.htm" />
+  <HelpKINode Title="SatzfolgeNummer.ToString method" Url="html/f78a4a6a-b3eb-c399-2eac-4a092a2abe41.htm" />
+  <HelpKINode Title="Schluessel property">
+    <HelpKINode Title="Kostenart.Schluessel Property " Url="html/4028afee-f0b6-7d29-bc5d-6c674ef5b14c.htm" />
+    <HelpKINode Title="SteuerlicheLeistungsart.Schluessel Property " Url="html/596347da-da8c-3132-5a19-0c77d4dcfb4c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SteuerlicheLeistungsart class">
+    <HelpKINode Title="SteuerlicheLeistungsart Class" Url="html/29be6fd8-0d8f-0c59-811f-7df09e338388.htm" />
+    <HelpKINode Title="about SteuerlicheLeistungsart class" Url="html/29be6fd8-0d8f-0c59-811f-7df09e338388.htm" />
+    <HelpKINode Title="methods" Url="html/131e9cc3-21d2-40be-bf31-2a2354ad1c88.htm" />
+    <HelpKINode Title="properties" Url="html/7a70efc0-a54c-fb8b-a412-c5c503a5a10c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SteuerlicheLeistungsart property" Url="html/ae75fd7a-2a03-885a-ce66-7d3b6dee69eb.htm" />
+  <HelpKINode Title="SteuerlicheLeistungsart.Bedeutung property" Url="html/de6b913c-57d8-92c8-f8e4-e5a7ae1b89e1.htm" />
+  <HelpKINode Title="SteuerlicheLeistungsart.Finde method" Url="html/a995e2b9-edac-cfce-6fb2-da8e4f2572ed.htm" />
+  <HelpKINode Title="SteuerlicheLeistungsart.IsGueltigFuer method" Url="html/c7d2441d-7d2f-3568-f329-0f4f61413e58.htm" />
+  <HelpKINode Title="SteuerlicheLeistungsart.Schluessel property" Url="html/596347da-da8c-3132-5a19-0c77d4dcfb4c.htm" />
+  <HelpKINode Title="SteuerlicheLeistungsart.ToString method" Url="html/3e6811ed-6ab2-ad9d-41f3-4aba5e12787b.htm" />
+  <HelpKINode Title="Success property" Url="html/8922a537-2498-078d-84de-875d217582a5.htm" />
+  <HelpKINode Title="Tag class">
+    <HelpKINode Title="Tag Class" Url="html/48791a5e-e3bd-f570-dba5-cb8144f7cfc3.htm" />
+    <HelpKINode Title="about Tag class" Url="html/48791a5e-e3bd-f570-dba5-cb8144f7cfc3.htm" />
+    <HelpKINode Title="constructor" Url="html/93e9b577-acc1-9e04-3725-df271b18450d.htm" />
+    <HelpKINode Title="methods" Url="html/e1bc33ab-d7e0-a43c-3a44-899bda1d48ca.htm" />
+    <HelpKINode Title="type conversions" Url="html/d864dc1f-86a3-22dd-ca9a-f68c46266a8e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Tag to DateTime conversion" Url="html/b3c6c99a-0734-eb49-ff77-cc7a053292ac.htm" />
+  <HelpKINode Title="Tag.Tag constructor" Url="html/93e9b577-acc1-9e04-3725-df271b18450d.htm" />
+  <HelpKINode Title="Tag.ToString method" Url="html/f4838114-8ba7-88c5-65b6-f8c3034b1fd6.htm" />
   <HelpKINode Title="ToString method">
-    <HelpKINode Title="Abrechnungsunternehmen.ToString Method " Url="html/c46a8985-f476-3c7f-29cd-f17497bd2d89.htm" />
-    <HelpKINode Title="ArgeVersion.ToString Method " Url="html/a94e0e7c-e767-8329-2903-ebb55436bf2d.htm" />
-    <HelpKINode Title="KundenNummer.ToString Method " Url="html/a6833e93-bc36-c21e-84b4-8c399afcd392.htm" />
-    <HelpKINode Title="LiegenschaftsNummer.ToString Method " Url="html/a323bdd5-c5d2-1645-6645-e601524bc3ac.htm" />
-    <HelpKINode Title="OrdnungsbegriffAbrechnungsunternehmen.ToString Method " Url="html/052250a6-9c99-da29-2490-c99d4decef14.htm" />
+    <HelpKINode Title="AbrechnungsfolgeNummer.ToString Method " Url="html/dd3b3718-014d-309d-0e27-8f63f06bb240.htm" />
+    <HelpKINode Title="Abrechnungsunternehmen.ToString Method " Url="html/e1815438-f289-41be-2588-e898e1a00d3d.htm" />
+    <HelpKINode Title="AnteilSteuerlicheLeistungsart.ToString Method " Url="html/e45f5c24-a1b4-faf7-eabd-1fff3f6ae2a1.htm" />
+    <HelpKINode Title="ArgeVersion.ToString Method " Url="html/5cd36961-5227-644c-ba87-71f8a54a9daf.htm" />
+    <HelpKINode Title="Betrag.ToString Method " Url="html/67a16030-d32a-b76e-dd55-e587e16b05b6.htm" />
+    <HelpKINode Title="ErweiterterOrdnungsbegriffAbrechnungsunternehmen.ToString Method " Url="html/8f153867-27fd-a6b9-fc70-54fe32152d41.htm" />
+    <HelpKINode Title="Kostenart.ToString Method " Url="html/18949897-f7ab-8192-0c12-8913ca72cad3.htm" />
+    <HelpKINode Title="KundenNummer.ToString Method " Url="html/8b174af0-d47d-fddc-4591-cab8f16d5260.htm" />
+    <HelpKINode Title="LiegenschaftsNummer.ToString Method " Url="html/ad55f7cb-6522-5ab9-8bcd-9a99dd846d00.htm" />
+    <HelpKINode Title="Nutzerfolge.ToString Method " Url="html/fb02bec6-cf7d-2d48-4916-c849ec65cbdb.htm" />
+    <HelpKINode Title="NutzergruppenNummer.ToString Method " Url="html/d9cd563c-535b-314e-2780-45f7118ec80d.htm" />
+    <HelpKINode Title="OrdnungsbegriffAbrechnungsunternehmen.ToString Method " Url="html/ba7ba469-ad03-7a4d-3f4b-b86210d61fc2.htm" />
     <HelpKINode Title="Ordnungsbegriffe.ToString Method " Url="html/cd3f288b-b8ca-3ea6-a07b-052442809bfc.htm" />
-    <HelpKINode Title="OrdnungsbegriffWohnungsunternehmen.ToString Method " Url="html/fb2c532a-8cef-f5f5-d26c-cbe3d949e088.htm" />
-    <HelpKINode Title="WohnungsNummer.ToString Method " Url="html/eca1c6a9-d21b-fa8e-2f3b-92bc70b483e3.htm" />
+    <HelpKINode Title="OrdnungsbegriffWohnungsunternehmen.ToString Method " Url="html/4e48ebd9-623a-e00b-eaab-cb7b70927a6d.htm" />
+    <HelpKINode Title="Prozent.ToString Method " Url="html/8c0c45ce-0657-7100-ec98-56bfc8e9e3bc.htm" />
+    <HelpKINode Title="SatzfolgeNummer.ToString Method " Url="html/f78a4a6a-b3eb-c399-2eac-4a092a2abe41.htm" />
+    <HelpKINode Title="SteuerlicheLeistungsart.ToString Method " Url="html/3e6811ed-6ab2-ad9d-41f3-4aba5e12787b.htm" />
+    <HelpKINode Title="Tag.ToString Method " Url="html/f4838114-8ba7-88c5-65b6-f8c3034b1fd6.htm" />
+    <HelpKINode Title="WohnungsNummer.ToString Method " Url="html/87f800b3-e8af-871b-ec98-4816fe302732.htm" />
   </HelpKINode>
+  <HelpKINode Title="value field" Url="html/a3a3a5b0-307e-7506-48da-b752b0bed992.htm" />
+  <HelpKINode Title="Value property" Url="html/4f8924d6-e112-54c6-c8d8-74dc85c0294e.htm" />
+  <HelpKINode Title="VariableBedeutung property" Url="html/cdcad3fa-8bb7-2360-b421-555127bb791b.htm" />
   <HelpKINode Title="version">
     <HelpKINode Title="history" Url="html/00210b05-0165-4495-be4c-9e6a7a3bdcb5.htm" />
   </HelpKINode>
   <HelpKINode Title="Version property" Url="html/c0f8879b-5d7c-042d-18df-c2701851ca12.htm" />
   <HelpKINode Title="Welcome" Url="html/2f04566b-5502-41d9-bc3a-e1f503700063.htm" />
   <HelpKINode Title="WohnungsNummer class">
-    <HelpKINode Title="WohnungsNummer Class" Url="html/2c3c249f-e03c-51ad-eb29-af9da0172321.htm" />
-    <HelpKINode Title="about WohnungsNummer class" Url="html/2c3c249f-e03c-51ad-eb29-af9da0172321.htm" />
-    <HelpKINode Title="constructor" Url="html/939bdf2d-9fde-b8e9-b42e-34a4e68ff56b.htm" />
-    <HelpKINode Title="methods" Url="html/6fbe5cf6-7020-dd7d-7869-269cf6f58085.htm" />
-    <HelpKINode Title="type conversions" Url="html/165857eb-a18c-ebad-29fa-37ecd17f342e.htm" />
+    <HelpKINode Title="WohnungsNummer Class" Url="html/3b637ed8-3fcd-2af2-d271-8bf00b44f515.htm" />
+    <HelpKINode Title="about WohnungsNummer class" Url="html/3b637ed8-3fcd-2af2-d271-8bf00b44f515.htm" />
+    <HelpKINode Title="constructor" Url="html/06e068d2-b1fa-4bd6-fb46-0b96dbef8a2e.htm" />
+    <HelpKINode Title="methods" Url="html/7096d16f-1d05-4d8e-7987-94055c8eb9b8.htm" />
+    <HelpKINode Title="type conversions" Url="html/5775ff5b-574a-63d7-1efc-b0142a69fc0c.htm" />
   </HelpKINode>
-  <HelpKINode Title="WohnungsNummer to Int16 conversion" Url="html/6f2491ad-1bb5-e5f5-dbc8-dc1b463e3540.htm" />
-  <HelpKINode Title="WohnungsNummer.ToString method" Url="html/eca1c6a9-d21b-fa8e-2f3b-92bc70b483e3.htm" />
-  <HelpKINode Title="WohnungsNummer.WohnungsNummer constructor" Url="html/939bdf2d-9fde-b8e9-b42e-34a4e68ff56b.htm" />
+  <HelpKINode Title="WohnungsNummer property" Url="html/95245c66-de68-d27e-60da-60b45655273c.htm" />
+  <HelpKINode Title="WohnungsNummer to Int16 conversion" Url="html/7ee9fd89-9230-63e6-7efc-833cb9ac5fc2.htm" />
+  <HelpKINode Title="WohnungsNummer.ToString method" Url="html/87f800b3-e8af-871b-ec98-4816fe302732.htm" />
+  <HelpKINode Title="WohnungsNummer.WohnungsNummer constructor" Url="html/06e068d2-b1fa-4bd6-fb46-0b96dbef8a2e.htm" />
   <HelpKINode Title="Write method">
-    <HelpKINode Title="OrdnungsbegriffeFile.Write Method " Url="html/85747548-1168-f01d-be9e-89601516bb52.htm" />
-    <HelpKINode Title="OrdnungsbegriffeWriter.Write Method " Url="html/f926e765-d10b-eabf-8d0e-7101618cbc00.htm" />
+    <HelpKINode Title="AnteilSteuerlicheLeistungsartFile.Write Method " Url="html/59cd7996-8966-76fb-30c1-0c5697f8f325.htm" />
+    <HelpKINode Title="ArgeWriter(TInstance).Write Method " Url="html/2d26f00d-7cee-5330-7ca8-56cc837ede4a.htm" />
+    <HelpKINode Title="IArgeWriter(T).Write Method " Url="html/c6615ffe-a231-63a3-eaa6-c533af138c46.htm" />
+    <HelpKINode Title="OrdnungsbegriffeFile.Write Method " Url="html/8765851b-33f1-f714-e470-ca1373eb0fe6.htm" />
   </HelpKINode>
-  <HelpKINode Title="WriterEncoding field" Url="html/b369df31-abec-83fd-a695-7380b392ae77.htm" />
+  <HelpKINode Title="WriterEncoding field" Url="html/cd21b4f2-0432-bdad-08a3-86ef9666817b.htm" />
 </HelpKI>
