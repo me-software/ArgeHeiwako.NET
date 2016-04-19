@@ -41,6 +41,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\VersionInfo.cs">
@@ -51,6 +52,7 @@
     <Compile Include="Common\Abrechnungsunternehmen.cs" />
     <Compile Include="Common\ArgeVersion.cs" />
     <Compile Include="Common\Betrag.cs" />
+    <Compile Include="Common\Dokumentart.cs" />
     <Compile Include="Common\Nummer.cs" />
     <Compile Include="Common\ParseResult.cs" />
     <Compile Include="Common\ErweiterterOrdnungsbegriffAbrechnungsunternehmen.cs" />
