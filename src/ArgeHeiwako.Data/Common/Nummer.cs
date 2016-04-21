@@ -8,6 +8,8 @@ namespace ArgeHeiwako.Data.Common
     /// <typeparam name="T"></typeparam>
     public class Nummer<T> where T : IComparable
     {
+        private int stringLength;
+
         /// <summary>
         /// Geschützter Zugriff auf den numerischen Wert der <see cref="Nummer{T}"/>-Instanz
         /// </summary>
@@ -28,11 +30,12 @@ namespace ArgeHeiwako.Data.Common
             if (valueString.Length != stringLength)
                 throw new ArgumentOutOfRangeException(parameterName);
 
+            this.stringLength = stringLength;
             var parseResult = parseFunction(valueString);
             if (!parseResult.Success)
                 throw new ArgumentOutOfRangeException(parameterName);
 
-            this.value = parseResult.Value;
+            value = parseResult.Value;
         }
 
         /// <summary>
@@ -46,6 +49,8 @@ namespace ArgeHeiwako.Data.Common
         {
             if (value.CompareTo(minValue) < 0 || value.CompareTo(maxValue) > 0)
                 throw new ArgumentOutOfRangeException(parameterName);
+
+            stringLength = maxValue.ToString().Length;
 
             this.value = value;
         }

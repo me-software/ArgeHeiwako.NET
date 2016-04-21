@@ -68,6 +68,7 @@
     <Compile Include="Data\Common\AbrechnungsunternehmenTests.cs" />
     <Compile Include="Data\Common\ArgeVersionTests.cs" />
     <Compile Include="Data\Common\BetragTests.cs" />
+    <Compile Include="Data\Common\BilddateiFolgeNummerTests.cs" />
     <Compile Include="Data\Common\DokumentartTests.cs" />
     <Compile Include="Data\Common\ErweiteterOrdnungsbegriffAbrechnungsunternehmenTests.cs" />
     <Compile Include="Data\Common\KostenartTests.cs" />
