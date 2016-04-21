@@ -53,6 +53,7 @@
     <Compile Include="Common\ArgeVersion.cs" />
     <Compile Include="Common\Betrag.cs" />
     <Compile Include="Common\BilddateiFolgeNummer.cs" />
+    <Compile Include="Common\BilddateiPfad.cs" />
     <Compile Include="Common\Dokumentart.cs" />
     <Compile Include="Common\Nummer.cs" />
     <Compile Include="Common\ParseResult.cs" />
