@@ -83,6 +83,7 @@
     <Compile Include="Data\Common\WohnungsNummerTests.cs" />
     <Compile Include="Data\Common\LiegenschaftsNummerTests.cs" />
     <Compile Include="Data\Common\OrdnungsbegriffAbrechnungsunternehmenTests.cs" />
+    <Compile Include="Data\NutzerAbrechnungBildTests.cs" />
     <Compile Include="Data\OrdnungsbegriffeTests.cs" />
     <Compile Include="Data\Common\OrdnungsbegriffWohnungsunternehmenTests.cs" />
     <Compile Include="IO\AnteilSteuerlicheLeistungsartFileTests.cs" />

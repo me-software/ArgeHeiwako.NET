@@ -68,6 +68,7 @@
     <Compile Include="Common\Satzfolgenummer.cs" />
     <Compile Include="Common\SteuerlicheLeistungsart.cs" />
     <Compile Include="Common\Tag.cs" />
+    <Compile Include="NutzerAbrechnungBild.cs" />
     <Compile Include="Ordnungsbegriffe.cs" />
     <Compile Include="Common\OrdnungsbegriffWohnungsunternehmen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
