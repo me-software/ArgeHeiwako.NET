@@ -1,15 +1,12 @@
 ﻿using ArgeHeiwako.Data;
 using ArgeHeiwako.Data.Common;
-using ArgeHeiwako.Tests.IO;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 using Xunit;
 
 namespace ArgeHeiwako.Tests.Data
 {
+    [ExcludeFromCodeCoverage]
     public class NutzerAbrechnungBildTests
     {
         private static LiegenschaftsNummer liegenschaftsNummer = new LiegenschaftsNummer(1);
@@ -196,6 +193,38 @@ namespace ArgeHeiwako.Tests.Data
         {
             var expectedString = "E898         000000001000100011ID                   test.pdf                                                001311215   ";
             Assert.Equal(expectedString, CreateDefault().ToString());
+        }
+
+        [Fact]
+        public void ToString_InstanceWithSatzfolgeNummer_ReturnsStringValue()
+        {
+            var satzfolgeNummer = new SatzfolgeNummer(1);
+            var instance = new NutzerAbrechnungBild(ordnungsbegriffAbrechnungsunternehmen, ordnungsbegriffWohnungsunternehmen, bilddateiPfad, bilddateiFolgeNummer, letzterTagNutzungszeitraum, satzfolgeNummer: satzfolgeNummer);
+            Assert.Equal("E8980000001  000000001000100011ID                   test.pdf                                                001311215   ", instance.ToString());
+        }
+
+        [Fact]
+        public void ToString_InstanceWithAbrechnungsunternehmen_ReturnsStringValue()
+        {
+            var abrechnungsunternehmen = Abrechnungsunternehmen.Finde(30);
+            var instance = new NutzerAbrechnungBild(ordnungsbegriffAbrechnungsunternehmen, ordnungsbegriffWohnungsunternehmen, bilddateiPfad, bilddateiFolgeNummer, letzterTagNutzungszeitraum, abrechnungsunternehmen: abrechnungsunternehmen);
+            Assert.Equal("E898       30000000001000100011ID                   test.pdf                                                001311215   ", instance.ToString());
+        }
+
+        [Fact]
+        public void ToString_InstanceWithAbrechnungsfolgeNummer_ReturnsStringValue()
+        {
+            var abrechnungsfolgeNummer = new AbrechnungsfolgeNummer("1");
+            var instance = new NutzerAbrechnungBild(ordnungsbegriffAbrechnungsunternehmen, ordnungsbegriffWohnungsunternehmen, bilddateiPfad, bilddateiFolgeNummer, letzterTagNutzungszeitraum, abrechnungsfolgeNummer: abrechnungsfolgeNummer);
+            Assert.Equal("E898         000000001000100011ID                  1test.pdf                                                001311215   ", instance.ToString());
+        }
+
+        [Fact]
+        public void ToString_InstanceWithDokumentArt_ReturnsStringValue()
+        {
+            var dokumentart = Dokumentart.Heizkostenabrechnung;
+            var instance = new NutzerAbrechnungBild(ordnungsbegriffAbrechnungsunternehmen, ordnungsbegriffWohnungsunternehmen, bilddateiPfad, bilddateiFolgeNummer, letzterTagNutzungszeitraum, dokumentart: dokumentart);
+            Assert.Equal("E898         000000001000100011ID                   test.pdf                                                001311215HKA", instance.ToString());
         }
 
         #endregion
