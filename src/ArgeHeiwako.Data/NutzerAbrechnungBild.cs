@@ -143,5 +143,31 @@ namespace ArgeHeiwako.Data
                 letzterTagNutzungszeitraum,
                 (dokumentart == null) ? "   " : dokumentart.ToString());
         }
+
+        /// <summary>
+        /// Erstellt eine neue <see cref="NutzerAbrechnungBild"/>-Instanz auf Basis des <see cref="string"/> aus der Datenaustausch-Datei
+        /// </summary>
+        /// <param name="nutzerAbrechnungBildString">Der <see cref="string"/> aus der Datenaustausch-Datei</param>
+        /// <exception cref="ArgumentNullException">Wenn der Parameter <paramref name="nutzerAbrechnungBildString"/> NULL ist</exception>
+        /// <exception cref="ArgumentOutOfRangeException">Wenn der Parameter <paramref name="nutzerAbrechnungBildString"/> einen nicht gültigen E898-Datensatz beinhaltet.</exception>
+        internal static NutzerAbrechnungBild FromString(string nutzerAbrechnungBildString)
+        {
+            if (nutzerAbrechnungBildString == null)
+                throw new ArgumentNullException(nameof(nutzerAbrechnungBildString));
+            if (nutzerAbrechnungBildString.Length != 120 || !nutzerAbrechnungBildString.StartsWith(Satzart))
+                throw new ArgumentOutOfRangeException(nameof(nutzerAbrechnungBildString));
+
+            var ordnungsbegriffAbrechnungsunternehmen = ErweiterterOrdnungsbegriffAbrechnungsunternehmen.FromString(nutzerAbrechnungBildString.Substring(13, 18));
+            var ordnungsbegriffWohnungsunternehmen = new OrdnungsbegriffWohnungsunternehmen(nutzerAbrechnungBildString.Substring(31, 20));
+            var bilddateiPfad = new BilddateiPfad(nutzerAbrechnungBildString.Substring(52, 56));
+            var bilddateiFolgeNummer = new BilddateiFolgeNummer(nutzerAbrechnungBildString.Substring(108, 3));
+            var letzterTagNutzungszeitraum = new Tag(nutzerAbrechnungBildString.Substring(111, 6));
+
+            return new NutzerAbrechnungBild(
+                ordnungsbegriffAbrechnungsunternehmen, 
+                ordnungsbegriffWohnungsunternehmen, 
+                bilddateiPfad, bilddateiFolgeNummer, 
+                letzterTagNutzungszeitraum);
+        }
     }
 }

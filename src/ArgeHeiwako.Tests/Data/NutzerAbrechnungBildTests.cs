@@ -229,6 +229,36 @@ namespace ArgeHeiwako.Tests.Data
 
         #endregion
 
+        #region FromString()
+
+        [Fact]
+        public void FromString_Null_ThrowsArgumentNullException()
+        {
+            var ex = Assert.Throws<ArgumentNullException>(() => NutzerAbrechnungBild.FromString(null));
+            Assert.Equal("nutzerAbrechnungBildString", ex.ParamName);
+        }
+
+
+        [Theory]
+        [InlineData("")]
+        [InlineData("                                                                                                                       ")]
+        [InlineData("                                                                                                                         ")]
+        [InlineData("E897                                                                                                                    ")]
+        public void FromString_InvalidString_ThrowsArgumentOutOfRangeException(string data)
+        {
+            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => NutzerAbrechnungBild.FromString(data));
+            Assert.Equal("nutzerAbrechnungBildString", ex.ParamName);
+        }
+
+        [Fact]
+        public void FromString_Default_ReturnsInstance()
+        {
+            var data = CreateDefault();
+            Assert.Equal(data.ToString(), NutzerAbrechnungBild.FromString(data.ToString()).ToString());
+        }
+
+        #endregion
+
         internal static NutzerAbrechnungBild CreateDefault()
         {
             return new NutzerAbrechnungBild(
