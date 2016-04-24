@@ -9,6 +9,10 @@ namespace ArgeHeiwako.Tests.Data
     [ExcludeFromCodeCoverage]
     public class NutzerAbrechnungBildTests
     {
+        private const string stringValueSatzfolgeNummer = "E8980000001  000000001000100011ID                   test.pdf                                                001311215   ";
+        private const string stringValueAbrechnungsunternehmen = "E898       30000000001000100011ID                   test.pdf                                                001311215   ";
+        private const string stringValueAbrechnungsfolgeNummer = "E898         000000001000100011ID                  1test.pdf                                                001311215   ";
+        private const string stringValueDokumentart = "E898         000000001000100011ID                   test.pdf                                                001311215HKA";
         private static LiegenschaftsNummer liegenschaftsNummer = new LiegenschaftsNummer(1);
         private static NutzergruppenNummer nutzergruppenNummer = new NutzergruppenNummer(1);
         private static WohnungsNummer wohnungsNummer = new WohnungsNummer(1);
@@ -200,7 +204,7 @@ namespace ArgeHeiwako.Tests.Data
         {
             var satzfolgeNummer = new SatzfolgeNummer(1);
             var instance = new NutzerAbrechnungBild(ordnungsbegriffAbrechnungsunternehmen, ordnungsbegriffWohnungsunternehmen, bilddateiPfad, bilddateiFolgeNummer, letzterTagNutzungszeitraum, satzfolgeNummer: satzfolgeNummer);
-            Assert.Equal("E8980000001  000000001000100011ID                   test.pdf                                                001311215   ", instance.ToString());
+            Assert.Equal(stringValueSatzfolgeNummer, instance.ToString());
         }
 
         [Fact]
@@ -208,7 +212,7 @@ namespace ArgeHeiwako.Tests.Data
         {
             var abrechnungsunternehmen = Abrechnungsunternehmen.Finde(30);
             var instance = new NutzerAbrechnungBild(ordnungsbegriffAbrechnungsunternehmen, ordnungsbegriffWohnungsunternehmen, bilddateiPfad, bilddateiFolgeNummer, letzterTagNutzungszeitraum, abrechnungsunternehmen: abrechnungsunternehmen);
-            Assert.Equal("E898       30000000001000100011ID                   test.pdf                                                001311215   ", instance.ToString());
+            Assert.Equal(stringValueAbrechnungsunternehmen, instance.ToString());
         }
 
         [Fact]
@@ -216,7 +220,7 @@ namespace ArgeHeiwako.Tests.Data
         {
             var abrechnungsfolgeNummer = new AbrechnungsfolgeNummer("1");
             var instance = new NutzerAbrechnungBild(ordnungsbegriffAbrechnungsunternehmen, ordnungsbegriffWohnungsunternehmen, bilddateiPfad, bilddateiFolgeNummer, letzterTagNutzungszeitraum, abrechnungsfolgeNummer: abrechnungsfolgeNummer);
-            Assert.Equal("E898         000000001000100011ID                  1test.pdf                                                001311215   ", instance.ToString());
+            Assert.Equal(stringValueAbrechnungsfolgeNummer, instance.ToString());
         }
 
         [Fact]
@@ -224,7 +228,7 @@ namespace ArgeHeiwako.Tests.Data
         {
             var dokumentart = Dokumentart.Heizkostenabrechnung;
             var instance = new NutzerAbrechnungBild(ordnungsbegriffAbrechnungsunternehmen, ordnungsbegriffWohnungsunternehmen, bilddateiPfad, bilddateiFolgeNummer, letzterTagNutzungszeitraum, dokumentart: dokumentart);
-            Assert.Equal("E898         000000001000100011ID                   test.pdf                                                001311215HKA", instance.ToString());
+            Assert.Equal(stringValueDokumentart, instance.ToString());
         }
 
         #endregion
@@ -255,6 +259,30 @@ namespace ArgeHeiwako.Tests.Data
         {
             var data = CreateDefault();
             Assert.Equal(data.ToString(), NutzerAbrechnungBild.FromString(data.ToString()).ToString());
+        }
+
+        [Fact]
+        public void FromString_WithSatzfolgeNummer_ReturnsInstanceWithSatzfolgeNummer()
+        {
+            Assert.Equal(1, NutzerAbrechnungBild.FromString(stringValueSatzfolgeNummer).SatzfolgeNummer);
+        }
+
+        [Fact]
+        public void FromString_WithAbrechnungsunternehmen_ReturnsInstanceWithAbrechnungsunternehmen()
+        {
+            Assert.Equal(Abrechnungsunternehmen.Finde(30), NutzerAbrechnungBild.FromString(stringValueAbrechnungsunternehmen).Abrechnungsunternehmen);
+        }
+
+        [Fact]
+        public void FromString_WithAbrechnungsfolgeNummer_ReturnsInstanceWithAbrechnungsfolgeNummer()
+        {
+            Assert.Equal("1", NutzerAbrechnungBild.FromString(stringValueAbrechnungsfolgeNummer).AbrechnungsfolgeNummer.ToString());
+        }
+
+        [Fact]
+        public void FromString_WithDokumentart_ReturnsInstanceWithDokumentart()
+        {
+            Assert.Equal(Dokumentart.Heizkostenabrechnung, NutzerAbrechnungBild.FromString(stringValueDokumentart).Dokumentart);
         }
 
         #endregion

@@ -163,11 +163,27 @@ namespace ArgeHeiwako.Data
             var bilddateiFolgeNummer = new BilddateiFolgeNummer(nutzerAbrechnungBildString.Substring(108, 3));
             var letzterTagNutzungszeitraum = new Tag(nutzerAbrechnungBildString.Substring(111, 6));
 
+            var satzfolgeNummerString = nutzerAbrechnungBildString.Substring(4, 7).Trim();
+            var satzfolgeNummer = satzfolgeNummerString == string.Empty ? null : new SatzfolgeNummer(satzfolgeNummerString);
+
+            var abrechnungsunternehmenString = nutzerAbrechnungBildString.Substring(11, 2).Trim();
+            var abrechnungsunternehmen = abrechnungsunternehmenString == string.Empty ? null : Abrechnungsunternehmen.Finde(abrechnungsunternehmenString);
+
+            var abrechnungsfolgeNummerString = nutzerAbrechnungBildString.Substring(51, 1).Trim();
+            var abrechnungsfolgeNummer = abrechnungsfolgeNummerString == string.Empty ? null : new AbrechnungsfolgeNummer(abrechnungsfolgeNummerString);
+
+            var dokumentartString = nutzerAbrechnungBildString.Substring(117, 3).Trim();
+            var dokumentart = dokumentartString == string.Empty ? null : (Dokumentart)dokumentartString;
+
             return new NutzerAbrechnungBild(
-                ordnungsbegriffAbrechnungsunternehmen, 
-                ordnungsbegriffWohnungsunternehmen, 
-                bilddateiPfad, bilddateiFolgeNummer, 
-                letzterTagNutzungszeitraum);
+                ordnungsbegriffAbrechnungsunternehmen,
+                ordnungsbegriffWohnungsunternehmen,
+                bilddateiPfad, bilddateiFolgeNummer,
+                letzterTagNutzungszeitraum,
+                satzfolgeNummer,
+                abrechnungsunternehmen,
+                abrechnungsfolgeNummer,
+                dokumentart);
         }
     }
 }
