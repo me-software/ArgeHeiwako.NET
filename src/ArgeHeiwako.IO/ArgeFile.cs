@@ -11,6 +11,7 @@ namespace ArgeHeiwako.IO
         private readonly DateTime created;
         private readonly string satzart;
         private IEnumerable<TData> datensaetze;
+        private bool showSatzart;
 
         /// <summary>
         /// Liefert den Erstellungszeitpunkt der Datei
@@ -30,7 +31,7 @@ namespace ArgeHeiwako.IO
         {
             get
             {
-                return $"DT{satzart}305_{Created.ToString("yyyyMMddHHmmss")}.DAT";
+                return $"DT{satzart}{(showSatzart ? "305": string.Empty)}_{Created.ToString("yyyyMMddHHmmss")}.DAT";
             }
         }
 
@@ -48,7 +49,8 @@ namespace ArgeHeiwako.IO
         /// <param name="created">Der Erstellungszeitpunkt der Datei</param>
         /// <param name="satzart">Die Satzart der Datei</param>
         /// <param name="datensaetze">Die Datensätze für die Datenaustauschdatei</param>
-        public ArgeFile(DateTime created, string satzart, IEnumerable<TData> datensaetze)
+        /// <param name="showVersion">Kennzeichen, ob die Version Bestandteil des Dateinamens ist.</param>
+        public ArgeFile(DateTime created, string satzart, IEnumerable<TData> datensaetze, bool showVersion)
         {
             #region Contracts
             if (satzart == null)
@@ -58,6 +60,7 @@ namespace ArgeHeiwako.IO
             this.datensaetze = datensaetze;
             this.created = created;
             this.satzart = satzart;
+            this.showSatzart = showVersion;
         }
     }
 }

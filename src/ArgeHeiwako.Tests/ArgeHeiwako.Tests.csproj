@@ -91,6 +91,8 @@
     <Compile Include="IO\ArgeFileTests.cs" />
     <Compile Include="IO\ArgeWriterTestsBase.cs" />
     <Compile Include="IO\FileTestsBase.cs" />
+    <Compile Include="IO\NutzerAbrechnungBildFileTests.cs" />
+    <Compile Include="IO\NutzerAbrechnungBildWriterTests.cs" />
     <Compile Include="IO\OrdnungsbegriffeFileTests.cs" />
     <Compile Include="IO\OrdnungsbegriffeWriterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

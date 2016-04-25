@@ -18,7 +18,7 @@ namespace ArgeHeiwako.Tests.IO
             filesCreated = new List<string>();
         }
 
-        protected abstract TFile GetFileInstance();
+        protected abstract TFile GetEmptyFileInstance();
 
         protected void AddFile(string fileName)
         {
@@ -40,7 +40,7 @@ namespace ArgeHeiwako.Tests.IO
         [Fact]
         public void Ctor_Default_DatensaetzeReturnsEmptyCollection()
         {
-            var file = GetFileInstance();
+            var file = GetEmptyFileInstance();
             Assert.Empty(file.Datensaetze);
         }
         
@@ -51,14 +51,14 @@ namespace ArgeHeiwako.Tests.IO
         [Fact]
         public void FileName_StartsWithDT()
         {
-            var file = GetFileInstance();
+            var file = GetEmptyFileInstance();
             Assert.StartsWith("DT", file.FileName);
         }
 
         [Fact]
         public void FileName_ExtensionDotDAT()
         {
-            var file = GetFileInstance();
+            var file = GetEmptyFileInstance();
             Assert.EndsWith(".DAT", file.FileName);
         }
 

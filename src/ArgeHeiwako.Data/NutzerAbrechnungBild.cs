@@ -8,7 +8,10 @@ namespace ArgeHeiwako.Data
     /// </summary>
     public class NutzerAbrechnungBild
     {
-        private const string Satzart = "E898";
+        /// <summary>
+        /// Liefert das Kennzeichen der Satzart für eine <see cref="NutzerAbrechnungBild"/>-Instanz
+        /// </summary>
+        public const string Satzart = "E898";
 
         private readonly BilddateiFolgeNummer bilddateiFolgeNummer;
         private readonly BilddateiPfad bilddateiPfad;

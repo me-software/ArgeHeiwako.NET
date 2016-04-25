@@ -153,7 +153,7 @@ namespace ArgeHeiwako.Tests.IO
             return content;
         }
 
-        protected override OrdnungsbegriffeFile GetFileInstance()
+        protected override OrdnungsbegriffeFile GetEmptyFileInstance()
         {
             return new OrdnungsbegriffeFile(DateTime.Now, new List<Ordnungsbegriffe>());
         }

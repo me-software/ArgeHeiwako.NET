@@ -17,10 +17,10 @@ namespace ArgeHeiwako.Tests.IO
 
         public AnteilSteuerlicheLeistungsartFileTests()
         {
-            file = GetFileInstance();
+            file = GetEmptyFileInstance();
         }
 
-        protected override AnteilSteuerlicheLeistungsartFile GetFileInstance()
+        protected override AnteilSteuerlicheLeistungsartFile GetEmptyFileInstance()
         {
             return new AnteilSteuerlicheLeistungsartFile(DateTime.Now, new List<AnteilSteuerlicheLeistungsart>());
         }
@@ -30,29 +30,29 @@ namespace ArgeHeiwako.Tests.IO
         [Fact]
         public void FileName_Get_StartsWithDTE835_()
         {
-            var file = GetFileInstance();
-            Assert.StartsWith("DTE835305_", file.FileName);
+            var file = GetEmptyFileInstance();
+            Assert.StartsWith("DTE835_", file.FileName);
         }
 
         [Fact]
         public void FileName_LengthEqual25()
         {
             var ordnungsbegriffeFile = new AnteilSteuerlicheLeistungsartFile(DateTime.Now, new List<AnteilSteuerlicheLeistungsart>());
-            Assert.Equal(28, ordnungsbegriffeFile.FileName.Length);
+            Assert.Equal(25, ordnungsbegriffeFile.FileName.Length);
         }
 
         [Fact]
         public void FileName_DatePartEqual20150101()
         {
             var ordnungsbegriffeFile = new AnteilSteuerlicheLeistungsartFile(new DateTime(2015, 1, 1), new List<AnteilSteuerlicheLeistungsart>());
-            Assert.Equal("20150101", ordnungsbegriffeFile.FileName.Substring(10, 8));
+            Assert.Equal("20150101", ordnungsbegriffeFile.FileName.Substring(7, 8));
         }
 
         [Fact]
         public void FileName_TimePartEqual161510()
         {
             var ordnungsbegriffeFile = new AnteilSteuerlicheLeistungsartFile(new DateTime(2015, 1, 1, 16, 15, 10), new List<AnteilSteuerlicheLeistungsart>());
-            Assert.Equal("161510", ordnungsbegriffeFile.FileName.Substring(18, 6));
+            Assert.Equal("161510", ordnungsbegriffeFile.FileName.Substring(15, 6));
         }
 
         #endregion

@@ -13,17 +13,12 @@ namespace ArgeHeiwako.IO
         private const string LINE_END = "\r\n";
 
         /// <summary>
-        /// Liefert die Kennzeichnung der Satzart
-        /// </summary>
-        public const string Satzart = "E835";
-
-        /// <summary>
         /// Erstellt eine <see cref="AnteilSteuerlicheLeistungsartFile"/>-Instanz
         /// </summary>
         /// <param name="created"></param>
         /// <param name="datensaetze"></param>
         public AnteilSteuerlicheLeistungsartFile(DateTime created, IEnumerable<AnteilSteuerlicheLeistungsart> datensaetze)
-            : base(created, Satzart, datensaetze)
+            : base(created, AnteilSteuerlicheLeistungsart.Satzart, datensaetze, false)
         {
         }
 
