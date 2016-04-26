@@ -11,7 +11,7 @@ namespace ArgeHeiwako.Tests.IO
     public class AnteilSteuerlicheLeistungsartWriterTests : ArgeWriterTestsBase<AnteilSteuerlicheLeistungsart, AnteilSteuerlicheLeistungsartWriter>
     {
         public AnteilSteuerlicheLeistungsartWriterTests() 
-            : base(135)
+            : base(133)
         {
         }
 
