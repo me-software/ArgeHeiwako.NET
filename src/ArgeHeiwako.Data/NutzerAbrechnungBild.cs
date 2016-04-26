@@ -13,6 +13,11 @@ namespace ArgeHeiwako.Data
         /// </summary>
         public const string Satzart = "E898";
 
+        /// <summary>
+        /// Liefert die Länge des Datensatzes in der Datenaustausch-Datei
+        /// </summary>
+        public const int StringLength = 120;
+
         private readonly BilddateiFolgeNummer bilddateiFolgeNummer;
         private readonly BilddateiPfad bilddateiPfad;
         private readonly Tag letzterTagNutzungszeitraum;
@@ -153,11 +158,11 @@ namespace ArgeHeiwako.Data
         /// <param name="nutzerAbrechnungBildString">Der <see cref="string"/> aus der Datenaustausch-Datei</param>
         /// <exception cref="ArgumentNullException">Wenn der Parameter <paramref name="nutzerAbrechnungBildString"/> NULL ist</exception>
         /// <exception cref="ArgumentOutOfRangeException">Wenn der Parameter <paramref name="nutzerAbrechnungBildString"/> einen nicht gültigen E898-Datensatz beinhaltet.</exception>
-        internal static NutzerAbrechnungBild FromString(string nutzerAbrechnungBildString)
+        public static NutzerAbrechnungBild FromString(string nutzerAbrechnungBildString)
         {
             if (nutzerAbrechnungBildString == null)
                 throw new ArgumentNullException(nameof(nutzerAbrechnungBildString));
-            if (nutzerAbrechnungBildString.Length != 120 || !nutzerAbrechnungBildString.StartsWith(Satzart))
+            if (nutzerAbrechnungBildString.Length != StringLength || !nutzerAbrechnungBildString.StartsWith(Satzart))
                 throw new ArgumentOutOfRangeException(nameof(nutzerAbrechnungBildString));
 
             var ordnungsbegriffAbrechnungsunternehmen = ErweiterterOrdnungsbegriffAbrechnungsunternehmen.FromString(nutzerAbrechnungBildString.Substring(13, 18));

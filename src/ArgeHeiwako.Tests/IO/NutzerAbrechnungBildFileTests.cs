@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
+using System.Linq;
 using Xunit;
 
 namespace ArgeHeiwako.Tests.IO
@@ -98,6 +99,51 @@ namespace ArgeHeiwako.Tests.IO
 
             file.Write();
             Assert.Equal(122, new FileInfo(fileName).Length);
+        }
+
+        #endregion
+
+        #region Load()
+
+        [Fact]
+        public void Load_FromStream_ReturnsAnteilSteuerlicheLeistungsartFile()
+        {
+            using (var stream = new MemoryStream(GetBytes()))
+            {
+                var file = NutzerAbrechnungBildFile.Load(stream);
+                Assert.NotNull(file);
+                Assert.IsAssignableFrom<NutzerAbrechnungBildFile>(file);
+            }
+        }
+
+        [Fact]
+        public void Load_FromStreamWithSingleRow_ReturnsAnteilSteuerlicheLeistungsartFileWithOneItem()
+        {
+            using (var stream = new MemoryStream(GetBytes()))
+            {
+                var file = NutzerAbrechnungBildFile.Load(stream);
+                Assert.NotNull(file);
+                Assert.NotNull(file.Datensaetze);
+                Assert.NotEmpty(file.Datensaetze);
+                Assert.Equal(1, file.Datensaetze.Count());
+                Assert.IsAssignableFrom<NutzerAbrechnungBild>(file.Datensaetze.First());
+            }
+        }
+
+        private byte[] GetBytes()
+        {
+            byte[] content = null;
+            using (var stream = new MemoryStream())
+            {
+                using (var writer = new NutzerAbrechnungBildWriter(stream))
+                {
+                    writer.Write(NutzerAbrechnungBildTests.CreateDefault());
+                }
+                stream.Flush();
+                content = stream.ToArray();
+            }
+
+            return content;
         }
 
         #endregion
