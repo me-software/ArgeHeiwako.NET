@@ -18,7 +18,7 @@ namespace ArgeHeiwako.IO
         /// <param name="created">Erstellungszeitpunkt</param>
         /// <param name="ordnungsbegriffe">>Auflistung der zu verwendenden <see cref="Data.Ordnungsbegriffe"/>-Instanzen</param>
         public OrdnungsbegriffeFile(DateTime created, IEnumerable<Ordnungsbegriffe> ordnungsbegriffe)
-            : base(created, Ordnungsbegriffe.Satzart, ordnungsbegriffe)
+            : base(created, Ordnungsbegriffe.Satzart, ordnungsbegriffe, true)
         {
         }
          
@@ -59,7 +59,7 @@ namespace ArgeHeiwako.IO
         }
 
         /// <summary>
-        /// Erzeugt aus einem <see cref="Stream"/> eine neue <see cref="Data.Ordnungsbegriffe"/>-Instanz
+        /// Erzeugt aus einem <see cref="Stream"/> eine neue <see cref="Ordnungsbegriffe"/>-Instanz
         /// </summary>
         /// <param name="stream">Der Stream aus dem gelesen wird.</param>
         /// <returns>Die ermittelte <see cref="OrdnungsbegriffeFile"/>-Instanz.</returns>

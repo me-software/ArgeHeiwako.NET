@@ -68,6 +68,9 @@
     <Compile Include="Data\Common\AbrechnungsunternehmenTests.cs" />
     <Compile Include="Data\Common\ArgeVersionTests.cs" />
     <Compile Include="Data\Common\BetragTests.cs" />
+    <Compile Include="Data\Common\BilddateiFolgeNummerTests.cs" />
+    <Compile Include="Data\Common\BilddateiPfadTests.cs" />
+    <Compile Include="Data\Common\DokumentartTests.cs" />
     <Compile Include="Data\Common\ErweiteterOrdnungsbegriffAbrechnungsunternehmenTests.cs" />
     <Compile Include="Data\Common\KostenartTests.cs" />
     <Compile Include="Data\Common\KundenNummerTests.cs" />
@@ -80,6 +83,7 @@
     <Compile Include="Data\Common\WohnungsNummerTests.cs" />
     <Compile Include="Data\Common\LiegenschaftsNummerTests.cs" />
     <Compile Include="Data\Common\OrdnungsbegriffAbrechnungsunternehmenTests.cs" />
+    <Compile Include="Data\NutzerAbrechnungBildTests.cs" />
     <Compile Include="Data\OrdnungsbegriffeTests.cs" />
     <Compile Include="Data\Common\OrdnungsbegriffWohnungsunternehmenTests.cs" />
     <Compile Include="IO\AnteilSteuerlicheLeistungsartFileTests.cs" />
@@ -87,6 +91,8 @@
     <Compile Include="IO\ArgeFileTests.cs" />
     <Compile Include="IO\ArgeWriterTestsBase.cs" />
     <Compile Include="IO\FileTestsBase.cs" />
+    <Compile Include="IO\NutzerAbrechnungBildFileTests.cs" />
+    <Compile Include="IO\NutzerAbrechnungBildWriterTests.cs" />
     <Compile Include="IO\OrdnungsbegriffeFileTests.cs" />
     <Compile Include="IO\OrdnungsbegriffeWriterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

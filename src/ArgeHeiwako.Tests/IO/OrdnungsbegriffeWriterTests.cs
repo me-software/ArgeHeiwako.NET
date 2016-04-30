@@ -1,11 +1,8 @@
 ﻿using ArgeHeiwako.Data;
-using ArgeHeiwako.Data.Common;
 using ArgeHeiwako.IO;
 using ArgeHeiwako.Tests.Data;
-using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
-using Xunit;
 
 namespace ArgeHeiwako.Tests.IO
 {
@@ -13,7 +10,7 @@ namespace ArgeHeiwako.Tests.IO
     public class OrdnungsbegriffeWriterTests : ArgeWriterTestsBase<Ordnungsbegriffe, OrdnungsbegriffeWriter>
     {
         public OrdnungsbegriffeWriterTests()
-            : base(130)
+            : base(128)
         {
         }
         

@@ -11,47 +11,48 @@ using Xunit;
 namespace ArgeHeiwako.Tests.IO
 {
     [ExcludeFromCodeCoverage]
-    public class AnteilSteuerlicheLeistungsartFileTests : FileTestsBase<AnteilSteuerlicheLeistungsartFile, AnteilSteuerlicheLeistungsart>
+    public class NutzerAbrechnungBildFileTests : FileTestsBase<NutzerAbrechnungBildFile, NutzerAbrechnungBild>
     {
-        private AnteilSteuerlicheLeistungsartFile file;
+        private NutzerAbrechnungBildFile file;
 
-        public AnteilSteuerlicheLeistungsartFileTests()
+        public NutzerAbrechnungBildFileTests()
         {
             file = GetEmptyFileInstance();
         }
 
-        protected override AnteilSteuerlicheLeistungsartFile GetEmptyFileInstance()
+        protected override NutzerAbrechnungBildFile GetEmptyFileInstance()
         {
-            return new AnteilSteuerlicheLeistungsartFile(DateTime.Now, new List<AnteilSteuerlicheLeistungsart>());
+            var dateTime = new DateTime(2016, 12, 31, 16, 15, 00);
+            return new NutzerAbrechnungBildFile(dateTime, new List<NutzerAbrechnungBild>());
         }
 
         #region FileName
 
         [Fact]
-        public void FileName_Get_StartsWithDTE835_()
+        public void FileName_Get_StartsWithDTE898_()
         {
             var file = GetEmptyFileInstance();
-            Assert.StartsWith("DTE835_", file.FileName);
+            Assert.StartsWith("DTE898_", file.FileName);
         }
 
         [Fact]
         public void FileName_LengthEqual25()
         {
-            var ordnungsbegriffeFile = new AnteilSteuerlicheLeistungsartFile(DateTime.Now, new List<AnteilSteuerlicheLeistungsart>());
+            var ordnungsbegriffeFile = new NutzerAbrechnungBildFile(DateTime.Now, new List<NutzerAbrechnungBild>());
             Assert.Equal(25, ordnungsbegriffeFile.FileName.Length);
         }
 
         [Fact]
         public void FileName_DatePartEqual20150101()
         {
-            var ordnungsbegriffeFile = new AnteilSteuerlicheLeistungsartFile(new DateTime(2015, 1, 1), new List<AnteilSteuerlicheLeistungsart>());
+            var ordnungsbegriffeFile = new NutzerAbrechnungBildFile(new DateTime(2015, 1, 1), new List<NutzerAbrechnungBild>());
             Assert.Equal("20150101", ordnungsbegriffeFile.FileName.Substring(7, 8));
         }
 
         [Fact]
         public void FileName_TimePartEqual161510()
         {
-            var ordnungsbegriffeFile = new AnteilSteuerlicheLeistungsartFile(new DateTime(2015, 1, 1, 16, 15, 10), new List<AnteilSteuerlicheLeistungsart>());
+            var ordnungsbegriffeFile = new NutzerAbrechnungBildFile(new DateTime(2015, 1, 1, 16, 15, 10), new List<NutzerAbrechnungBild>());
             Assert.Equal("161510", ordnungsbegriffeFile.FileName.Substring(15, 6));
         }
 
@@ -67,7 +68,7 @@ namespace ArgeHeiwako.Tests.IO
         }
 
         [Fact]
-        public void Write_WithEmptyListOfOrdnungsbegriffen_CreatesFileInCurrentDirectory()
+        public void Write_EmptyRows_CreatesFileInCurrentDirectory()
         {
             file.Write();
             var fileName = Path.Combine(Environment.CurrentDirectory, file.FileName);
@@ -77,7 +78,7 @@ namespace ArgeHeiwako.Tests.IO
         }
 
         [Fact]
-        public void Write_ListWithOneItem_CreatesFileInDirectory()
+        public void Write_EmptyRows_CreatesFileInDirectory()
         {
             var directory = Path.Combine(Environment.CurrentDirectory, "test");
             var fileName = Path.Combine(directory, file.FileName);
@@ -89,15 +90,15 @@ namespace ArgeHeiwako.Tests.IO
         }
 
         [Fact]
-        public void Write_ListWithOneItem_FileSizeEquals130()
+        public void Write_SingleInstance_FileSizeEquals130()
         {
-            
-
-            var file = new AnteilSteuerlicheLeistungsartFile(DateTime.Now, new[] { AnteilSteuerlicheLeistungsartTests.CreateDefault() });
+            var file = new NutzerAbrechnungBildFile(
+                DateTime.Now,
+                new[] { NutzerAbrechnungBildTests.CreateDefault() });
             var fileName = Path.Combine(Environment.CurrentDirectory, file.FileName);
 
             file.Write();
-            Assert.Equal(135, new FileInfo(fileName).Length);
+            Assert.Equal(122, new FileInfo(fileName).Length);
         }
 
         #endregion
@@ -109,9 +110,9 @@ namespace ArgeHeiwako.Tests.IO
         {
             using (var stream = new MemoryStream(GetBytes()))
             {
-                var file = AnteilSteuerlicheLeistungsartFile.Load(stream);
+                var file = NutzerAbrechnungBildFile.Load(stream);
                 Assert.NotNull(file);
-                Assert.IsAssignableFrom<AnteilSteuerlicheLeistungsartFile>(file);
+                Assert.IsAssignableFrom<NutzerAbrechnungBildFile>(file);
             }
         }
 
@@ -120,12 +121,12 @@ namespace ArgeHeiwako.Tests.IO
         {
             using (var stream = new MemoryStream(GetBytes()))
             {
-                var file = AnteilSteuerlicheLeistungsartFile.Load(stream);
+                var file = NutzerAbrechnungBildFile.Load(stream);
                 Assert.NotNull(file);
                 Assert.NotNull(file.Datensaetze);
                 Assert.NotEmpty(file.Datensaetze);
                 Assert.Equal(1, file.Datensaetze.Count());
-                Assert.IsAssignableFrom<AnteilSteuerlicheLeistungsart>(file.Datensaetze.First());
+                Assert.IsAssignableFrom<NutzerAbrechnungBild>(file.Datensaetze.First());
             }
         }
 
@@ -134,9 +135,9 @@ namespace ArgeHeiwako.Tests.IO
             byte[] content = null;
             using (var stream = new MemoryStream())
             {
-                using (var writer = new AnteilSteuerlicheLeistungsartWriter(stream))
+                using (var writer = new NutzerAbrechnungBildWriter(stream))
                 {
-                    writer.Write(AnteilSteuerlicheLeistungsartTests.CreateDefault());
+                    writer.Write(NutzerAbrechnungBildTests.CreateDefault());
                 }
                 stream.Flush();
                 content = stream.ToArray();
@@ -146,16 +147,5 @@ namespace ArgeHeiwako.Tests.IO
         }
 
         #endregion
-
-        public override void Dispose()
-        {
-            base.Dispose();
-
-            var fileName = Path.Combine(Environment.CurrentDirectory, file.FileName);
-            if (File.Exists(fileName))
-            {
-                File.Delete(fileName);
-            }
-        }
     }
 }

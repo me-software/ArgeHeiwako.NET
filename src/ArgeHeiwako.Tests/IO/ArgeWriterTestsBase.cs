@@ -8,18 +8,18 @@ using Xunit;
 namespace ArgeHeiwako.Tests.IO
 {
     [ExcludeFromCodeCoverage]
-    public abstract class ArgeWriterTestsBase<TInstance, TWriter> where TWriter : IArgeWriter<TInstance>
+    public abstract class ArgeWriterTestsBase<TData, TWriter> where TWriter : IArgeWriter<TData>
     {
         private int length;
 
         public ArgeWriterTestsBase(int length)
         {
-            this.length = length;
+            this.length = length + 2;
         }
 
         public abstract string GetWriterName();
 
-        public abstract TInstance GetInstance();
+        public abstract TData GetInstance();
 
         public abstract TWriter GetWriter(Stream stream);
 
