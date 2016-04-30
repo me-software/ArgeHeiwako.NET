@@ -41,6 +41,9 @@ namespace ArgeHeiwako.IO
             if (directory == null)
                 throw new ArgumentNullException(nameof(directory));
 
+            if (!Directory.Exists(directory))
+                Directory.CreateDirectory(directory);
+
             var filePath = Path.Combine(directory, FileName);
             using (var fileStream = new FileStream(filePath, FileMode.CreateNew))
             {
