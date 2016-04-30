@@ -14,6 +14,14 @@
           <listItem>
             <para>
               <externalLink>
+                <linkText>0.3.0-alpha</linkText>
+                <linkUri>https://github.com/me-software/ArgeHeiwako.NET/issues?q=milestone%3A0.3.0-alpha+</linkUri>
+              </externalLink>
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <externalLink>
                 <linkText>0.2.0-alpha</linkText>
                 <linkUri>https://github.com/me-software/ArgeHeiwako.NET/issues?q=milestone%3A0.2.0-alpha+</linkUri>
               </externalLink>
