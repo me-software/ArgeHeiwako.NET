@@ -47,6 +47,9 @@
     <Compile Include="..\VersionInfo.cs">
       <Link>Properties\VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="Common\Ablesekennzeichen.cs" />
+    <Compile Include="Abrechnungssatz.cs" />
+    <Compile Include="Common\Anteil.cs" />
     <Compile Include="AnteilSteuerlicheLeistungsart.cs" />
     <Compile Include="Common\AbrechnungsfolgeNummer.cs" />
     <Compile Include="Common\Abrechnungsunternehmen.cs" />
@@ -55,6 +58,7 @@
     <Compile Include="Common\BilddateiFolgeNummer.cs" />
     <Compile Include="Common\BilddateiPfad.cs" />
     <Compile Include="Common\Dokumentart.cs" />
+    <Compile Include="Common\Einheit.cs" />
     <Compile Include="Common\Nummer.cs" />
     <Compile Include="Common\ParseResult.cs" />
     <Compile Include="Common\ErweiterterOrdnungsbegriffAbrechnungsunternehmen.cs" />
@@ -68,6 +72,8 @@
     <Compile Include="Common\Satzfolgenummer.cs" />
     <Compile Include="Common\SteuerlicheLeistungsart.cs" />
     <Compile Include="Common\Tag.cs" />
+    <Compile Include="Common\Waehrung.cs" />
+    <Compile Include="Common\Name.cs" />
     <Compile Include="NutzerAbrechnungBild.cs" />
     <Compile Include="Ordnungsbegriffe.cs" />
     <Compile Include="Common\OrdnungsbegriffWohnungsunternehmen.cs" />

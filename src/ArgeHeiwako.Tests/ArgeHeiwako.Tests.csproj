@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\AbrechnungssatzTests.cs" />
     <Compile Include="Data\AnteilSteuerlicheLeistungsartTests.cs" />
     <Compile Include="Data\Common\AbrechnungsfolgeNummerTests.cs" />
     <Compile Include="Data\Common\AbrechnungsunternehmenTests.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Data\Common\BilddateiFolgeNummerTests.cs" />
     <Compile Include="Data\Common\BilddateiPfadTests.cs" />
     <Compile Include="Data\Common\DokumentartTests.cs" />
+    <Compile Include="Data\Common\EinheitTests.cs" />
     <Compile Include="Data\Common\ErweiteterOrdnungsbegriffAbrechnungsunternehmenTests.cs" />
     <Compile Include="Data\Common\KostenartTests.cs" />
     <Compile Include="Data\Common\KundenNummerTests.cs" />
