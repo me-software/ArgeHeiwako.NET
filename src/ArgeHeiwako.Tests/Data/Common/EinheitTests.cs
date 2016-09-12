@@ -251,6 +251,7 @@ namespace ArgeHeiwako.Tests.Data.Common
 
         #region ToString()
 
+        [Fact]
         public void ToString_ReturnsCorrectValue()
         {
             Assert.Equal("001", Einheit.GJ.ToString());

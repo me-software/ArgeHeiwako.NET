@@ -1,10 +1,12 @@
 ﻿using ArgeHeiwako.Data;
 using ArgeHeiwako.Data.Common;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using Xunit;
 
 namespace ArgeHeiwako.Tests.Data
 {
+    [ExcludeFromCodeCoverage]
     public class AbrechnungssatzTests
     {
         private ArgeVersion version;
