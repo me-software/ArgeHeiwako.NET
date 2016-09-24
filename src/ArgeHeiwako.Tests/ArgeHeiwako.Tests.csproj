@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Data\AbrechnungssatzTests.cs" />
     <Compile Include="Data\AnteilSteuerlicheLeistungsartTests.cs" />
+    <Compile Include="Data\Common\AblesekennzeichenTests.cs" />
     <Compile Include="Data\Common\AbrechnungsfolgeNummerTests.cs" />
     <Compile Include="Data\Common\AbrechnungsunternehmenTests.cs" />
     <Compile Include="Data\Common\ArgeVersionTests.cs" />
