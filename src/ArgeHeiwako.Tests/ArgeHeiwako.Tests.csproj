@@ -68,6 +68,7 @@
     <Compile Include="Data\Common\AblesekennzeichenTests.cs" />
     <Compile Include="Data\Common\AbrechnungsfolgeNummerTests.cs" />
     <Compile Include="Data\Common\AbrechnungsunternehmenTests.cs" />
+    <Compile Include="Data\Common\AnteilTests.cs" />
     <Compile Include="Data\Common\ArgeVersionTests.cs" />
     <Compile Include="Data\Common\BetragTests.cs" />
     <Compile Include="Data\Common\BilddateiFolgeNummerTests.cs" />
