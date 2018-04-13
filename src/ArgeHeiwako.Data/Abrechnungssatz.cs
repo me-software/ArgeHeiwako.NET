@@ -55,50 +55,19 @@ namespace ArgeHeiwako.Data
             Betrag neueVorauszahlungMontatlichNetto = null,
             Betrag umlageausfallwagnis = null,
             Betrag saldoBrutto = null,
-            Betrag saldoNetto = null, 
+            Betrag saldoNetto = null,
             Anteil verbrauchsanteile = null,
             Einheit einheitVerbrauchsanteile = null,
             Ablesekennzeichen ableseKennzeichen = null,
             Name nutzername = null)
         {
-            #region Contracts
-            if (argeVersion == null)
-            {
-                throw new ArgumentNullException(nameof(argeVersion));
-            }
-            if (kundenNummer == null)
-            {
-                throw new ArgumentNullException(nameof(kundenNummer));
-            }
-            if (ordnungsbegriffAbrechnungsunternehmen == null)
-            {
-                throw new ArgumentNullException(nameof(ordnungsbegriffAbrechnungsunternehmen));
-            }
-            if (ordnungsbegriffWohnungsunternehmen == null)
-            {
-                throw new ArgumentNullException(nameof(ordnungsbegriffWohnungsunternehmen));
-            }
-            if (letzterTagNutzungszeitraum == null)
-            {
-                throw new ArgumentNullException(nameof(letzterTagNutzungszeitraum));
-            }
-            if (kostenart == null)
-            {
-                throw new ArgumentNullException(nameof(kostenart));
-            }
-            if (waehrung == null)
-            {
-                throw new ArgumentNullException(nameof(waehrung));
-            }
-            #endregion
-
-            this.argeVersion = argeVersion;
-            this.kundenNummer = kundenNummer;
-            this.ordnungsbegriffAbrechnungsunternehmen = ordnungsbegriffAbrechnungsunternehmen;
-            this.ordnungsbegriffWohnungsunternehmen = ordnungsbegriffWohnungsunternehmen;
-            this.letzterTagNutzungszeitraum = letzterTagNutzungszeitraum;
-            this.kostenart = kostenart;
-            this.waehrung = waehrung;
+            this.argeVersion = argeVersion ?? throw new ArgumentNullException(nameof(argeVersion));
+            this.kundenNummer = kundenNummer ?? throw new ArgumentNullException(nameof(kundenNummer));
+            this.ordnungsbegriffAbrechnungsunternehmen = ordnungsbegriffAbrechnungsunternehmen ?? throw new ArgumentNullException(nameof(ordnungsbegriffAbrechnungsunternehmen));
+            this.ordnungsbegriffWohnungsunternehmen = ordnungsbegriffWohnungsunternehmen ?? throw new ArgumentNullException(nameof(ordnungsbegriffWohnungsunternehmen));
+            this.letzterTagNutzungszeitraum = letzterTagNutzungszeitraum ?? throw new ArgumentNullException(nameof(letzterTagNutzungszeitraum));
+            this.kostenart = kostenart ?? throw new ArgumentNullException(nameof(kostenart));
+            this.waehrung = waehrung ?? throw new ArgumentNullException(nameof(waehrung));
 
 
         }
